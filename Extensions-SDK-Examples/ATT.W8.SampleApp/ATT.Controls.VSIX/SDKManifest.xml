@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FileList
+  DisplayName="AT&amp;T Control Library"
+  ProductFamilyName="AT&amp;T Control Library"
+  MinVSVersion="11.0"
+  MinToolsVersion="4.0"
+  CopyRedistToSubDirectory="ATT.Controls"
+  AppliesTo="WindowsAppContainer+Managed"
+  MoreInfo="http://developer.att.com/">
+   <File Reference="ATT.Controls.dll">
+     <ToolboxItems VSCategory="AT&amp;T Controls">
+       <item Type = "ATT.Controls.ControlBase"/>
+       <Item Type = "ATT.Controls.SmsControl"/>
+       <Item Type = "ATT.Controls.SmsVotingControl"/>
+       <Item Type = "ATT.Controls.MmsControl"/>
+       <Item Type = "ATT.Controls.MmsCouponControl"/>
+       <item Type = "ATT.Controls.MmsGalleryControl"/>
+       <Item Type = "ATT.Controls.SpeechControl"/>
+       <item Type = "ATT.Controls.WapPushServiceControl"/>
+     </ToolboxItems>
+    </File>
+</FileList>

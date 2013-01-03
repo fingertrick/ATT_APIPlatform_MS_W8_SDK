@@ -1,0 +1,5 @@
+E:\att\wipro-drops\01022013\WP8-Sample-Apps\ATT.WP8.SendMMSApp\ATT.WP8.SendMMSApp\obj\Release\App.g.cs
+E:\att\wipro-drops\01022013\WP8-Sample-Apps\ATT.WP8.SendMMSApp\ATT.WP8.SendMMSApp\obj\Release\MainPage.g.cs
+E:\att\wipro-drops\01022013\WP8-Sample-Apps\ATT.WP8.SendMMSApp\ATT.WP8.SendMMSApp\obj\Release\ATT.WP8.SendMMSApp.g.resources
+E:\att\wipro-drops\01022013\WP8-Sample-Apps\ATT.WP8.SendMMSApp\ATT.WP8.SendMMSApp\obj\Release\ATT.WP8.SendMMSApp.Resources.AppResources.resources
+E:\att\wipro-drops\01022013\WP8-Sample-Apps\ATT.WP8.SendMMSApp\ATT.WP8.SendMMSApp\obj\Release\ATT.WP8.SendMMSApp.csproj.GenerateResource.Cache

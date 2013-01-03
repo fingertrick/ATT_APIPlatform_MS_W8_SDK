@@ -1,0 +1,73 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ATT.Controls.SubControls"
+    xmlns:utility="using:ATT.Controls.Utility">
+
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Styles/Default.xaml" />						
+	</ResourceDictionary.MergedDictionaries>	
+
+	<Style TargetType="local:FileOpenPickerControl">
+        <Setter Property="MinWidth" Value="100" />
+        <Setter Property="MaxWidth" Value="400" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FileOpenPickerControl">
+                    <Border x:Name="listView" Background="{StaticResource DefaultBackground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="10">
+                        <Grid>
+                            <Grid.Resources>
+                                <utility:NullVisibilityConverter x:Key="NullVisibilityConverter" />
+                            </Grid.Resources>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+							<ListView Grid.Row="0" MaxHeight="90" SelectionMode="Single" HorizontalAlignment="Stretch" ItemContainerStyle="{StaticResource ListViewItemStyle}" 
+                                      ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=FilesExt}" 
+                                      SelectedItem="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=CurrentFile, Mode=TwoWay}"  >
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="15,0,0,0" HorizontalAlignment="Stretch" Width="Auto">
+                                            <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                             </Grid.ColumnDefinitions>
+                                                        <TextBlock Grid.Column="0" Text="{Binding Path=File.Name}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                                        <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"
+                                                                Command="{Binding Path=DeleteFileCommand}" CommandParameter="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content}"                                                        
+                                                                MinWidth="10"  
+                                                                Margin="0,0,25,0"
+                                                                BorderThickness="0">
+                                                                        <Button.Template>
+                                                                            <ControlTemplate TargetType="Button">
+                                                                                <Grid>
+                                                                                    <ContentPresenter Height="20" Width="20">
+                                                                                        <Canvas>
+                                                                                            <Rectangle Fill="#00ffffff" Height="20" Width="20" />
+                                                                                            <Image Width="20" Height="20" Grid.Row="1" Source="{StaticResource ImageBucketPath}"/>
+                                                                                        </Canvas>
+                                                                                    </ContentPresenter>
+                                                                                </Grid>
+                                                                            </ControlTemplate>
+                                                                        </Button.Template>
+                                                            </Button>
+                                         </Grid>                                           
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>                                                     
+
+                            </ListView>
+                         
+                            <Button Grid.Row="1" Content="{TemplateBinding FileOpenButtonText}" Style="{TemplateBinding FileOpenButtonStyle}" Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=FileOpenCommand}" />
+                            <local:ErrorToolTip Grid.Row="1" ErrorMessage="{TemplateBinding ErrorMessage}" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                            
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

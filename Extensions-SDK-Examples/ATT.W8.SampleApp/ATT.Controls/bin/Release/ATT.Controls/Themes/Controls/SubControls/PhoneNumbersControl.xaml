@@ -1,0 +1,47 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ATT.Controls.SubControls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Styles/Default.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style TargetType="local:PhoneNumbersControl">
+        <Setter Property="MinWidth" Value="180" />
+        <Setter Property="MinHeight" Value="40" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:PhoneNumbersControl">
+                    <Border Background="{StaticResource DefaultBackground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="{TemplateBinding PhoneNumberLabel}" HorizontalAlignment="Left" Style="{StaticResource textBlockHeader}" />
+                            <local:ExtendedTextBox  Grid.Row="1"
+                                                    CustomAction="{Binding Path=UpdateBindedViewModelProperty, RelativeSource={RelativeSource TemplatedParent}, Mode=OneTime}" 
+                                                    Text="{Binding Path=TextPhoneNumber, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" 
+                                                    Style="{TemplateBinding PhoneNumberStyle}" 
+                                                    AcceptsReturn="True" 
+                                                    TextWrapping="Wrap" 
+                                                    ScrollViewer.HorizontalScrollMode="Disabled" 
+                                                    ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                                    ScrollViewer.VerticalScrollMode="Auto" 
+                                                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                                    local:TextBoxValidationExtensions.Format="Phone"
+                                                    local:TextBoxValidationExtensions.IsValid="{Binding Path=IsValidPhoneNumbers, Mode=TwoWay}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>
+

@@ -1,0 +1,65 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ATT.Controls"
+    xmlns:utility="using:ATT.Controls.Utility">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Styles/Default.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <x:String x:Key="MMSGallery">MMS Gallery - Picture</x:String>
+    <x:String x:Key="UpdateGallery">Update Gallery</x:String>
+    <x:String x:Key="MoveBack">&lt;</x:String>
+    <x:String x:Key="MoveForward">&gt;</x:String>
+    
+    
+    <Style TargetType="local:MmsGalleryControl">
+        <Setter Property="MinHeight" Value="320"/>
+        <Setter Property="MinWidth" Value="350"/>
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:MmsGalleryControl">
+                    <Border Background="{StaticResource DefaultBackground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="10">
+                        <Grid>
+                            <Grid.RowDefinitions>                              
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.Resources>
+                                <utility:PathToImageSourceConverter x:Key="PathToImageSourceConverter" />
+                            </Grid.Resources>
+                                                     
+                            <TextBlock Grid.Row="0" Text="{StaticResource MMSGallery}" Style="{StaticResource textBlockHeader}" HorizontalAlignment="Left" />
+
+                            <FlipView Grid.Row="1" Margin="0,10,0,15" MaxHeight="150" x:Name="FlipView"> 
+                                <FlipView.Resources>
+                                    <CollectionViewSource x:Key="dataView" Source="{Binding MMSCollection}">                                      
+                                    </CollectionViewSource>
+                                </FlipView.Resources>
+                                <FlipView.ItemsSource>
+                                    <Binding Source="{StaticResource dataView}"/>
+                                </FlipView.ItemsSource>
+                                <FlipView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Background="Gray">
+                                            <Image Source="{Binding Attachments[0], Converter={StaticResource PathToImageSourceConverter}}" Stretch="UniformToFill" />                                        
+                                        </Grid>
+                                    </DataTemplate>
+                                </FlipView.ItemTemplate>                              
+                            </FlipView>
+
+                            <TextBox Text="{Binding ElementName=FlipView, Path=SelectedItem.Body}" Height="72" Grid.Row="2" IsEnabled="False" TextWrapping="Wrap" ScrollViewer.HorizontalScrollMode="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollMode="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+
+                            <Button Grid.Row="3" x:Name="updateGallery" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="{StaticResource UpdateGallery}" Width="140" Margin="0,38,-3,0"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

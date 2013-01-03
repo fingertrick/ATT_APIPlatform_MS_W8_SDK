@@ -1,0 +1,47 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ATT.Controls"
+    xmlns:subControls="using:ATT.Controls.SubControls"
+    xmlns:voting="using:ATT.Controls.SubControls.SmsVotingSubControls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Styles/Default.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <x:String x:Key="UpdateChart">Update chart</x:String>
+    <x:String x:Key="VotingHeader">Voting results</x:String>
+
+    <Style TargetType="local:SmsVotingControl">
+        <Setter Property="MinWidth" Value="320" />
+        <Setter Property="MinHeight" Value="290" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SmsVotingControl">
+                    <Border Background="{StaticResource DefaultBackground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>                           
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="60" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="{StaticResource VotingHeader}" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource textBlockHeader}" Margin="10,0,10,0"/>
+
+                            <voting:SmsVotingChart Grid.Row="1"
+                                                  ItemsSource="{Binding VotingResults}"
+                                                  ForegroundBrush="{StaticResource DefaultChartForegroundBrush}"
+                                                  DarkBarBrush="{StaticResource DefaultVotingGridMainColumn}"
+                                                  LightBarBrush="{StaticResource DefaultVotingGridOppositeColumn}"/>
+                            <subControls:ErrorToolTip Grid.Row="1" ErrorMessage="{Binding ErrorMessage}" HorizontalAlignment="Right" VerticalAlignment="Top" />
+
+                            <Button Grid.Row="2" Content="{StaticResource UpdateChart}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="130" Command="{Binding UpdateCommand}" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>
+

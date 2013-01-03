@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATT.Services</name>
+    </assembly>
+    <members>
+        <member name="T:ATT.Services.IMmsService">
+            <summary>
+            Interface for MMS service.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.IMmsService.Send(ATT.Services.MmsEntity)">
+            <summary>
+             Sends MMS message to multiple recipients
+            </summary>
+            <param name="mms"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ATT.Services.IMmsService.GetMmsStatus(System.String)">
+            <summary>
+            Gets sent MMS message delivery status
+            </summary>
+            <param name="mmsId">message id</param>
+            <returns>current message delivery status</returns>
+        </member>
+        <member name="T:ATT.Services.InboundMms">
+            <summary>
+            Represents recieved MMS message
+            </summary>
+        </member>
+        <member name="M:ATT.Services.InboundMms.#ctor(System.String,ATT.Services.PhoneNumber,System.String)">
+            <summary>
+            Creates new instance of <see cref="T:ATT.Services.InboundMms"/>
+            </summary>
+            <param name="id">Id of MMS message</param>
+            <param name="senderNumber">phone number of a sender who sent this MMS message</param>
+            <param name="body">MMS body</param>
+        </member>
+        <member name="M:ATT.Services.InboundMms.#ctor(System.String,ATT.Services.PhoneNumber,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates new instance of <see cref="T:ATT.Services.InboundMms"/>
+            </summary>
+            <param name="id">Id of MMS message</param>
+            <param name="senderNumber">phone number of a sender who sent this MMS message</param>
+            <param name="body">MMS body</param>
+            <param name="attachments">MMS attachments</param>
+        </member>
+        <member name="P:ATT.Services.InboundMms.Id">
+            <summary>
+            Gets MMS Id
+            </summary>
+        </member>
+        <member name="P:ATT.Services.InboundMms.SenderNumber">
+            <summary>
+            Gets phone number of a sender who sent this MMS message
+            </summary>
+        </member>
+        <member name="P:ATT.Services.InboundMms.Body">
+            <summary>
+            Gets MMS message body
+            </summary>
+        </member>
+        <member name="P:ATT.Services.InboundMms.Attachments">
+            <summary>
+            Gets MMS attachments
+            </summary>
+        </member>
+        <member name="T:ATT.Services.IMmsStorage">
+            <summary>
+            Interface for getting MMS from storage or setting into storage.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.IMmsStorage.GetMmsMessages(System.String)">
+            <summary>
+            Loads MMS messages collection from storage.
+            </summary>
+            <param name="shortCode">Short code that represent MMS.</param>
+            <returns>List of <see cref="T:ATT.Services.InboundMms"/> loaded MMS messages collection.</returns>
+        </member>
+        <member name="M:ATT.Services.IMmsStorage.StoreMmsMessages(System.Collections.Generic.IEnumerable{ATT.Services.InboundMms},System.String)">
+            <summary>
+            Saves MMS into storage.
+            </summary>
+            <param name="mmsCollection">List of <see cref="T:ATT.Services.InboundMms"/> MMS.</param>.
+            <param name="shortCode">Short code that represents MMS collection.</param>
+        </member>
+        <member name="T:ATT.Services.InboundSms">
+            <summary>
+            Represents recieved SMS message
+            </summary>
+        </member>
+        <member name="M:ATT.Services.InboundSms.#ctor(System.String,ATT.Services.PhoneNumber,System.String)">
+            <summary>
+            Creates new instance of <see cref="T:ATT.Services.InboundSms"/>
+            </summary>
+            <param name="id">Id of SMS message</param>
+            <param name="senderNumber">phone number of a sender who sent this SMS message</param>
+            <param name="body">SMS body</param>
+            <exception cref="T:System.ArgumentNullException">id is null or senderNumber is null</exception>
+        </member>
+        <member name="P:ATT.Services.InboundSms.Id">
+            <summary>
+            Gets SMS Id
+            </summary>
+        </member>
+        <member name="P:ATT.Services.InboundSms.SenderNumber">
+            <summary>
+            Gets phone number of a sender who sent this SMS message
+            </summary>
+        </member>
+        <member name="P:ATT.Services.InboundSms.Body">
+            <summary>
+            Gets SMS message body
+            </summary>
+        </member>
+        <member name="M:ATT.Services.ISmsService.Send(ATT.Services.SmsEntity)">
+            <summary>
+            Sends SMS message
+            </summary>
+            <param name="sms">instance of <see cref="T:ATT.Services.SmsEntity"/> to send</param>
+            <param name="phoneNumber">isntance of <see cref="T:ATT.Services.PhoneNumber"/> representing reciepient phone number</param>
+            <returns>generated message id</returns>
+        </member>
+        <member name="M:ATT.Services.ISmsService.GetSmsStatus(System.String)">
+            <summary>
+            Gets SMS delivery status
+            </summary>
+            <param name="smsId">Id of SMS sent</param>
+        </member>
+        <member name="M:ATT.Services.ISmsService.GetInboundSmsMessages(System.String)">
+            <summary>
+            Gets collection of inbound SMS messages sent to some short code
+            </summary>
+            <param name="shortCode">short code</param>
+        </member>
+        <member name="T:ATT.Services.ISmsVotingStorage">
+            <summary>
+            Interface for getting SMS voting results from storage or setting SMS voting results into storage.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.ISmsVotingStorage.GetStatistics">
+            <summary>
+            Gets SMS voting statistics from storage.
+            </summary>
+            <returns>SMS voting statistics.</returns>
+        </member>
+        <member name="M:ATT.Services.ISmsVotingStorage.AddVote(System.String,System.Int32)">
+            <summary>
+            Adds voting results to the storage.
+            </summary>
+            <param name="msg">SMS message text.</param>
+            <param name="count">Count of votes.</param>
+        </member>
+        <member name="M:ATT.Services.ISmsVotingStorage.AddVotes(System.Collections.Generic.IEnumerable{ATT.Services.InboundSms})">
+            <summary>
+            Adds voting results to the storage.
+            </summary>
+            <param name="messages">Set of <see cref="T:ATT.Services.InboundSms"/> voting SMS messages.</param>
+        </member>
+        <member name="M:ATT.Services.ISmsVotingStorage.ClearStatistics">
+            <summary>
+            Clears voting statistics in storage.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.ISmsVotingStorage.GetStatisticsAsync">
+            <summary>
+            Gets SMS voting statistics from storage.
+            </summary>
+            <returns>Returns Task as a result of asynchronous operation. Task result is SMS voting statistics.</returns>
+        </member>
+        <member name="M:ATT.Services.ISmsVotingStorage.AddVoteAsync(System.String,System.Int32)">
+            <summary>
+            Adds voting results to the storage.
+            </summary>
+            <param name="msg">SMS message text.</param>
+            <param name="count">Count of votes.</param>
+            <returns>Returns Task as a result of asynchronous operation.</returns>
+        </member>
+        <member name="M:ATT.Services.ISmsVotingStorage.AddVotesAsync(System.Collections.Generic.IEnumerable{ATT.Services.InboundSms})">
+            <summary>
+            Adds voting results to the storage.
+            </summary>
+            <param name="messages">Set of <see cref="T:ATT.Services.InboundSms"/> voting SMS messages.</param>
+            <returns>Returns Task as a result of asynchronous operation.</returns>
+        </member>
+        <member name="M:ATT.Services.ISmsVotingStorage.ClearStatisticsAsync">
+            <summary>
+            Clears voting statistics in storage.
+            </summary>
+            <returns>Returns Task as a result of asynchronous operation.</returns>
+        </member>
+        <member name="T:ATT.Services.ISpeechService">
+            <summary>
+            Service for working with speech
+            </summary>
+        </member>
+        <member name="M:ATT.Services.ISpeechService.Send(Windows.Storage.StorageFile)">
+            <summary>
+            Sends speech message
+            </summary>
+            <param name="attachment">Instance of <see cref="!:Speech"/>File to send</param>
+            <returns>Transcripted text (instance of <see cref="T:ATT.Services.SpeechResponse"/>)</returns>
+        </member>
+        <member name="T:ATT.Services.IWapPushService">
+            <summary>
+            Interface for WAP Push service
+            </summary>
+        </member>
+        <member name="M:ATT.Services.IWapPushService.Send(System.String,System.String,System.String)">
+            <summary>
+            Sends WAP push notification
+            </summary>
+            <param name="phoneNumber">Phone number where send notification</param>
+            <param name="url">notification's url</param>
+            <param name="alertText">notification's alert text</param>
+            <returns>Id of notification returned by REST service</returns>
+        </member>
+        <member name="T:ATT.Services.MessageDeliveryStatus">
+            <summary>
+            Enumeration with all supported message delivery statuses
+            </summary>
+        </member>
+        <member name="F:ATT.Services.MessageDeliveryStatus.Initial">
+            <summary>
+            Intial status
+            </summary>
+        </member>
+        <member name="F:ATT.Services.MessageDeliveryStatus.DeliveredToNetwork">
+            <summary>
+            Delivered to the network but not yet delivered to the Handset.
+            </summary>
+        </member>
+        <member name="F:ATT.Services.MessageDeliveryStatus.DeliveredToTerminal">
+            <summary>
+            Successfully delivered to the Handset of the destination mobile number.
+            </summary>
+        </member>
+        <member name="F:ATT.Services.MessageDeliveryStatus.DeliveryImpossible">
+            <summary>
+            Unsuccessful delivery; the message could not be delivered before it expired.
+            </summary>
+        </member>
+        <member name="F:ATT.Services.MessageDeliveryStatus.Error">
+            <summary>
+            Was thrown exception
+            </summary>
+        </member>
+        <member name="T:ATT.Services.MmsEntity">
+            <summary>
+            Represents MMS message
+            </summary>
+        </member>
+        <member name="T:ATT.Services.SmsEntity">
+            <summary>
+            Represents SMS message
+            </summary>
+        </member>
+        <member name="M:ATT.Services.SmsEntity.#ctor(System.Collections.Generic.IEnumerable{ATT.Services.PhoneNumber},System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Services.SmsEntity"/>
+            </summary>
+            <param name="phoneNumbers">Collection of phone numbers to send SMS to.</param>
+            <param name="body">SMS message text.</param>
+        </member>
+        <member name="P:ATT.Services.SmsEntity.Body">
+            <summary>
+            Gets SMS message body
+            </summary>
+        </member>
+        <member name="P:ATT.Services.SmsEntity.PhoneNumbers">
+            <summary>
+            Gets reciever phone numbers
+            </summary>
+        </member>
+        <member name="P:ATT.Services.SmsEntity.MessageID">
+            <summary>
+            Gets or sets message identifier.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.MmsEntity.#ctor(System.Collections.Generic.IEnumerable{ATT.Services.PhoneNumber},System.String)">
+            <summary>
+            Creates new instance of <see cref="T:ATT.Services.MmsEntity"/>
+            </summary>
+            <param name="phoneNumbers">Collection of phone numbers to send MMS to.</param>
+            <param name="body">MMS text message.</param>
+        </member>
+        <member name="M:ATT.Services.MmsEntity.#ctor(System.Collections.Generic.IEnumerable{ATT.Services.PhoneNumber},System.String,System.Collections.Generic.IEnumerable{Windows.Storage.StorageFile})">
+            <summary>
+            Creates new instance of <see cref="T:ATT.Services.MmsEntity"/>
+            </summary>
+            <param name="phoneNumbers">Collection of phone numbers to send MMS to.</param>
+            <param name="body">MMS text message.</param>
+            <param name="attachments">Collection of attached files.</param>
+        </member>
+        <member name="P:ATT.Services.MmsEntity.Attachments">
+            <summary>
+            Gets MMS attachments.
+            </summary>
+        </member>
+        <member name="T:ATT.Services.PhoneNumber">
+            <summary>
+            Represents Phone Number
+            </summary>
+        </member>
+        <member name="P:ATT.Services.PhoneNumber.Number">
+            <summary>
+            Gets phone number
+            </summary>
+        </member>
+        <member name="T:ATT.Services.SpeechResponse">
+            <summary>
+            Represents response from speech service
+            </summary>
+        </member>
+        <member name="M:ATT.Services.SpeechResponse.#ctor(System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Services.SpeechResponse"/>
+            </summary>
+            <param name="transcriptedText">Transcripted text</param>
+            <param name="error">Error from service</param>
+        </member>
+        <member name="P:ATT.Services.SpeechResponse.TranscriptedText">
+            <summary>
+            Gets or sets transcripted text
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,8 @@
+E:\tmp\ATT.W8.SampleApp\ATT.Utility.Tests\bin\Debug\ATT.Utility.Tests.dll
+E:\tmp\ATT.W8.SampleApp\ATT.Utility.Tests\bin\Debug\ATT.Utility.Tests.pdb
+E:\tmp\ATT.W8.SampleApp\ATT.Utility.Tests\bin\Debug\ATT.Utility.dll
+E:\tmp\ATT.W8.SampleApp\ATT.Utility.Tests\bin\Debug\ATT.Utility.pdb
+E:\tmp\ATT.W8.SampleApp\ATT.Utility.Tests\bin\Debug\ATT.Utility.xml
+E:\tmp\ATT.W8.SampleApp\ATT.Utility.Tests\obj\Debug\ATT.Utility.Tests.csprojResolveAssemblyReference.cache
+E:\tmp\ATT.W8.SampleApp\ATT.Utility.Tests\obj\Debug\ATT.Utility.Tests.dll
+E:\tmp\ATT.W8.SampleApp\ATT.Utility.Tests\obj\Debug\ATT.Utility.Tests.pdb

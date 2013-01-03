@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATT.Utility</name>
+    </assembly>
+    <members>
+        <member name="T:ATT.Utility.Argument">
+            <summary>
+            Utitility class used to incapsulate and simplify argument checks
+            </summary>
+        </member>
+        <member name="M:ATT.Utility.Argument.ExpectNotNull``1(System.Linq.Expressions.Expression{System.Func{``0}},System.String)">
+            <summary>
+            Checks the argument value and throws <see cref="T:System.ArgumentNullException"/> if it is null
+            </summary>
+            <typeparam name="T">tye of the argument to check</typeparam>
+            <param name="f">expression pointing to the argument</param>
+            <param name="message">message to include in exception</param>
+        </member>
+        <member name="M:ATT.Utility.Argument.ExpectNotNullOrWhiteSpace(System.Linq.Expressions.Expression{System.Func{System.String}},System.String)">
+            <summary>
+            Checks string argument and throws <see cref="T:System.ArgumentNullException"/> if it is null, empty or consists only of white-space characters.
+            </summary>
+            <param name="f">Expresion pointing to the argument</param>
+            <param name="message">message to include in exception</param>
+        </member>
+        <member name="M:ATT.Utility.Argument.ExpectNotEmptyGuid(System.Linq.Expressions.Expression{System.Func{System.Guid}})">
+            <summary>
+            Checks Guid argument and throws <see cref="T:System.ArgumentException"/> if it equals to empty Guid
+            </summary>
+            <param name="f">Expression pointing to the argument</param>
+        </member>
+        <member name="M:ATT.Utility.Argument.Expect(System.Func{System.Boolean},System.String,System.String)">
+            <summary>
+            Checks custom argument condition and throws <see cref="T:System.ArgumentException"/> if its result is false
+            </summary>
+            <param name="condition">Condition expression to check</param>
+            <param name="argumentName">name of the argument checked by condition</param>
+            <param name="errorMessage">error message to include in exception</param>
+        </member>
+    </members>
+</doc>

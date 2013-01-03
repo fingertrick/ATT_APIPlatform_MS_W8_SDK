@@ -1,0 +1,17 @@
+ATT.Controls\Assets\delete_sign_black.png
+ATT.Controls\Assets\delete_sign_white.png
+ATT.Controls\Themes\Controls\MmsControl.xaml
+ATT.Controls\Themes\Controls\MmsCouponControl.xaml
+ATT.Controls\Themes\Controls\SmsControl.xaml
+ATT.Controls\Themes\Controls\SmsVotingControl.xaml
+ATT.Controls\Themes\Controls\SpeechControl.xaml
+ATT.Controls\Themes\Controls\SubControls\ErrorToolTip.xaml
+ATT.Controls\Themes\Controls\SubControls\FileOpenPickerControl.xaml
+ATT.Controls\Themes\Controls\SubControls\FileOpenPickerPreviewControl.xaml
+ATT.Controls\Themes\Controls\SubControls\MessageControl.xaml
+ATT.Controls\Themes\Controls\SubControls\PhoneNumbersControl.xaml
+ATT.Controls\Themes\Controls\SubControls\SmsVotingChart.xaml
+ATT.Controls\Themes\Generic.xaml
+ATT.Controls\Themes\Styles\Default.xaml
+ATT.Controls\Themes\Styles\DefaultDark.xaml
+ATT.Controls\Themes\Styles\DefaultLight.xaml

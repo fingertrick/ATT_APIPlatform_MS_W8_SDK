@@ -1,0 +1,33 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ATT.Controls">
+    
+    <x:String x:Key="SuccessfullyDelivered">Successfully Delivered</x:String>
+    <x:String x:Key="SuccessfullySent">Successfully Sent</x:String>
+    <x:String x:Key="NotDelivered">Not Delivered</x:String>
+    <x:String x:Key="Error">Error</x:String>
+    <x:String x:Key="FileVeryBig">File very big!</x:String>
+    <x:String x:Key="Warning">Warning</x:String>
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Styles/Default.xaml" />
+
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/SubControls/ErrorToolTip.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/SubControls/PhoneNumbersControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/SubControls/MessageControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/SubControls/FileOpenPickerControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/SubControls/FileOpenPickerPreviewControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/SubControls/SMSVotingChart.xaml" />
+        
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/SMSVotingControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/MMSGalleryControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/WAPPushServiceControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/SpeechControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/SMSControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/MMSCouponControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Controls/MMSControl.xaml" />        
+    </ResourceDictionary.MergedDictionaries>
+   
+   </ResourceDictionary>
+

@@ -1,0 +1,55 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ATT.Controls"
+    xmlns:subControls="using:ATT.Controls.SubControls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///ATT.Controls/Themes/Styles/Default.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <x:String x:Key="Send">Send</x:String>
+	<x:String x:Key="NewMessage">New Message</x:String>
+    <x:String x:Key="SMSText">SMS Text</x:String>
+    
+    <Style TargetType="local:SmsControl">
+        <Setter Property="MinWidth" Value="370" />
+        <Setter Property="MinHeight" Value="290" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SmsControl">
+                    <Border Background="{StaticResource DefaultBackground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*" />
+                                <RowDefinition Height="4*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <subControls:PhoneNumbersControl Grid.Row="0" 
+                                                  TextPhoneNumber="{Binding Path=PhoneNumbers, Mode=TwoWay}" 
+                                                  PhoneNumberStyle="{TemplateBinding PhoneNumberStyle}" 
+                                                  IsEnabled="{Binding Path=IsEditableEnabled}"/>
+
+                            <subControls:MessageControl Grid.Row="1" TextHeader="{StaticResource SMSText}" 
+												  TextMessage="{Binding Path=Message, Mode=TwoWay}" 
+												  MessageStatus="{Binding Path=MessageStatusName}"
+												  MessageTextStyle="{TemplateBinding TextStyle}" 
+												  MaxMessageLength="{TemplateBinding MaxSmsLength}"
+                                                  IsEnabled="{Binding Path=IsEditableEnabled}"
+                                                  ErrorMessage="{Binding Path=ErrorMessage}"/>
+                            
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button Content="{StaticResource NewMessage}" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Command="{Binding NewCommand}" IsEnabled="{Binding Path=IsNewMessageEnabled}" />
+                                <Button Content="{StaticResource Send}"  HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Command="{Binding SendCommand}" IsEnabled="{Binding Path=IsEditableEnabled}" />
+							</StackPanel>
+                            
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>
+

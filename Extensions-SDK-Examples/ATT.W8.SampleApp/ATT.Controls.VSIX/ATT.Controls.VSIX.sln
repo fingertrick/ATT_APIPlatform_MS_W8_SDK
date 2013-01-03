@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATT.Controls.VSIX", "ATT.Controls.VSIX.csproj", "{ABB2A033-94C4-4448-9806-7DCEE127809B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATT.Controls.Design", "..\ATT.Controls.Design\ATT.Controls.Design.csproj", "{E1D479BE-FAFB-41E0-A6EF-CC558537802B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://vm-rnd-01.dev.sigmaukraine.com:8080/tfs/att
+		SccProjectUniqueName0 = ATT.Controls.VSIX.csproj
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\ATT.Controls.Design\\ATT.Controls.Design.csproj
+		SccProjectName1 = ../ATT.Controls.Design
+		SccLocalPath1 = ..\\ATT.Controls.Design
+		SccLocalPath2 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABB2A033-94C4-4448-9806-7DCEE127809B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB2A033-94C4-4448-9806-7DCEE127809B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB2A033-94C4-4448-9806-7DCEE127809B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB2A033-94C4-4448-9806-7DCEE127809B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D479BE-FAFB-41E0-A6EF-CC558537802B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D479BE-FAFB-41E0-A6EF-CC558537802B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D479BE-FAFB-41E0-A6EF-CC558537802B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D479BE-FAFB-41E0-A6EF-CC558537802B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

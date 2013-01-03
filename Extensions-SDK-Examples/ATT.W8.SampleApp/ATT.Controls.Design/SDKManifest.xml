@@ -1,0 +1,5 @@
+﻿<FileList DisplayName="AT&amp;T Control Library" MinVSVersion="11.0">
+    <File Reference="ATT.Controls.dll">
+        <ToolboxItems VSCategory="AT&amp;T Control Category" />
+    </File>
+</FileList>

@@ -1,0 +1,1167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATT.WinRTSDK</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "T:ATT.WinRTSDK.AuthorizationService" -->
+        <member name="M:ATT.WinRTSDK.AuthorizationService.#ctor(ATT.WinRTSDK.Entities.AttServiceSettings)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.AuthorizationService"/>
+            </summary>
+            <param name="settings"><see cref="T:ATT.WinRTSDK.Entities.AttServiceSettings"/>Service settings.</param>
+            <exception cref="T:System.ArgumentNullException">settings is null.</exception>
+        </member>
+        <member name="M:ATT.WinRTSDK.AuthorizationService.GetClientCredentials(ATT.WinRTSDK.OAuthToken,System.String)">
+            <summary>
+            Gets client credentials.
+            </summary>
+            <param name="clientCredential">Client credentials.</param>
+            <param name="scopeList">Scope list.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.WapPushResponse">
+            <summary>
+            Entity that represents WAP push responce
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.WapPushResponse.#ctor(System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.WapPushResponse"/>
+            </summary>
+            <param name="id">WAP push identifier</param>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.WapPushResponse.Parse(System.String)">
+            <summary>
+            Parses&gt;WAP push responce from input JSON formatted text message
+            </summary>
+            <param name="jsonInput">input JSON formatted text message</param>
+            <returns>Parsed WAP push responce entity</returns>
+            <exception cref="T:System.ArgumentNullException">jsonInput is null</exception>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.WapPushResponse.Id">
+            <summary>
+            Gets or sets WAP push identifier
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.ErrorEntity">
+            <summary>
+            Entity that represents request error
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ErrorEntity.RequestError">
+            <summary>
+            Request error
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ErrorEntity.InvalidResponse">
+            <summary>
+            Error description
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.InboundSmsMessage">
+            <summary>
+            Entity that represents inbound SMS message
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.ResponseEntityBase">
+            <summary>
+            Base class for HTTP responces
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.ResponseEntityBase.ToString">
+            <summary>
+            Returns a string that represents the current responce.
+            </summary>
+            <returns>A string that represents the current responce.</returns>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ResponseEntityBase.BadRequest">
+            <summary>
+            Gets or sets responce error
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ResponseEntityBase.RequestError">
+            <summary>
+            Gets or sets request error
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ResponseEntityBase.RequestErrorLowMoniker">
+            <summary>
+            Gets or sets request error
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.InboundSmsMessage.ToString">
+            <summary>
+            Returns a string that represents the current inbound SMS message.
+            </summary>
+            <returns>A string that represents the current inbound SMS message.</returns>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InboundSmsMessage.Message">
+            <summary>
+            Gets or sets message
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InboundSmsMessage.MessageId">
+            <summary>
+            Gets or sets message identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InboundSmsMessage.SenderAddress">
+            <summary>
+            Gets or sets sender address
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.InboundSms">
+            <summary>
+            Entity that represents inbound SMS
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.InboundSms.ParseJson(System.String)">
+            <summary>
+            Parses JSON formatted message to <see cref="T:ATT.WinRTSDK.Entities.InboundSmsMessageList"/> entity
+            </summary>
+            <param name="jsonInput">Input JSON formatted message</param>
+            <returns>Parsed <see cref="T:ATT.WinRTSDK.Entities.InboundSmsMessageList"/> entity</returns>
+            <exception cref="T:System.ArgumentNullException">jsonInput is null.</exception>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.InboundSmsMessageList">
+            <summary>
+            Entity that represents inbound message list
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InboundSmsMessageList.InboundSmsMessage">
+            <summary>
+            Gets or sets list of inbound SMS messages
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InboundSmsMessageList.NumberOfMessagesInThisBatch">
+            <summary>
+            Gets or sets the number of messages in the message list
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InboundSmsMessageList.ResourceUrl">
+            <summary>
+            Gets or sets resouce URL
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InboundSmsMessageList.TotalNumberOfPendingMessages">
+            <summary>
+            Gets or sets total number of pending messages
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.InboundSmsMessageListRoot">
+            <summary>
+            Entity that represents the root of inbound SMS messages list
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InboundSmsMessageListRoot.InboundSmsMessageList">
+            <summary>
+            Gets or sets list of inbound SMS messages
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.MmsEntity">
+            <summary>
+            Entity that represents MMS
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.MmsEntity.Addresses">
+            <summary>
+            Gets or sets list of MMS addresses
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.MmsEntity.Subject">
+            <summary>
+            Gets or sets MMS subject
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.MmsEntity.Attachments">
+            <summary>
+            Gets or sets list of MMS attaches
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.MmsResponse">
+            <summary>
+            Entity that represents MMS responce
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.MmsResponse.#ctor(System.String,System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.MmsResponse"/>
+            </summary>
+            <param name="id">MMS responce identifier</param>
+            <param name="resourceUrl">Resource URL</param>
+            <exception cref="T:System.ArgumentNullException">id is null or resourceUrl is null</exception>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.MmsResponse.Parse(System.String)">
+            <summary>
+            Parses JSON formatted input text to <see cref="T:ATT.WinRTSDK.Entities.MmsResponse"/> entity
+            </summary>
+            <param name="jsonInput">JSON formatted input text</param>
+            <returns>Parsed MMS responce entity</returns>
+            <exception cref="T:System.ArgumentException">jsonInput is null or empty string</exception>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.MmsResponse.Id">
+            <summary>
+            Gets MMS responce identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.MmsResponse.ResourceUrl">
+            <summary>
+            Gets resource URL
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.MmsResponseRaw">
+            <summary>
+            Entity that represents MMS responce parsed from JSON formatted text
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.MmsResponseRaw.Id">
+            <summary>
+            Gets or sets MMS responce identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.MmsResponseRaw.ResourceReference">
+            <summary>
+            Gets or sets MMS resource reference
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.DeliveryInfo">
+            <summary>
+            Entity that represents Delivery information
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.DeliveryInfo.Address">
+            <summary>
+            Gets or sets delivery address
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.DeliveryInfo.DeliveryStatus">
+            <summary>
+            Gets or sets delivery status
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.DeliveryInfo.Id">
+            <summary>
+            Gets or sets delivery identifier
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.DeliveryInfoList">
+            <summary>
+            Entity that represents delivery information list
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.DeliveryInfoList.DeliveryStatus">
+            <summary>
+            Gets or sets delivery status
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.DeliveryStatus">
+            <summary>
+            Entity that represents delivery status of HTTP request
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.DeliveryStatus.DeliveryInfoList">
+            <summary>
+            Gets or sets Delivery information list
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.DeliveryStatus.ResourceUrl">
+            <summary>
+            Gets or sets resource URL
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.NBest">
+            <summary>
+            Entity that represents recognized text
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.NBest.Confidence">
+            <summary>
+            Gets or sets confidence
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.NBest.Grade">
+            <summary>
+            Gets or sets grade value
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.NBest.Hypothesis">
+            <summary>
+            Gets or sets hyphotesis
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.NBest.LanguageId">
+            <summary>
+            Gets or sets language identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.NBest.ResultText">
+            <summary>
+            Gets or sets resuting text
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.NBest.Words">
+            <summary>
+            Gets or sets array of words
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.NBest.WordScores">
+            <summary>
+            Gets or sets array of word scores
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.OutBoundSmsRaw">
+            <summary>
+            Entity that represents outbound SMS parsed from JSON formatted text
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.OutBoundSmsRaw.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.OutBoundSmsRaw"/>
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.OutBoundSmsRaw.#ctor(System.String,System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.OutBoundSmsRaw"/>
+            </summary>
+            <param name="address">SMS address</param>
+            <param name="message">SMS message</param>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.OutBoundSmsRaw.Address">
+            <summary>
+            Gets or sets SMS address
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.OutBoundSmsRaw.Message">
+            <summary>
+            Gets or sets SMS message
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.PolicyException">
+            <summary>
+            Entity that represents policy exception parsed from JSON formatted text
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.PolicyException.MessageId">
+            <summary>
+            Gets or sets message identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.PolicyException.Text">
+            <summary>
+            Gets or sets policy exception text
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.PolicyException.Variables">
+            <summary>
+            Gets or sets variables
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.Recognition">
+            <summary>
+            Entity that represents speech recognition
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.Recognition.NBest">
+            <summary>
+            Gets or sets array of <see cref="P:ATT.WinRTSDK.Entities.Recognition.NBest"/>
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.Recognition.ResponseId">
+            <summary>
+            Responce identifier
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.RequestError">
+            <summary>
+            Entity that represents request error
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.RequestError.PolicyException">
+            <summary>
+            Gets or sets policy exception
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.RequestError.ServiceException">
+            <summary>
+            Gets or sets service exception
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.RequestError.ServiceExceptionLowMoniker">
+            <summary>
+            Gets or sets service exception
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.ServiceExceptionEntity">
+            <summary>
+            Entity that represents service exception
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ServiceExceptionEntity.MessageId">
+            <summary>
+            Gets or sets message identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ServiceExceptionEntity.MessageIdLowMoniker">
+            <summary>
+            Gets or sets message identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ServiceExceptionEntity.Text">
+            <summary>
+            Gets or sets service exception text
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ServiceExceptionEntity.TextLowMoniker">
+            <summary>
+            Gets or sets service exception text
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ServiceExceptionEntity.Variables">
+            <summary>
+            Gets or sets service exception variables
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ServiceExceptionEntity.VariablesLowMoniker">
+            <summary>
+            Gets or sets service exception variables
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.SpeechResponse">
+            <summary>
+            Entity that represents speech responce
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.SpeechResponse.Parse(System.String)">
+            <summary>
+            Parses speech responce from input JSON formatted text message
+            </summary>
+            <param name="jsonInput">Input JSON formatted text message</param>
+            <returns>Parsed speech responce entity</returns>
+            <exception cref="T:System.ArgumentNullException">jsonInput is null</exception>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.SpeechResponse.Recognition">
+            <summary>
+            Gets or sets speech responce recognition
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.MmsPriority">
+            <summary>
+            Specifies MMS priority, which is used for sending MMS.
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.MmsPriority.Default">
+            <summary>
+            Default priority.
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.MmsPriority.Low">
+            <summary>
+            Low priority.
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.MmsPriority.Normal">
+            <summary>
+            Normal priority.
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.MmsPriority.High">
+            <summary>
+            High priority.
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.MmsService">
+            <summary>
+            Represents ATT MMS API REST service wrapper.
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.AttRestService">
+            <summary>
+            Base class for ATT API REST service wrappers.
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.AttRestService.#ctor(ATT.WinRTSDK.Entities.AttServiceSettings)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.AttRestService"/>
+            </summary>
+            <param name="settings"><see cref="T:ATT.WinRTSDK.Entities.AttServiceSettings"/>ATT service settings.</param>
+            <exception cref="T:System.ArgumentNullException">settings is null.</exception>
+        </member>
+        <member name="M:ATT.WinRTSDK.AttRestService.GetClientCredential">
+            <summary>
+            Creates or refreshes current service client credentials used to perform a request.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.AttRestService.GetScope">
+            <summary>
+            Gets concrete service scope.
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.AttRestService.SendRawRequest(System.Net.Http.HttpMethod,System.String,System.String,System.String)">
+            <summary>
+            Sends HTTP request with raw string content.
+            </summary>
+            <param name="httpMethod"><see cref="T:System.Net.Http.HttpMethod"/>Http method to use in the request.</param>
+            <param name="relativeUri">ATT service relative Uri.</param>
+            <param name="requestBody">request body to send.</param>
+            <param name="bodyMediaType">request body media type.</param>
+        </member>
+        <member name="M:ATT.WinRTSDK.AttRestService.SendContentRequest(System.Net.Http.HttpMethod,System.String,System.Net.Http.HttpContent)">
+            <summary>
+            Sends HTTP request with specified <see cref="T:System.Net.Http.HttpContent"/> as request body.
+            </summary>
+            <param name="httpMethod"><see cref="T:System.Net.Http.HttpMethod"/>Http method to use in the request.</param>
+            <param name="relativeUri">ATT service relative Uri.</param>
+            <param name="content"><see cref="T:System.Net.Http.HttpContent"/> to use as request body.</param>
+        </member>
+        <member name="P:ATT.WinRTSDK.AttRestService.Settings">
+            <summary>
+            ATT service settings
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ATT.WinRTSDK.MmsService.#ctor(ATT.WinRTSDK.Entities.AttServiceSettings)" -->
+        <member name="M:ATT.WinRTSDK.MmsService.GetScope">
+            <summary>
+            Gets MMS service scope.
+            </summary>
+            <returns>MMS service scope.</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.MmsService.SendMms(System.Collections.Generic.IEnumerable{System.String},System.String,System.Collections.Generic.IEnumerable{Windows.Storage.StorageFile},ATT.WinRTSDK.MmsPriority)">
+            <summary>
+            Sends new MMS message.
+            </summary>
+            <param name="phoneNumbers">Phone numbers to send MMS message to.</param>
+            <param name="message">Message body to send.</param>
+            <param name="attachments">List of files attached to MMS.</param>
+            <param name="priority">MMS priority.</param>
+            <returns>Instance of <see cref="T:ATT.WinRTSDK.Entities.MmsResponse"/> with sent MMS response information.</returns>
+            <exception cref="T:System.ArgumentNullException">Message is null.</exception>
+        </member>
+        <member name="M:ATT.WinRTSDK.MmsService.GetMmsStatus(System.String)">
+            <summary>
+            Gets status of precioustly sent MMS.
+            </summary>
+            <param name="smsId">Identifier of MMS message to get status for.</param>
+            <returns>Instance of <see cref="T:ATT.WinRTSDK.Entities.DeliveryInfoList"/> with the information about MMS message status.</returns>
+            <exception cref="T:System.ArgumentNullException">mmsId is null.</exception>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:ATT.WinRTSDK.ScopeTypes" -->
+        <member name="F:ATT.WinRTSDK.ScopeTypes.Payment">
+            <summary>
+            Payment
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.ScopeTypes.SMS">
+            <summary>
+            MSM message
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.ScopeTypes.MMS">
+            <summary>
+            MMS message
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.ScopeTypes.TerminalLocation">
+            <summary>
+            Terminal location
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.ScopeTypes.WapPush">
+            <summary>
+            WAP push
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.ScopeTypes.MOBO">
+            <summary>
+            MOBO
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.ScopeTypes.MIM">
+            <summary>
+            MIM
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.ScopeTypes.Speech">
+            <summary>
+            Speech
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.OAuthToken">
+            <summary>
+            Entity that represents authorization token instance
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.OAuthToken.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.OAuthToken"/>
+            </summary>
+            <param name="accessToken">Access token</param>
+            <param name="refreshToken">Refresh token</param>
+            <param name="expiresIn">Expiration</param>
+            <exception cref="T:System.ArgumentNullException">accessToken is null or refreshToken is null or expiresIn is null</exception>
+            <exception cref="T:System.ArgumentException">expiresIn cannot be parsed to long</exception>
+        </member>
+        <member name="M:ATT.WinRTSDK.OAuthToken.IsExpired">
+            <summary>
+            Gets whether authorization token is expired
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.OAuthToken.ParseJson(System.String)">
+            <summary>
+            Parses JSON formated text input to <see cref="T:ATT.WinRTSDK.OAuthToken"/> authorization token entity
+            </summary>
+            <param name="jsonInput">JSON formated text input</param>
+            <returns><see cref="T:ATT.WinRTSDK.OAuthToken"/>Authorization token entity</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.OAuthToken.ToString">
+            <summary>
+            Returns a string that represents the current authorization token.
+            </summary>
+            <returns>A string that represents the current authorization token.</returns>
+        </member>
+        <member name="P:ATT.WinRTSDK.OAuthToken.AccessToken">
+            <summary>
+            Gets access token
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.OAuthToken.CreationTime">
+            <summary>
+            Gets creation time
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:ATT.WinRTSDK.OAuthToken.Expiration" -->
+        <member name="P:ATT.WinRTSDK.OAuthToken.ExpiresIn">
+            <summary>
+            Gets the number of seconds for expiration time, from creation time
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.OAuthToken.RefreshToken">
+            <summary>
+            Gets refresh token
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.AttServiceSettings">
+            <summary>
+            Entity that represents ATT service settings
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.AttServiceSettings.#ctor(System.String,System.String,System.Uri)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.AttServiceSettings"/>
+            </summary>
+            <param name="cliendId">Client identifier</param>
+            <param name="clientSecret">Client secret key</param>
+            <param name="serviceEndPoint">Service endpoint</param>
+            <exception cref="T:System.ArgumentNullException">cliendId is null or clientSecret is null or serviceEndPoint is null.</exception>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.AttServiceSettings.ClientId">
+            <summary>
+            Cliend identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.AttServiceSettings.ClientSecret">
+            <summary>
+            Client secret key
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.AttServiceSettings.EndPoint">
+            <summary>
+            Service endpoint
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.SpeechService">
+            <summary>
+            Represents ATT Speech API REST service wrapper.
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.SpeechService.#ctor(ATT.WinRTSDK.Entities.AttServiceSettings)">
+            <summary>
+            Creates new instance of <see cref="T:ATT.WinRTSDK.SpeechService"/>
+            </summary>
+            <param name="settings">Instance of <see cref="T:ATT.WinRTSDK.Entities.AttServiceSettings"/> containing ATT API settings.</param>
+        </member>
+        <member name="M:ATT.WinRTSDK.SpeechService.GetScope">
+            <summary>
+            Gets speech service scope.
+            </summary>
+            <returns>Speech service scope.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ATT.WinRTSDK.SpeechService.SpeechToText(Windows.Storage.StorageFile,ATT.WinRTSDK.XSpeechContext)" -->
+        <member name="T:ATT.WinRTSDK.Utils.ContentTypeMapping">
+            <summary>
+            Utility class for defining file types
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.Utils.ContentTypeMapping.KnownExtentions">
+            <summary>
+            Set of known file extensions
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.ContentTypeMapping.MapContentTypeFromExtension(System.String)">
+            <summary>
+            Gets content type by file extension
+            </summary>
+            <param name="extension">File extension</param>
+            <returns>Name of file type</returns>
+            <exception cref="T:System.ArgumentNullException">extension is null</exception>
+            <exception cref="T:System.ArgumentException">extension is unknown file extension</exception>
+        </member>
+        <member name="T:ATT.WinRTSDK.Utils.HttpHelper">
+            <summary>
+            Class realizes the instance for sending http requests
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.HttpHelper.#ctor(System.Uri)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Utils.HttpHelper"/>
+            </summary>
+            <param name="endPoint">Service endpoint</param>
+            <exception cref="T:System.ArgumentNullException">endPoint is null.</exception>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.HttpHelper.CreateHttpClient">
+            <summary>
+            Creates HTTP client
+            </summary>
+            <returns><see cref="T:System.Net.Http.HttpClient"/>Instance of HTTP client</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.HttpHelper.CreateHttpClient(System.String)">
+            <summary>
+            Creates HTTP client
+            </summary>
+            <param name="accessToken">Access token</param>
+            <returns>Instance of HTTP client</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.HttpHelper.CreateContent(System.String,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates HTTP content
+            </summary>
+            <param name="requestBody">HTTP request body</param>
+            <param name="contentHeader">Content header</param>
+            <returns><see cref="T:System.Net.Http.HttpContent"/>Instance of HTTP content</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.HttpHelper.GetResponse(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Gets HTTP response formatted to string.
+            </summary>
+            <param name="response"><see cref="T:System.Net.Http.HttpResponseMessage"/>Instance of HTTP response</param>
+            <returns>Returns Task as a result of asynchronous operation.
+            The Task result is HTTP response string value.</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.HttpHelper.SendRequest(System.Net.Http.HttpMethod,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends HTTP request with raw string content
+            </summary>
+            <param name="httpMethod"><see cref="T:System.Net.Http.HttpMethod"/>HTTP method to use in the request</param>
+            <param name="relativeUri">Service relative URI</param>
+            <param name="requestBody">Request body to send</param>
+            <param name="accessToken">Access token</param>
+            <param name="bodyMediaType">Request body media type</param>
+            <returns>Returns Task as a result of asunchronous operation.
+            The Task result is the result of HTTP request sending.</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.HttpHelper.SendRequest(System.Net.Http.HttpMethod,System.String,System.String,System.Net.Http.HttpContent)">
+            <summary>
+            Sends HTTP request with raw string content
+            </summary>
+            <param name="httpMethod"><see cref="T:System.Net.Http.HttpMethod"/>HTTP method to use in the request</param>
+            <param name="relativeUri">Service relative URI</param>
+            <param name="accessToken">Access token</param>
+            <param name="content"><see cref="T:System.Net.Http.HttpContent"/>HTTP content</param>
+            <returns>Returns Task as a result of asunchronous operation.
+            The Task result is the result of HTTP request sending.</returns>
+            <exception cref="T:System.ArgumentNullException">relativeUri is null.</exception>
+            <exception cref="T:ATT.WinRTSDK.Entities.InvalidResponseException">HTTP request could not be sent.</exception>
+        </member>
+        <member name="T:ATT.WinRTSDK.Utils.JsonParser`1">
+            <summary>
+            Class for parsing data from/to JSON format
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.JsonParser`1.DeserializeToJson(System.String)">
+            <summary>
+            Parse JSON formatted data
+            </summary>
+            <param name="jsonInput">Input string in JSON format</param>
+            <returns>Parsed data</returns>
+            <exception cref="T:System.ArgumentNullException">jsonInput is null</exception>
+            <exception cref="T:ATT.WinRTSDK.Entities.InvalidResponseException">jsonInput cannot be parsed</exception>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.JsonParser`1.SerializeToJson(`0)">
+            <summary>
+            Serializes data to JSON formatted data
+            </summary>
+            <param name="toJsonObject">Data object for serialization</param>
+            <returns>JSON formatted data</returns>
+            <exception cref="T:System.ArgumentNullException">toJsonObject is null</exception>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.InvalidResponseException">
+            <summary>
+            Entity that represents invalid responce exception
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.InvalidResponseException.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.InvalidResponseException"/>
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.InvalidResponseException.#ctor(ATT.WinRTSDK.Entities.ResponseEntityBase)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.InvalidResponseException"/>
+            </summary>
+            <param name="invalidResponseEntity"><see cref="T:ATT.WinRTSDK.Entities.ResponseEntityBase"/>Invalid responce entity</param>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.InvalidResponseException.#ctor(System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.InvalidResponseException"/>
+            </summary>
+            <param name="message">Error message</param>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.InvalidResponseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.InvalidResponseException"/>
+            </summary>
+            <param name="message">Error message</param>
+            <param name="ex">Original exception</param>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.InvalidResponseException.#ctor(System.String,System.Exception,System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.InvalidResponseException"/>
+            </summary>
+            <param name="message">Error messsage</param>
+            <param name="ex">Original exception</param>
+            <param name="status"><see cref="T:System.Net.HttpStatusCode"/>Responce status</param>
+            <param name="body">Invalid responce body</param>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InvalidResponseException.Body">
+            <summary>
+            Gets or sets invalid responce body
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InvalidResponseException.InvalidResponseEntity">
+            <summary>
+            Gets or sets invalid responce entity
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.InvalidResponseException.Status">
+            <summary>
+            Gets or sets rror status
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.OAuthTokenRaw">
+            <summary>
+            Entity that represents authorization token parsed from JSON formatted text
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.OAuthTokenRaw.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.OAuthTokenRaw"/>
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.OAuthTokenRaw.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.OAuthTokenRaw"/>
+            </summary>
+            <param name="accessToken">Access token</param>
+            <param name="refreshToken">Refresh token</param>
+            <param name="expiresIn">Expires in</param>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.OAuthTokenRaw.AccessToken">
+            <summary>
+            Gets or sets access token value
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.OAuthTokenRaw.ExpiresIn">
+            <summary>
+            Gets or sets number of expiration seconds
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.OAuthTokenRaw.RefreshToken">
+            <summary>
+            Gets or sets refresh token value
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.OutBoundSms">
+            <summary>
+            Entity that represents outbound SMS
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.OutBoundSms.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.OutBoundSms"/>
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Entities.OutBoundSms.#ctor(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.OutBoundSms"/>
+            </summary>
+            <param name="address">Set of SMS addresses</param>
+            <param name="message">SMS message</param>
+            <exception cref="T:System.ArgumentNullException">address is null</exception>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.OutBoundSms.Address">
+            <summary>
+            Gets or sets set of SMS addresses
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.OutBoundSms.Message">
+            <summary>
+            Gets or sets SMS message
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.ResourceReferenceRaw">
+            <summary>
+            Entity that represents resource reference, parsed from JSON formatted text
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.ResourceReferenceRaw.ResourceUrl">
+            <summary>
+            Gets or sets resource URL
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.SmsEntity">
+            <summary>
+            Entity that represents SMS
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.SmsEntity.Addresses">
+            <summary>
+            Gets or sets the list of SMS addresses
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.SmsEntity.Message">
+            <summary>
+            Gets or sets SMS message
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.SmsEntity.TelAdresses">
+            <summary>
+            Gets or sets sms recipient addreses for internal needs.
+            It is not data member of sms json serialization.
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.Entities.SmsResponseRaw">
+            <summary>
+            Entity that represents SMS responce parsed from JSON formatted text
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.SmsResponseRaw.Id">
+            <summary>
+            Gets or sets SMS responce identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Entities.SmsResponseRaw.ResourceReference">
+            <summary>
+            Gets or sets SMS resource reference
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.SmsResponse">
+            <summary>
+            Entity that represents SMS responce
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.SmsResponse.#ctor(System.String,System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WinRTSDK.Entities.MmsResponse"/>
+            </summary>
+            <param name="id">SMS responce identifier</param>
+            <param name="resourceUrl">Resource URL</param>
+            <exception cref="T:System.ArgumentNullException">id is null or resourceUrl is null</exception>
+        </member>
+        <member name="M:ATT.WinRTSDK.SmsResponse.Parse(System.String)">
+            <summary>
+            Parses JSON formatted input text to <see cref="T:ATT.WinRTSDK.SmsResponse"/> entity
+            </summary>
+            <param name="jsonInput">JSON formatted input text</param>
+            <returns>Parsed SMS responce entity</returns>
+            <exception cref="T:System.ArgumentNullException">id is null or resourceUrl is null</exception>
+        </member>
+        <member name="P:ATT.WinRTSDK.SmsResponse.Id">
+            <summary>
+            Gets SMS responce identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.SmsResponse.ResourceUrl">
+            <summary>
+            Gets resource URL
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.SmsService">
+            <summary>
+            Represents ATT SMS API REST service wrapper.
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.SmsService.#ctor(ATT.WinRTSDK.Entities.AttServiceSettings)">
+            <summary>
+            Creates new instance of <see cref="T:ATT.WinRTSDK.SmsService"/>
+            </summary>
+            <param name="settings">Instance of <see cref="T:ATT.WinRTSDK.Entities.AttServiceSettings"/> containing ATT API settings.</param>
+        </member>
+        <member name="M:ATT.WinRTSDK.SmsService.GetScope">
+            <summary>
+            Gets SMS service scope.
+            </summary>
+            <returns>SMS service scope.</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.SmsService.SendSms(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Sends new SMS message.
+            </summary>
+            <param name="phoneNumbers">Phone numbers to send SMS message to.</param>
+            <param name="message">Message body to send.</param>
+            <returns>Instance of <see cref="T:ATT.WinRTSDK.SmsResponse"/> with sent SMS response information.</returns>
+            <exception cref="T:System.ArgumentNullException">phoneNumbers is null.</exception>
+            <exception cref="T:System.ArgumentException">phoneNumbers count equals zero.</exception>
+        </member>
+        <member name="M:ATT.WinRTSDK.SmsService.GetSmsStatus(System.String)">
+            <summary>
+            Gets status of precioustly sent SMS.
+            </summary>
+            <param name="smsId">Identifier of SMS message to get status for.</param>
+            <returns>Instance of <see cref="T:ATT.WinRTSDK.Entities.DeliveryInfoList"/> with the information about SMS message status.</returns>
+            <exception cref="T:System.ArgumentNullException">smsId is null.</exception>
+        </member>
+        <member name="M:ATT.WinRTSDK.SmsService.GetInboundSmsMessages(System.String)">
+            <summary>
+            Gets SMS messages recieved for specific short code
+            </summary>
+            <param name="shortCode">Short code to get SMS message for.</param>
+            <returns>instance of <see cref="T:ATT.WinRTSDK.Entities.InboundSmsMessageList"/>Returns task as a result of asynchronous operation. Task result is list of inbound SMS messages.</returns>
+            <exception cref="T:System.ArgumentNullException">shortCode is null.</exception>
+        </member>
+        <member name="T:ATT.WinRTSDK.Utils.HttpPropertyList">
+            <summary>
+            Class represents instance with the set of parameters for http request.
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.HttpPropertyList.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.HttpPropertyList.FormEncode">
+            <summary>
+            Returns an encoding string that represents the current object.
+            </summary>
+            <returns>An encoding string that represents the current object.</returns>
+        </member>
+        <member name="P:ATT.WinRTSDK.Utils.HttpPropertyList.Properties">
+            <summary>
+            Map of parameters mapped by parameter names
+            </summary>
+        </member>
+        <member name="P:ATT.WinRTSDK.Utils.HttpPropertyList.Item(System.String)">
+            <summary>
+            Gets or sets the value associated with the specified property name.
+            </summary>
+            <param name="propName">Property name</param>
+            <returns>The value associated with the property name</returns>
+            <exception cref="T:System.ArgumentNullException">property name is null.</exception>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">The property is retrieved and property name does not exist in the collection.</exception>
+        </member>
+        <member name="T:ATT.WinRTSDK.Utils.BinaryFileUtils">
+            <summary>
+            Utility class for working with binary files
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.BinaryFileUtils.CombineByteArrays(System.Byte[][])">
+            <summary>
+            Combines list of byte arrays to the single array.
+            </summary>
+            <param name="arrays">Arrays to be combined</param>
+            <returns>Combined array</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.BinaryFileUtils.ReadAllBytes(Windows.Storage.StorageFile)">
+            <summary>
+            Reads binary file
+            </summary>
+            <param name="file">File to read</param>
+            <returns>Returns Task as a result of asynchronous operation.
+            Task result is full file content</returns>
+        </member>
+        <member name="T:ATT.WinRTSDK.Utils.PhoneNumberConverter">
+            <summary>
+            utility for conversion phone numbers
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.PhoneNumberConverter.ConvertToIsdn(System.String)">
+            <summary>
+            Convert phone number to ISDN format
+            </summary>
+            <param name="numberToConvert">Phone number to convert.</param>
+            <returns>Converted phone number.</returns>
+            <exception cref="T:System.ArgumentNullException">numberToConvert is null.</exception>
+            <exception cref="T:System.ArgumentException">numberToConvert is in incorrect format</exception>
+        </member>
+        <member name="T:ATT.WinRTSDK.Utils.ScopeList">
+            <summary>
+            Scope list utility
+            </summary>
+        </member>
+        <member name="M:ATT.WinRTSDK.Utils.ScopeList.ScopesList(System.Collections.Generic.IEnumerable{ATT.WinRTSDK.ScopeTypes})">
+            <summary>
+            Scope list 
+            </summary>
+        </member>
+        <member name="T:ATT.WinRTSDK.WapPushService">
+            <summary>
+            Represents ATT WAP Push API REST service wrapper.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ATT.WinRTSDK.WapPushService.#ctor(ATT.WinRTSDK.Entities.AttServiceSettings)" -->
+        <member name="M:ATT.WinRTSDK.WapPushService.GetScope">
+            <summary>
+            Gets WAP push service scope.
+            </summary>
+            <returns>WAP push service scope.</returns>
+        </member>
+        <member name="M:ATT.WinRTSDK.WapPushService.Send(System.String,System.String,System.String)">
+            <summary>
+            Sends new WAP Push.
+            </summary>
+            <param name="phoneNumber">Phone number to send WAP Push to.</param>
+            <param name="url">Service URL.</param>
+            <param name="alertText">Alert text.</param>
+            <returns>Instance of <see cref="T:ATT.WinRTSDK.Entities.WapPushResponse"/> with sent WAP Push response information.</returns>
+        </member>
+        <member name="T:ATT.WinRTSDK.XSpeechContext">
+            <summary>
+            Specifies speech content of audiofile which is used for recognizing audiofile to text message.
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.XSpeechContext.Generic">
+            <summary>
+            Generic search.
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.XSpeechContext.UVerseEPG">
+            <summary>
+            UVerseEPG.
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.XSpeechContext.BusinessSearch">
+            <summary>
+            Business search.
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.XSpeechContext.WebSearch">
+            <summary>
+            Web search.
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.XSpeechContext.SMS">
+            <summary>
+            SMS.
+            </summary>
+        </member>
+        <member name="F:ATT.WinRTSDK.XSpeechContext.VoiceMail">
+            <summary>
+            Voice mail.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:ATT.WinRTSDK.XSpeechContext.QuestionAndAnswer" -->
+    </members>
+</doc>

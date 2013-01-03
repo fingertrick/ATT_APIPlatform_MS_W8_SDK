@@ -1,0 +1,42 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="clr-namespace:ATT.WP8.Controls;assembly=ATT.WP8.Controls"
+    xmlns:local="clr-namespace:ATT.WP8.SampleApp" x:Class="ATT.WP8.SampleApp.SpeechControlPage"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="{StaticResource DefaultBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="254*"/>
+            <RowDefinition Height="Auto"/>
+            
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="AT&amp;T" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Speech Control" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="48"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <Controls:SpeechControl VerticalAlignment="Top"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <local:CopyRightControl Grid.Row="2" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+
+</phone:PhoneApplicationPage>

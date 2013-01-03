@@ -1,0 +1,1523 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATT.Controls</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "T:ATT.Controls.AttSettings" -->
+        <member name="P:ATT.Controls.AttSettings.ApiKey">
+            <summary>
+            Gets or sets API key.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.AttSettings.SecretKey">
+            <summary>
+            Gets or sets Secret key.
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Presenters.PresenterBase">
+            <summary>
+            Base class for all presenters
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Utility.NotifyPropertyChangedBase">
+            <summary>
+            Base class that raises the property changed.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Utility.NotifyPropertyChangedBase.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the property changed event using a string
+            </summary>
+            <param name="propertyName">
+            The name of the property that changed
+            </param>
+        </member>
+        <member name="M:ATT.Controls.Utility.NotifyPropertyChangedBase.OnPropertyChanged``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Raises the PropertyChanged event.
+            </summary>
+            <param name="propertyExpression">
+            Expression pointing to the property.
+            </param>
+            <typeparam name="T">
+            The type of the property (usually implicit)
+            </typeparam>
+            <exception cref="T:System.ArgumentNullException">
+            Raised if the property name is null
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Raised if the property does not point to a valid member
+            </exception>
+        </member>
+        <member name="M:ATT.Controls.Presenters.PresenterBase.Unload">
+            <summary>
+            Unload presenter. Release resources which was used in presenter
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.PresenterBase.IsNewMessageEnabled">
+            <summary>
+            Gets or sets enabled/disabled status for NewMessage button
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.PresenterBase.IsEditableEnabled">
+            <summary>
+            Gets or sets enabled/disabled status for edit
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.PresenterBase.ErrorMessage">
+            <summary>
+            Gets or sets error message
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Presenters.SenderPresenterBase">
+            <summary>
+            Base class for all sender presenters
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SenderPresenterBase.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.Presenters.SenderPresenterBase"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SenderPresenterBase.SendMessage(ATT.Controls.Presenters.SenderPresenterBase.MessageDeliveryListenerHandler)">
+            <summary>
+            Send message to network
+            </summary>
+            <param name="messageDeliveryListenerCreator"></param>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SenderPresenterBase.CreateMessageDeliveryListener">
+            <summary>
+            Create new <see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/>
+            </summary>
+            <returns><see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/></returns>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SenderPresenterBase.Send">
+            <summary>
+            Send message
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SenderPresenterBase.ClearControl">
+            <summary>
+            Clear all fields on control and reset some properties
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SenderPresenterBase.GetPhoneNumbers">
+            <summary>
+            Get array of <see cref="T:ATT.Services.PhoneNumber"/> from PhoneNumbers property
+            </summary>
+            <returns>Array of <see cref="T:ATT.Services.PhoneNumber"/></returns>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SenderPresenterBase.Unload">
+            <summary>
+            Unload presenter. Release resources which was used in presenter
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SenderPresenterBase.CanSendMessage">
+            <summary>
+            Gets value can we send message
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SenderPresenterBase.MessageStatus">
+            <summary>
+            Gets or sets status of message
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SenderPresenterBase.MessageStatusName">
+            <summary>
+            Gets text for field which show message status
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SenderPresenterBase.PhoneNumbers">
+            <summary>
+            Gets or sets comma-separated list of phone numbers specified by user
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SenderPresenterBase.Message">
+            <summary>
+            Gets or sets text of message
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SenderPresenterBase.IsValidPhoneNumbers">
+            <summary>
+            Gets or sets valid status for phone numbers field
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SenderPresenterBase.SendCommand">
+            <summary>
+            Gets or sets command for sending message
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SenderPresenterBase.NewCommand">
+            <summary>
+            Gets or sets command for prepare control for making new message
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Presenters.SpeechControlPresenter">
+            <summary>
+            Presenter for <see cref="T:ATT.Controls.SpeechControl"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SpeechControlPresenter.#ctor(ATT.Services.ISpeechService)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.Presenters.SpeechControlPresenter"/>
+            </summary>
+            <param name="serv">Speech service</param>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SpeechControlPresenter.Unload">
+            <summary>
+            Unload presenter. Release resources which was used in presenter
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SpeechControlPresenter.CanSendSpeech">
+            <summary>
+            Gets value can we send speech
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SpeechControlPresenter.SendSpeech">
+            <summary>
+            Gets or sets command for sending speech
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SpeechControlPresenter.File">
+            <summary>
+            Gets or sets attachment file
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SpeechControlPresenter.TranscriptedMessage">
+            <summary>
+            Gets transcripted text
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.SenderControlBase`1">
+            <summary>
+            Base class for sender controls like SmsControl, MmsControl, MmsCouponControl
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.ControlBase`1">
+            <summary>
+            Base class for all ATT controls.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ATT.Controls.ControlBase`1.#ctor" -->
+        <member name="P:ATT.Controls.ControlBase`1.EndPoint">
+            <summary>
+            Gets or sets EndPoint for ATT services.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.ControlBase`1.ApiKey">
+            <summary>
+            Gets or sets ApiKey for access to ATT services.  If you do not set an ApiKey, the software will default to the value set with the global static ATTSettings.ApiKey.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.ControlBase`1.SecretKey">
+            <summary>
+            Gets or sets SecretKey for access to ATT services.  If you do not set an ApiKey, the software will default to the value set with the global static ATTSettings.Secretkey.
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.SenderControlBase`1.PhoneNumberStyleProperty">
+            <summary>
+            Style for textBox with phone numbers.
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.SenderControlBase`1.TextStyleProperty">
+            <summary>
+            Style for textBox with MMS.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.SenderControlBase`1.PhoneNumberStyle">
+            <summary>
+            Gets or sets style for textBox with phone numbers.  The control will accept .NET standard styling options for a textBox.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.SenderControlBase`1.TextStyle">
+            <summary>
+            Gets or sets style for textBox with MMS.   The control will accept .NET standard styling options for a textBox.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.SenderControlBase`1.PhoneNumbers">
+            <summary>
+            Gets or sets comma-or-semicolon-separated list of phone numbers specified by the user.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.SenderControlBase`1.Message">
+            <summary>
+            Gets or sets the actual text-to-send for the message.  This is separate and distinct from the multimedia image for MMS messages.
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.ErrorToolTip">
+            <summary>
+            Control which showing error in tooltip
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.ErrorToolTip.ErrorMessageProperty">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.ErrorToolTip.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.ErrorToolTip"/>
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.ErrorToolTip.ErrorMessage">
+            <summary>
+            Gets or sets error message
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.SMSVotingChart">
+            <summary>
+            Represent chart for <see cref="T:ATT.Controls.SmsVotingControl"/>
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.SMSVotingChart.ItemsSourceProperty">
+            <summary>
+            Identifies the ItemsSource dependency property.
+            </summary>     
+        </member>
+        <member name="M:ATT.Controls.SMSVotingChart.OnItemsSourceChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            ItemsSourceProperty property changed callback.
+            </summary>
+            <param name="o">Series for which the ItemsSource changed.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:ATT.Controls.SMSVotingChart.OnItemsSourceChanged(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Called when the ItemsSource property changes.
+            </summary>
+            <param name="oldValue">Old value of the ItemsSource property.</param>
+            <param name="newValue">New value of the ItemsSource property.</param>
+        </member>
+        <member name="M:ATT.Controls.SMSVotingChart.BoundCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Handles events which are raised when the bound collection changes (i.e. items added/removed)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ATT.Controls.SMSVotingChart.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.SMSVotingChart"/>
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.SMSVotingChart.ItemsSource">
+            <summary>
+            Gets or sets a collection used to contain the data points of the Series.
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.TextBoxFormatValidationHandler">
+            <summary>
+            Validation handler class for TextBox
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxFormatValidationHandler.SplitPhoneNumbers(System.String)">
+            <summary>
+            Split string to list of phone numbers
+            </summary>
+            <param name="phoneNumbers">String to split</param>
+            <returns>Set of phone numbers</returns>
+        </member>
+        <member name="T:ATT.Controls.ValidTextBoxFormats">
+            <summary>
+            TextBox formats for validation
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.TextBoxValidationExtensions">
+            <summary>
+            Validation extension for TextBox
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.TextBoxValidationExtensions.FormatProperty">
+            <summary>
+            Format Attached Dependency Property
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.GetFormat(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Gets the Format property. This dependency property 
+            indicates the formats to validate for.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.SetFormat(Windows.UI.Xaml.DependencyObject,ATT.Controls.ValidTextBoxFormats)">
+            <summary>
+            Sets the Format property. This dependency property 
+            indicates the formats to validate for.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.OnFormatChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handles changes to the Format property.
+            </summary>
+            <param name="d">
+            The <see cref="T:Windows.UI.Xaml.DependencyObject"/> on which
+            the property has changed value.
+            </param>
+            <param name="e">
+            Event data that is issued by any event that
+            tracks changes to the effective value of this property.
+            </param>
+        </member>
+        <member name="F:ATT.Controls.TextBoxValidationExtensions.FormatValidationHandlerProperty">
+            <summary>
+            FormatValidationHandler Attached Dependency Property
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.GetFormatValidationHandler(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Gets the FormatValidationHandler property. This dependency property 
+            indicates the handler that checks the format in the TextBox.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.SetFormatValidationHandler(Windows.UI.Xaml.DependencyObject,ATT.Controls.TextBoxFormatValidationHandler)">
+            <summary>
+            Sets the FormatValidationHandler property. This dependency property 
+            indicates the handler that checks the format in the TextBox.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.OnFormatValidationHandlerChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handles changes to the FormatValidationHandler property.
+            </summary>
+            <param name="d">
+            The <see cref="T:Windows.UI.Xaml.DependencyObject"/> on which
+            the property has changed value.
+            </param>
+            <param name="e">
+            Event data that is issued by any event that
+            tracks changes to the effective value of this property.
+            </param>
+        </member>
+        <member name="F:ATT.Controls.TextBoxValidationExtensions.ValidBrushProperty">
+            <summary>
+            ValidBrush Attached Dependency Property
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.GetValidBrush(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Gets the ValidBrush property. This dependency property 
+            indicates the brush to use to highlight a successfully validated field.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.SetValidBrush(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.Media.Brush)">
+            <summary>
+            Sets the ValidBrush property. This dependency property 
+            indicates the brush to use to highlight a successfully validated field.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.OnValidBrushChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handles changes to the ValidBrush property.
+            </summary>
+            <param name="d">
+            The <see cref="T:Windows.UI.Xaml.DependencyObject"/> on which
+            the property has changed value.
+            </param>
+            <param name="e">
+            Event data that is issued by any event that
+            tracks changes to the effective value of this property.
+            </param>
+        </member>
+        <member name="F:ATT.Controls.TextBoxValidationExtensions.InvalidBrushProperty">
+            <summary>
+            InvalidBrush Attached Dependency Property
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.GetInvalidBrush(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Gets the InvalidBrush property. This dependency property 
+            indicates the brush to use to highlight a TextBox with invalid text.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.SetInvalidBrush(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.Media.Brush)">
+            <summary>
+            Sets the InvalidBrush property. This dependency property 
+            indicates the brush to use to highlight a TextBox with invalid text.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.OnInvalidBrushChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handles changes to the InvalidBrush property.
+            </summary>
+            <param name="d">
+            The <see cref="T:Windows.UI.Xaml.DependencyObject"/> on which
+            the property has changed value.
+            </param>
+            <param name="e">
+            Event data that is issued by any event that
+            tracks changes to the effective value of this property.
+            </param>
+        </member>
+        <member name="F:ATT.Controls.TextBoxValidationExtensions.IsValidProperty">
+            <summary>
+            IsValid Attached Dependency Property
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.GetIsValid(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Gets the IsValid property. This dependency property 
+            indicates the validation state.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.TextBoxValidationExtensions.SetIsValid(Windows.UI.Xaml.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the IsValid property. This dependency property 
+            indicates the validation state.
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Utility.CommandManager">
+            <summary>
+            The command manager
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Utility.CommandManager.InvalidateRequerySuggested">
+            <summary>
+            The invalidate requery suggested
+            </summary>
+        </member>
+        <member name="E:ATT.Controls.Utility.CommandManager.RequerySuggested">
+            <summary>
+            Requery suggested
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Utility.CommandManager.Current">
+            <summary>
+            Gets current <see cref="T:ATT.Controls.Utility.CommandManager"/>
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Utility.EmptyCollectionVisibilityConverter">
+            <summary>
+            Convert empty collection to collapse visibility
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Utility.EmptyCollectionVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Convert empty collection to Visibility.Collapsed
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns><see cref="T:Windows.UI.Xaml.Visibility"/></returns>
+        </member>
+        <member name="M:ATT.Controls.Utility.EmptyCollectionVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Convert back
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ATT.Controls.Utility.EmptyStringVisibilityConverter">
+            <summary>
+            Convert empty string to collapse visibility
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Utility.EmptyStringVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Convert empty string to Visibility.Collapsed
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns><see cref="T:Windows.UI.Xaml.Visibility"/></returns>
+        </member>
+        <member name="M:ATT.Controls.Utility.EmptyStringVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Convert back
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ATT.Controls.Utility.NullVisibilityConverter">
+            <summary>
+            Convert null to collapse visibility
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Utility.NullVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Convert null to Visibility.Collapsed
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns><see cref="T:Windows.UI.Xaml.Visibility"/></returns>
+        </member>
+        <member name="M:ATT.Controls.Utility.NullVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Convert back
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ATT.Controls.Utility.PathToImageSourceConverter">
+            <summary>
+            Convert path to image to <see cref="T:Windows.UI.Xaml.Media.ImageSource"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Utility.PathToImageSourceConverter.Convert(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Convert path to image to <see cref="T:Windows.UI.Xaml.Media.ImageSource"/> 
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ATT.Controls.Utility.PathToImageSourceConverter.ConvertBack(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Convert back
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ATT.Controls.Utility.RelayCommand.#ctor(System.Action{System.Object},System.Func{System.Boolean})">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.Utility.RelayCommand"/>
+            </summary>
+            <param name="execute">The execution logic</param>
+            <param name="canExecute">The execution status logic</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if the execute argument is null</exception>
+        </member>
+        <member name="M:ATT.Controls.Utility.RelayCommand.RaiseCanExecuteChanged">
+            <summary>
+            Raises the <see cref="E:ATT.Controls.Utility.RelayCommand.CanExecuteChanged"/> event.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Utility.RelayCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">
+            This parameter will always be ignored.
+            </param>
+            <returns>
+            true if this command can be executed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:ATT.Controls.Utility.RelayCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">
+            This parameter will always be ignored.
+            </param>
+        </member>
+        <member name="E:ATT.Controls.Utility.RelayCommand.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether the command should execute.
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.FileType">
+            <summary>
+            This is an enumeration that contains the file types supported by ATT controls.
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileType.Any">
+            <summary>
+            Any file type
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileType.Audio">
+            <summary>
+            Audio file type (e.g. “.mp3”, “.wav”).
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileType.Video">
+            <summary>
+            Video file type (e.g. “.wmv”, “.avi”).
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileType.Picture">
+            <summary>
+            Pircure file type (e.g. “.jpg”, “.png”).
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Presenters.SmsVotingControlPresenter">
+            <summary>
+            Presenter for <see cref="T:ATT.Controls.SmsVotingControl"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SmsVotingControlPresenter.#ctor(ATT.Services.ISmsVotingStorage,ATT.Services.ISmsService,System.String,System.Int32)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.Presenters.SmsVotingControlPresenter"/>
+            </summary>
+            <param name="smsVotingStorage">storage used to store incoming SMS messages</param>
+            <param name="smsService">SMS service implementation</param>
+            <param name="shortCode">short code to be used for getting incoming SMS messages</param>
+            <param name="smsPollInterval">intervall between SMS messages polling</param>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SmsVotingControlPresenter.Listen">
+            <summary>
+            Constantly gets inbount SMS messages from server stopping for configured interval of time
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SmsVotingControlPresenter.Unload">
+            <summary>
+            Unload presenter. Release resources which was used in presenter
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.SmsVotingControlPresenter.VotingResults">
+            <summary>
+            Gets or sets status of message
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Presenters.MmsControlPresenter">
+            <summary>
+            Presenter for <see cref="T:ATT.Controls.MmsControl"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsControlPresenter.#ctor(ATT.Services.IMmsService)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.Presenters.MmsControlPresenter"/>
+            </summary>
+            <param name="serv">MMS service</param>
+            <exception cref="T:System.ArgumentNullException">serv is null.</exception>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsControlPresenter.ClearControl">
+            <summary>
+            Clear all fields on control and reset some properties
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsControlPresenter.Send">
+            <summary>
+            Send message
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsControlPresenter.CreateMessageDeliveryListener">
+            <summary>
+            Create new <see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/>
+            </summary>
+            <returns><see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/></returns>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsControlPresenter.Unload">
+            <summary>
+            Unload presenter. Release resources which was used in presenter
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.MmsControlPresenter.AttachmentFiles">
+            <summary>
+            Gets or sets attachment files
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.MmsControlPresenter.MmsAttachSize">
+            <summary>
+             Gets or sets mms attach size in bytes
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.MmsControlPresenter.MaxMmsSize">
+            <summary>
+             Gets max mms size in bytes
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.MmsControlPresenter.NeedClearCommand">
+            <summary>
+            Gets or sets command for cleaning name and image
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Presenters.MmsCouponControlPresenter">
+            <summary>
+            Presenter for <see cref="T:ATT.Controls.MmsCouponControl"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsCouponControlPresenter.#ctor(ATT.Services.IMmsService)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.Presenters.MmsCouponControlPresenter"/>
+            </summary>
+            <param name="serv">MMS service</param>
+            <exception cref="T:System.ArgumentNullException">serv is null</exception>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsCouponControlPresenter.ClearControl">
+            <summary>
+            Clear all fields on control and reset some properties
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsCouponControlPresenter.Send">
+            <summary>
+            Send message
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsCouponControlPresenter.CreateMessageDeliveryListener">
+            <summary>
+            Create new <see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/>
+            </summary>
+            <returns><see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/></returns>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsCouponControlPresenter.Unload">
+            <summary>
+            Unload presenter. Release resources which was used in presenter
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.MmsCouponControlPresenter.File">
+            <summary>
+            Gets or sets attachment file
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.MmsCouponControlPresenter.MmsAttachSize">
+            <summary>
+             Gets or sets mms attach size in bytes
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.MmsCouponControlPresenter.MaxMmsSize">
+            <summary>
+             Gets max mms size in bytes
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.MmsCouponControlPresenter.NeedClearCommand">
+            <summary>
+            Gets or sets command for cleaning name and image
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.LocalFileMmsStorage">
+            <summary>
+            Class that can save and load mms into a local file 
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.LocalFileMmsStorage.GetMmsMessages(System.String)">
+            <summary>
+            Loads MMS messages collection from local storage.
+            </summary>
+            <param name="shortCode">A short code is an alternate phone number you can use instead of a phone number.  This way your computer can recieve messages as if it were a phone. Learn more about short codes, or get one, at developer.att.com.</param>
+            <returns>List of <see cref="T:ATT.Services.InboundMms"/> loaded MMS messages collection.</returns>
+        </member>
+        <member name="M:ATT.Controls.LocalFileMmsStorage.StoreMmsMessages(System.Collections.Generic.IEnumerable{ATT.Services.InboundMms},System.String)">
+            <summary>
+            Saves MMS into storage.
+            </summary>
+            <param name="mmsCollection">List of <see cref="T:ATT.Services.InboundMms"/> MMS.</param>.
+            <param name="shortCode">A short code is an alternate phone number you can use instead of a phone number.  This way your computer can recieve messages as if it were a phone. Learn more about short codes, or get one, at developer.att.com.</param>
+        </member>
+        <member name="T:ATT.Controls.Presenters.MmsGalleryControlPresenter">
+            <summary>
+            Presenter for <see cref="T:ATT.Controls.MmsGalleryControl"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsGalleryControlPresenter.#ctor(System.String,ATT.Services.IMmsStorage)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.Presenters.MmsGalleryControlPresenter"/>
+            </summary>
+            <param name="shortCode"></param>
+            <param name="mmsStorage"></param>
+        </member>
+        <member name="M:ATT.Controls.Presenters.MmsGalleryControlPresenter.Unload">
+            <summary>
+            Unload presenter. Release resources which was used in presenter
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.MmsGalleryControlPresenter.MmsCollection">
+            <summary>
+            Gets collection of MMS
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.MmsGalleryControlPresenter.UpdateMmsGalleryCommand">
+            <summary>
+            Gets or sets command for update MMS collection from storage
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.ExtendedTextBox">
+            <summary>
+            Extended TextBox (notified by CustomAction when text was changed)
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.ExtendedTextBox.CustomActionProperty">
+            <summary>
+            CustomAction
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.ExtendedTextBox.CustomAction">
+            <summary>
+            CustomAction
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Presenters.FileOpenPickerPreviewControlPresenter">
+            <summary>
+            Presenter for <see cref="T:ATT.Controls.FileOpenPickerPreviewControl"/>
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Presenters.FileOpenPickerPreviewControlPresenter.File">
+            <summary>
+            Gets or sets attachment file
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.MessageControl">
+            <summary>
+            Message control
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MessageControl.MessageTextStyleProperty">
+            <summary>
+            Style for textBox with message
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MessageControl.MaxMessageLengthProperty">
+            <summary>
+            Max message length
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MessageControl.CurrentAttachSizeProperty">
+            <summary>
+            Current message length
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MessageControl.TotalMessageLengthProperty">
+            <summary>
+            Current message length
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MessageControl.TextHeaderProperty">
+            <summary>
+            Text header field
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MessageControl.TextMessageProperty">
+            <summary>
+            Text message field
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MessageControl.MessageStatusProperty">
+            <summary>
+            Text status field
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MessageControl.ErrorMessageProperty">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.MessageControl.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.MessageControl"/>
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MessageControl.MessageTextStyle">
+            <summary>
+            Gets or sets style for textBox with message
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MessageControl.MaxMessageLength">
+            <summary>
+            Gets or sets max message length
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MessageControl.CurrentAttachSize">
+            <summary>
+            Gets or sets current message length
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MessageControl.TotalMessageLength">
+            <summary>
+            Gets or sets total message length
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MessageControl.TextHeader">
+            <summary>
+            Gets or sets text header field
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MessageControl.TextMessage">
+            <summary>
+            Gets or sets text message field
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MessageControl.MessageStatus">
+            <summary>
+            Gets or sets text status field
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MessageControl.ErrorMessage">
+            <summary>
+            Gets or sets error message
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MessageControl.UpdateBindedViewModelProperty">
+            <summary>
+            Update binded ViewModel property
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.FileOpenPickerPreviewControl">
+            <summary>
+            Control for select and preview files
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerPreviewControl.FileOpenButtonStyleProperty">
+            <summary>
+            Style for open file button
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerPreviewControl.FileOpenButtonTextProperty">
+            <summary>
+            Open file button text.
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerPreviewControl.FileProperty">
+            <summary>
+            Attachment file
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.FileOpenPickerPreviewControl.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.FileOpenPickerPreviewControl"/>
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerPreviewControl.Presenter">
+            <summary>
+            Presenter for <see cref="T:ATT.Controls.FileOpenPickerPreviewControl"/>
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerPreviewControl.FileOpenButtonStyle">
+            <summary>
+            Gets or sets style for open file buton
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerPreviewControl.FileOpenButtonText">
+            <summary>
+            Gets or sets open button text
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerPreviewControl.File">
+            <summary>
+            Gets or sets attachment file
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerPreviewControl.ClearCommand">
+            <summary>
+            Gets command for clear fields
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.MmsCouponControl">
+            <summary>
+            This control sends an MMS image with preview.  It's most common use is to send coupons to a group of customers. 
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MmsCouponControl.FileOpenButtonStyleProperty">
+            <summary>
+            Style for open file button.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.MmsCouponControl.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:ATT.Controls.MmsCouponControl"/>.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MmsCouponControl.FileOpenButtonStyle">
+            <summary>
+            Gets or sets style for open file button.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MmsCouponControl.File">
+            <summary>
+            Gets or sets attachment file.
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.FileOpenPickerControl">
+            <summary>
+            Control for select file
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.FileOpenCommandProperty">
+            <summary>
+            Command for showing openFileDialog
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.ClearCommandProperty">
+            <summary>
+            Command for clear fields
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.RemoveCommandProperty">
+            <summary>
+            Command for remove current file
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.FileOpenPathStyleProperty">
+            <summary>
+            Style for textBox with open file path
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.FileOpenButtonStyleProperty">
+            <summary>
+            Style for open file button
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.FileOpenButtonTextProperty">
+            <summary>
+            Open file button text.
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.FileTypeProperty">
+            <summary>
+            File type
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.FileProperty">
+            <summary>
+            Attachment file
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.FilesProperty">
+            <summary>
+            Attachment files
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.SelectMultipleFilesProperty">
+            <summary>
+            Select multiple files mode
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.CurrentFileProperty">
+            <summary>
+            Current selected Attachment file
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.ImagePreviewProperty">
+            <summary>
+            Image
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.FileOpenPickerControl.ErrorMessageProperty">
+            <summary>
+            Error text
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.FileOpenPickerControl.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.FileOpenPickerControl"/>
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.FileOpenCommand">
+            <summary>
+            Gets command for showing openFileDialog
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.ClearCommand">
+            <summary>
+            Gets command for clear fields
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.RemoveCommand">
+            <summary>
+            Gets command for remove selected file
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.FileOpenPathStyle">
+            <summary>
+            Gets or sets style for open file path textBox
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.FileOpenButtonStyle">
+            <summary>
+            Gets or sets style for open file buton
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.FileOpenButtonText">
+            <summary>
+            Gets or sets text for open button
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.FileType">
+            <summary>
+            Gets or sets type of files for openFileDialog
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.File">
+            <summary>
+            Gets or sets attachment file
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.Files">
+            <summary>
+            Gets or sets attachment files
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.FilesExt">
+            <summary>
+            Gets attachment files
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.SelectMultipleFiles">
+            <summary>
+            Gets or sets select multiple files mode
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.CurrentFile">
+            <summary>
+            Gets or sets current attachment file
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.ImagePreview">
+            <summary>
+            Gets or sets image
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.FileOpenPickerControl.ErrorMessage">
+            <summary>
+            Gets or sets error text
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.MmsGalleryControl">
+            <summary>
+            Control with gallery of MMS.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.MmsGalleryControl.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:ATT.Controls.MmsGalleryControl"/>.
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MmsGalleryControl.FileNameProperty">
+            <summary>
+            File name of mms gallery.
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MmsGalleryControl.MMSShortCodeProperty">
+            <summary>
+            MMS voting short code.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MmsGalleryControl.FileName">
+            <summary>
+            Gets or sets file name of mms gallery.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MmsGalleryControl.MMSShortCode">
+            <summary>
+            Gets or sets MMS voting short code.
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.MmsControl">
+            <summary>
+            Control for sending MMS Messages.
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.MmsControl.FileOpenButtonStyleProperty">
+            <summary>
+            Style for open file button.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.MmsControl.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.MmsControl"/>.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MmsControl.FileOpenButtonStyle">
+            <summary>
+            Gets or sets style for open file button.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.MmsControl.AttachmentFiles">
+            <summary>
+            Gets or sets attachment file.
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.PhoneNumbersControl">
+            <summary>
+            Phone numbers control
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.PhoneNumbersControl.PhoneNumberStyleProperty">
+            <summary>
+            Style for textBox with phone numbers
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.PhoneNumbersControl.TextPhoneNumberProperty">
+            <summary>
+            Text phone number field
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.PhoneNumbersControl.PhoneNumberLabelProperty">
+            <summary>
+            Text header field
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.PhoneNumbersControl.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.PhoneNumbersControl"/>
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.PhoneNumbersControl.PhoneNumberStyle">
+            <summary>
+            Gets or sets style for textBox with phone numbers
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.PhoneNumbersControl.PhoneNumberLabel">
+            <summary>
+            Gets or sets text header field
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.PhoneNumbersControl.TextPhoneNumber">
+            <summary>
+            Gets or sets text phone number field
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.PhoneNumbersControl.UpdateBindedViewModelProperty">
+            <summary>
+            Update binded ViewModel property
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.SmsControl">
+            <summary>
+            Use this control for sending SMS messages up to four kilobytes in length.
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.SmsControl.MaxSmsLengthProperty">
+            <summary>
+            The maxlength property, if not set explicitly, will be defined as 4096 bytes (4K).
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.SmsControl.#ctor">
+            <summary>
+            Constructor for the <see cref="T:ATT.Controls.SmsControl"/>.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:ATT.Controls.SmsControl.MaxSmsLength" -->
+        <member name="T:ATT.Controls.Presenters.SmsControlPresenter">
+            <summary>
+            Presenter for <see cref="T:ATT.Controls.SmsControl"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SmsControlPresenter.#ctor(ATT.Services.ISmsService)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.Presenters.SmsControlPresenter"/>
+            </summary>
+            <param name="serv">SMS service</param>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SmsControlPresenter.Send">
+            <summary>
+            Send message
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.SmsControlPresenter.CreateMessageDeliveryListener">
+            <summary>
+            Create new <see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/>
+            </summary>
+            <returns><see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/></returns>
+        </member>
+        <member name="T:ATT.Controls.SmsVotingControl">
+            <summary>
+            Control which represent voting statistics.
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.SmsVotingControl.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.SmsVotingControl"/>.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:ATT.Controls.SmsVotingControl.SmsVotingStorage" -->
+        <member name="P:ATT.Controls.SmsVotingControl.SmsShortCode">
+            <summary>
+            Gets or sets SMS voting short code - the number votes will "call" into in order to vote.
+            Learn more about short codes, and how to get them, at developer.att.com.
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.SpeechControl">
+            <summary>
+            The speech control takes in an audio file and transcribes it into text which you can copy/paste, save, and so on.
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.SpeechControl.FileOpenPathStyleProperty">
+            <summary>
+            Style for textBox with open file path
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.SpeechControl.FileOpenButtonStyleProperty">
+            <summary>
+            Style for open file button
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.SpeechControl.TranscriptedTextStyleProperty">
+            <summary>
+            Style for transcripted textBox
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.SpeechControl.TranscriptedTextProperty">
+            <summary>
+            Transcripted text
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.SpeechControl.FileOpenPathStyle">
+            <summary>
+            Gets or sets style for open file path textBox.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.SpeechControl.FileOpenButtonStyle">
+            <summary>
+            Gets or sets style for open file button.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.SpeechControl.TranscriptedTextStyle">
+            <summary>
+            Gets or sets style for the text received from the server.
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.SpeechControl.File">
+            <summary>
+            The actual file to attach, upload to server, and interpret.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:ATT.Controls.SpeechControl.TranscriptedMessage" -->
+        <member name="P:ATT.Controls.SpeechControl.ErrorMessage">
+            <summary>
+            If the service encounters and error (no internet connection, file too large, service is not available, etc) it will be displayed here. 
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.SpeechControl.IsNewMessageEnabled">
+            <summary>
+            Gets true if waiting input, otherwise returns false.
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Bar">
+            <summary>
+            Class represent Bar on <see cref="T:ATT.Controls.SMSVotingChart"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Bar.#ctor(System.String,System.Double)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.Bar"/>
+            </summary>
+            <param name="label">Label text</param>
+            <param name="value">Value</param>
+        </member>
+        <member name="P:ATT.Controls.Bar.Label">
+            <summary>
+            Gets or sets label text
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.Bar.Value">
+            <summary>
+            Gets or sets value
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Utility.ResourcesHelper">
+            <summary>
+            Class for working with resources
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Utility.ResourcesHelper.GetString(System.String,System.String,System.String)">
+            <summary>
+            Gets string resource from resource dictionary
+            </summary>
+            <param name="assembly">Name of ressource assembly</param>
+            <param name="path">Path to resource</param>
+            <param name="name">resource name</param>
+            <returns>resource value</returns>
+        </member>
+        <member name="M:ATT.Controls.Utility.ResourcesHelper.GetString(System.String)">
+            <summary>
+            Gets string resource from default resource dictionary
+            </summary>
+            <param name="name">Resource name</param>
+            <returns>Resource value</returns>
+            <exception cref="T:System.ArgumentNullException">name is null.</exception>
+        </member>
+        <member name="T:ATT.Controls.WapPushServiceControl">
+            <summary>
+            Control that allows a user to send a WAP Push message to a single mobile device
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.WapPushServiceControl.PhoneNumberStyleProperty">
+            <summary>
+            Style for textBox with phone numbers
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.WapPushServiceControl.UrlStyleProperty">
+            <summary>
+            Style for textBox with url
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.WapPushServiceControl.AlertTextStyleProperty">
+            <summary>
+            Style for textBox with alert
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.WapPushServiceControl.TextPhoneNumberProperty">
+            <summary>
+            Text phone number field
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.WapPushServiceControl.UrlProperty">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="F:ATT.Controls.WapPushServiceControl.AlertTextProperty">
+            <summary>
+            Alert text
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.WapPushServiceControl.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.WapPushServiceControl"/>
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.WapPushServiceControl.PhoneNumberStyle">
+            <summary>
+            Gets or sets style for textBox with phone numbers
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.WapPushServiceControl.UrlStyle">
+            <summary>
+            Gets or sets style for url textBox
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.WapPushServiceControl.AlertTextStyle">
+            <summary>
+            Gets or sets style for alert textBox
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.WapPushServiceControl.TextPhoneNumber">
+            <summary>
+            Gets or sets text phone number field
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.WapPushServiceControl.Url">
+            <summary>
+            Gets or sets URL
+            </summary>
+        </member>
+        <member name="P:ATT.Controls.WapPushServiceControl.AlertText">
+            <summary>
+            Gets or sets alert text
+            </summary>
+        </member>
+        <member name="T:ATT.Controls.Presenters.WapPushServiceControlPresenter">
+            <summary>
+            Presenter for <see cref="T:ATT.Controls.WapPushServiceControl"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.WapPushServiceControlPresenter.#ctor(ATT.Services.IWapPushService)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Controls.Presenters.WapPushServiceControlPresenter"/>
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.WapPushServiceControlPresenter.Send">
+            <summary>
+            Send message
+            </summary>
+        </member>
+        <member name="M:ATT.Controls.Presenters.WapPushServiceControlPresenter.CreateMessageDeliveryListener">
+            <summary>
+            Creates new <see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/>
+            </summary>
+            <returns>Instance of <see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/></returns>
+        </member>
+        <member name="P:ATT.Controls.Presenters.WapPushServiceControlPresenter.Url">
+            <summary>
+            Gets or sets Url to send wap push message to
+            </summary>
+        </member>
+    </members>
+</doc>

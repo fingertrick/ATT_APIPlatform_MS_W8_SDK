@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ATT-DPS-W8E1</Machine>
+    <WindowsUser>dpsadmin</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls.Tests\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls.Tests\bin\Debug\ATT.Controls.Tests.dll">
+      <PackagePath>ATT.Controls.Tests.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\ATT.Controls.dll">
+      <PackagePath>ATT.Controls.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls.Tests\bin\Debug\ATT.Controls.Tests.pdb">
+      <PackagePath>ATT.Controls.Tests.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\ATT.Controls.pdb">
+      <PackagePath>ATT.Controls.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\MSTestFramework\11.0\References\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.UnitTestFramework.dll">
+      <PackagePath>Microsoft.VisualStudio.TestPlatform.UnitTestFramework.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Services\bin\Debug\ATT.Services.dll">
+      <PackagePath>ATT.Services.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\ATT.Services.Impl.dll">
+      <PackagePath>ATT.Services.Impl.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\ATT.Utility.dll">
+      <PackagePath>ATT.Utility.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\ATT.WP8.SDK.dll">
+      <PackagePath>ATT.WP8.SDK.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Services.Mock\bin\Debug\ATT.Services.Mock.dll">
+      <PackagePath>ATT.Services.Mock.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Services\bin\Debug\ATT.Services.pdb">
+      <PackagePath>ATT.Services.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\ATT.Services.Impl.pdb">
+      <PackagePath>ATT.Services.Impl.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\ATT.Utility.pdb">
+      <PackagePath>ATT.Utility.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Services.Mock\bin\Debug\ATT.Services.Mock.pdb">
+      <PackagePath>ATT.Services.Mock.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\ATT.Controls.xml">
+      <PackagePath>ATT.Controls.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Services\bin\Debug\ATT.Services.xml">
+      <PackagePath>ATT.Services.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\ATT.Services.Impl.xml">
+      <PackagePath>ATT.Services.Impl.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\ATT.Utility.xml">
+      <PackagePath>ATT.Utility.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.Core.dll">
+      <PackagePath>Microsoft.VisualStudio.TestPlatform.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\MSTestFramework\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.Extensions.MSAppContainerAdapter.dll">
+      <PackagePath>Microsoft.VisualStudio.TestPlatform.Extensions.MSAppContainerAdapter.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll">
+      <PackagePath>Microsoft.VisualStudio.TestPlatform.ObjectModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll">
+      <PackagePath>Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.Utilities.dll">
+      <PackagePath>Microsoft.VisualStudio.TestPlatform.Utilities.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\vstest.executionengine.appcontainer.exe">
+      <PackagePath>vstest.executionengine.appcontainer.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\vstest.executionengine.appcontainer.x86.exe">
+      <PackagePath>vstest.executionengine.appcontainer.x86.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls.Tests\Images\UnitTestLogo.png">
+      <PackagePath>Images\UnitTestLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls.Tests\Images\UnitTestSmallLogo.png">
+      <PackagePath>Images\UnitTestSmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls.Tests\Images\UnitTestSplashScreen.png">
+      <PackagePath>Images\UnitTestSplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls.Tests\Images\UnitTestStoreLogo.png">
+      <PackagePath>Images\UnitTestStoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\Assets\delete_sign_black.png">
+      <PackagePath>ATT.Controls\Assets\delete_sign_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\Assets\delete_sign_white.png">
+      <PackagePath>ATT.Controls\Assets\delete_sign_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\SubControls\ErrorToolTip.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\SubControls\ErrorToolTip.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\SubControls\FileOpenPickerControl.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\SubControls\FileOpenPickerControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\MmsControl.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\MmsControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\MmsCouponControl.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\MmsCouponControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\SubControls\FileOpenPickerPreviewControl.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\SubControls\FileOpenPickerPreviewControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\SubControls\MessageControl.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\SubControls\MessageControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\SubControls\PhoneNumbersControl.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\SubControls\PhoneNumbersControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\SmsControl.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\SmsControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\SmsVotingControl.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\SmsVotingControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\SpeechControl.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\SpeechControl.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Controls\SubControls\SmsVotingChart.xaml">
+      <PackagePath>ATT.Controls\Themes\Controls\SubControls\SmsVotingChart.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Generic.xaml">
+      <PackagePath>ATT.Controls\Themes\Generic.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Styles\Default.xaml">
+      <PackagePath>ATT.Controls\Themes\Styles\Default.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Styles\DefaultDark.xaml">
+      <PackagePath>ATT.Controls\Themes\Styles\DefaultDark.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls\bin\Debug\Themes\Styles\DefaultLight.xaml">
+      <PackagePath>ATT.Controls\Themes\Styles\DefaultLight.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tmp\ATT.W8.SampleApp\ATT.Controls.Tests\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

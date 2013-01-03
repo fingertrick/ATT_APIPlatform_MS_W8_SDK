@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATT.Services.Impl</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "T:ATT.Services.AttApiService" -->
+        <!-- Badly formed XML comment ignored for member "M:ATT.Services.AttApiService.#ctor(System.String,System.String,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "P:ATT.Services.AttApiService.Settings" -->
+        <!-- Badly formed XML comment ignored for member "T:ATT.Services.Impl.AttMmsService" -->
+        <member name="M:ATT.Services.Impl.AttMmsService.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Services.Impl.AttMmsService"/>
+            </summary>
+            <param name="endPoint">Service endpoint.</param>
+            <param name="apiKey">API key.</param>
+            <param name="secretKey">Sekret key.</param>
+        </member>
+        <member name="M:ATT.Services.Impl.AttMmsService.Send(ATT.Services.MmsEntity)">
+            <summary>
+            Sends MMS message to multiple recipients
+            </summary>
+            <param name="mms">MMS message to be sent.</param>
+            <returns>Returns Task as a result of asynchronous operation. task result is <see cref="T:ATT.Services.MmsEntity"/> sended MMS.</returns>
+            <exception cref="T:System.ArgumentNullException">mms is null.</exception>
+        </member>
+        <member name="M:ATT.Services.Impl.AttMmsService.GetMmsStatus(System.String)">
+            <summary>
+            Gets sent MMS message delivery status.
+            </summary>
+            <param name="mmsId">Message identifier.</param>
+            <returns>Current message delivery status.</returns>
+            <exception cref="T:System.ArgumentNullException">mmsId is null.</exception>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:ATT.Services.Impl.AttSmsService" -->
+        <!-- Badly formed XML comment ignored for member "M:ATT.Services.Impl.AttSmsService.#ctor(System.String,System.String,System.String)" -->
+        <member name="M:ATT.Services.Impl.AttSmsService.Send(ATT.Services.SmsEntity)">
+            <summary>
+            Sends SMS message to multiple recipients
+            </summary>
+            <param name="sms">instance of <see cref="T:ATT.Services.SmsEntity"/> to send</param>
+            <param name="phoneNumbers">collection of <see cref="T:ATT.Services.PhoneNumber"/> representing reciepient phone numbers</param>
+            <returns>generated message id</returns>
+            <exception cref="T:System.ArgumentNullException">sms is null</exception>
+        </member>
+        <member name="M:ATT.Services.Impl.AttSmsService.GetSmsStatus(System.String)">
+            <summary>
+            Gets SMS delivery status
+            </summary>
+            <param name="smsId">Id of SMS sent</param>
+            <exception cref="T:System.ArgumentNullException">smsId is null</exception>
+        </member>
+        <member name="M:ATT.Services.Impl.AttSmsService.GetInboundSmsMessages(System.String)">
+            <summary>
+            Gets collection of inbound SMS messages sent to some short code
+            </summary>
+            <param name="shortCode">short code</param>
+            <exception cref="T:System.ArgumentNullException">shortCode is null</exception>
+        </member>
+        <member name="T:ATT.Services.Impl.AttSpeechService">
+            <summary>
+            ATT speech service implementation.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.AttSpeechService.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Create instance of <see cref="T:ATT.Services.Impl.AttSpeechService"/>
+            </summary>
+            <param name="endPoint">Service endpoint( servive address)</param>
+            <param name="apiKey">Api key for ATT REST services.</param>
+            <param name="secretKey">User secret key.</param>
+        </member>
+        <member name="M:ATT.Services.Impl.AttSpeechService.Send(Windows.Storage.StorageFile)">
+            <summary>
+            Sends audio file to Speech service API and retrives the recognition of call. 
+            </summary>
+            <param name="attachment">Audio file.</param>
+            <returns>Recognition of call.</returns>
+        </member>
+        <member name="T:ATT.Services.Impl.Delivery.MessageDeliveryListener">
+            <summary>
+            Handles message delivery status polling
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.Delivery.MessageDeliveryListener.#ctor(ATT.Services.SmsEntity,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Creates new instance of <see cref="T:ATT.Services.Impl.Delivery.MessageDeliveryListener"/>
+            </summary>
+            <param name="message">SMS message to be listened.</param>
+            <param name="pollPeriod">time interval bewtween delivery status polls</param>
+            <param name="timeout">if delivery status is not changed after this time interval then listener will stop polling</param>
+            <exception cref="T:System.ArgumentNullException">message is null or pollPeriod is null or timeout is null</exception>
+        </member>
+        <member name="M:ATT.Services.Impl.Delivery.MessageDeliveryListener.ListenForMessageDelivered">
+            <summary>
+            Starts listener by beginning to poll message delivery status.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.Delivery.MessageDeliveryListener.Stop">
+            <summary>
+            Stops listener.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.Delivery.MessageDeliveryListener.PollMessageStatus">
+            <summary>
+            Gets poll message status.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ATT.Services.Impl.Delivery.MessageDeliveryListener.Message">
+            <summary>
+            Gets message that is listened.
+            </summary>
+        </member>
+        <member name="T:ATT.Services.Impl.Delivery.MmsDeliveryListener">
+            <summary>
+            Handles MMS delivery listening
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.Delivery.MmsDeliveryListener.#ctor(ATT.Services.IMmsService,ATT.Services.SmsEntity,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Creates new instance of <see cref="T:ATT.Services.Impl.Delivery.MmsDeliveryListener"/>
+            </summary>
+            <param name="smsService">instance of <see cref="T:ATT.Services.ISmsService"/></param>
+            <param name="messageId">Id of a MMS message listen should check delivery status for</param>
+            <param name="pollPeriod">time interval bewtween delivery status polls</param>
+            <param name="timeout">if delivery status is not changed after this time interval then listener will stop polling</param>
+        </member>
+        <member name="T:ATT.Services.Impl.Delivery.SmsDeliveryListener">
+            <summary>
+            Handles SMS delivery listening
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.Delivery.SmsDeliveryListener.#ctor(ATT.Services.ISmsService,ATT.Services.SmsEntity,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Creates new instance of <see cref="T:ATT.Services.Impl.Delivery.SmsDeliveryListener"/>
+            </summary>
+            <param name="smsService">instance of <see cref="T:ATT.Services.ISmsService"/></param>
+            <param name="messageId">Id of a SMS message listen should check delivery status for</param>
+            <param name="pollPeriod">time interval bewtween delivery status polls</param>
+            <param name="timeout">if delivery status is not changed after this time interval then listener will stop polling</param>
+        </member>
+        <member name="T:ATT.Services.Impl.NotificationManager">
+            <summary>
+            Manager that manage listeners and wait return status
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.NotificationManager.AddListener(ATT.Services.Impl.Delivery.MessageDeliveryListener)">
+            <summary>
+            add listener for wait return status
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="P:ATT.Services.Impl.NotificationManager.Instance">
+            <summary>
+            Single instance of NotificationManager
+            </summary>
+        </member>
+        <member name="T:ATT.Services.Impl.NotificationService">
+            <summary>
+            show ToastNotification message status
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.NotificationService.ShowNotification(ATT.Services.SmsEntity,ATT.Services.MessageDeliveryStatus)">
+            <summary>
+            Show message notification
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:ATT.Services.Impl.PhoneNumberValidator">
+            <summary>
+            Validate phone number
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.PhoneNumberValidator.ValidatePhone(System.String)">
+            <summary>
+            Validate single phone number
+            </summary>
+            <param name="phoneNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ATT.Services.Impl.PhoneNumberValidator.ValidatePhone(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Validate collection of phone numbers
+            </summary>
+            <param name="phoneNumbers"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ATT.Services.Impl.SmsVotingFileStorage">
+            <summary>
+            Implementation of SMS Voting local file storage.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.#ctor(System.String,System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Services.Impl.SmsVotingFileStorage"/>.
+            </summary>
+            <param name="fileName">Physical file name.</param>
+            <param name="shortCode">SMS short code.</param>
+            <exception cref="T:System.ArgumentNullException">fileName is null or shortCode is null.</exception>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.OpenFileStorage">
+            <summary>
+            Opens file storage.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.GetStatistics">
+            <summary>
+            Gets SMS voting statistics from local file storage.
+            </summary>
+            <returns>SMS voting statistics.</returns>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.AddVote(System.String,System.Int32)">
+            <summary>
+            Adds voting results to the local file storage.
+            </summary>
+            <param name="msg">SMS message text.</param>
+            <param name="count">Count of votes.</param>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.AddVotes(System.Collections.Generic.IEnumerable{ATT.Services.InboundSms})">
+            <summary>
+            Adds voting results to the local file storage.
+            </summary>
+            <param name="messages">Set of <see cref="T:ATT.Services.InboundSms"/> voting SMS messages.</param>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.ClearStatistics">
+            <summary>
+            Clears voting statistics from local file storage.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.GetStatisticsAsync">
+            <summary>
+            Gets SMS voting statistics from local file storage.
+            </summary>
+            <returns>Returns Task as a result of asynchronous operation. Task result is SMS voting statistics.</returns>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.AddVoteAsync(System.String,System.Int32)">
+            <summary>
+            Adds voting results to the local file storage.
+            </summary>
+            <param name="msg">SMS message text.</param>
+            <param name="count">Count of votes.</param>
+            <returns>Returns Task as a result of asynchronous operation.</returns>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.IncreaseVoting(System.String,System.Int32)">
+            <summary>
+            Increase voting in xml storage
+            </summary>
+            <param name="voteKey">voting key</param>
+            <param name="count">voting coount</param>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.GetVotingElement(System.String)">
+            <summary>
+            Gets main voting element by short code from xml storage
+            </summary>
+            <param name="shortCode">short code</param>
+            <returns>Upper voting xml element</returns>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.AddVotesAsync(System.Collections.Generic.IEnumerable{ATT.Services.InboundSms})">
+            <summary>
+            Adds voting results to the local file storage.
+            </summary>
+            <param name="messages">Set of <see cref="T:ATT.Services.InboundSms"/> voting SMS messages.</param>
+            <returns>Returns Task as a result of asynchronous operation.</returns>
+        </member>
+        <member name="M:ATT.Services.Impl.SmsVotingFileStorage.ClearStatisticsAsync">
+            <summary>
+            Clears voting statistics from local file storage.
+            </summary>
+            <returns>Returns Task as a result of asynchronous operation.</returns>
+        </member>
+        <member name="T:ATT.Services.Impl.MessageStatusEventArgs">
+            <summary>
+            EventArgs for MessageStatus
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.MessageStatusEventArgs.#ctor(ATT.Services.MessageDeliveryStatus,ATT.Services.SmsEntity)">
+            <summary>
+            Creates instance of <see cref="T:ATT.Services.Impl.MessageStatusEventArgs"/>
+            </summary>
+            <param name="status"></param>
+            <param name="message"></param>
+        </member>
+        <member name="P:ATT.Services.Impl.MessageStatusEventArgs.MessageStatus">
+            <summary>
+            Gets or sets message status
+            </summary>
+        </member>
+        <member name="P:ATT.Services.Impl.MessageStatusEventArgs.Message">
+            <summary>
+            Gets or sets original message
+            </summary>
+        </member>
+        <member name="T:ATT.Services.Impl.WeakEventDispatcher`1">
+            <summary>
+            Listeners are registered with weak references to their instances. This allows listeners to get garbage collected 
+            if such listeners are not referenced anywhere else anymore. Invokers are pre compiled and cached.
+            This class is thread safe.
+            </summary>
+            <example>
+                public class Entity {
+                    private readonly WeakEventDispatcher&lt;<see cref="T:System.EventArgs">System.EventArgs</see>&gt; _changeNotificationDispatcher;
+            
+                    public event EventHandler&lt;<see cref="T:System.EventArgs">System.EventArgs</see>&gt; DataChanged {
+                        add { _changeNotificationDispatcher += value; }
+                        remove { _changeNotificationDispatcher -= value; }
+                    }
+            
+                    protected virtual void OnDataChanged(System.EventArgs e) {
+                         if(_changeNotificationDispatcher!= null)
+                            _changeNotificationDispatcher.Invoke(this, e);
+                    }
+                }
+            </example>
+            <typeparam name="TEventArgs">The type of the event args.</typeparam>
+        </member>
+        <member name="F:ATT.Services.Impl.WeakEventDispatcher`1._purgeExecuteThreshold">
+            <summary>
+            Threshold which determines after how many try purge calls a real purge (getting rid of garbage collected instance handlers) must be performed
+            </summary>
+        </member>
+        <member name="F:ATT.Services.Impl.WeakEventDispatcher`1._tryPurgeCounter">
+            <summary>
+            Counts TryPurge calls
+            </summary>
+        </member>
+        <member name="F:ATT.Services.Impl.WeakEventDispatcher`1._eventHandlers">
+            <summary>
+            The list of event handlers which need to be executed on each invoke
+            </summary>
+        </member>
+        <member name="F:ATT.Services.Impl.WeakEventDispatcher`1._handlerCtors">
+            <summary>
+            Cached invoker constructors 
+            </summary>
+        </member>
+        <member name="F:ATT.Services.Impl.WeakEventDispatcher`1._staticEventHandlers">
+            <summary>
+            Static event handlers are registered seperately. Such handlers are not bound to an instance en do not need to be purged.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.WeakEventDispatcher`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.Services.Impl.WeakEventDispatcher`1"/> class.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.WeakEventDispatcher`1.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.Services.Impl.WeakEventDispatcher`1"/> class.
+            </summary>
+            <param name="purgeExecuteThreshold">The purge execute threshold i.e threshold which determines after how many trypurge calls the real purge must be performed.</param>
+        </member>
+        <member name="M:ATT.Services.Impl.WeakEventDispatcher`1.op_Addition(ATT.Services.Impl.WeakEventDispatcher{`0},System.EventHandler{`0})">
+            <summary>
+            Implements the operator + (and +=). Use this operator to add a handler to the event dispatcher, 
+            even when the dispatcher is null (as Microsoft allows as well) since the dispatcher
+            is instantiated if it is null.
+            </summary>
+            <param name="dispatcher">The dispatcher.</param>
+            <param name="handler">The handler.</param>
+            <returns>
+            The result of the operator.
+            </returns>
+        </member>
+        <member name="M:ATT.Services.Impl.WeakEventDispatcher`1.op_Subtraction(ATT.Services.Impl.WeakEventDispatcher{`0},System.EventHandler{`0})">
+            <summary>
+            Implements the operator - (and -=) to remove a handler from the dispatcher.
+            </summary>
+            <param name="dispatcher">The dispatcher.</param>
+            <param name="handler">The handler.</param>
+            <returns>
+            The result of the operator.
+            </returns>
+        </member>
+        <member name="M:ATT.Services.Impl.WeakEventDispatcher`1.Invoke(System.Object,`0)">
+            <summary>
+            Invokes all registered handlers.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="!:TEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:ATT.Services.Impl.WeakEventDispatcher`1.Purge">
+            <summary>
+            Cleans up all garbage collected listener handlers.
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.WeakEventDispatcher`1.TryPurge">
+            <summary>
+            Tries to purge. It performs the purge only if it is needed again as configured by the _purgeExecuteThreshold.
+            TryPurge() is invoked on each AddHandler and Invoke. On RemoveHandler a purge is performed instantly.
+            </summary>
+        </member>
+        <member name="E:ATT.Services.Impl.WeakEventDispatcher`1.Event">
+            <summary>
+            Internal event representative.
+            </summary>
+        </member>
+        <member name="P:ATT.Services.Impl.WeakEventDispatcher`1.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:ATT.Services.Impl.WeakEventDispatcher`1"/> is enabled. If it is not enabled then
+            any invocation will never result into any handler execution.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:ATT.Services.Impl.WeakEventDispatcher`1.InstanceHandlerCount">
+            <summary>
+            Gets the number of registered instance handlers. 
+            Static handlers are not included.
+            </summary>
+        </member>
+        <member name="T:ATT.Services.Impl.WeakEventDispatcher`1.IHandlerInvoker">
+            <summary>
+            This interface is a generic handler invoker interface meant to represent a compiled specific handler invoker
+            </summary>
+        </member>
+        <member name="T:ATT.Services.Impl.WeakEventDispatcher`1.HandlerInvoker`1">
+            <summary>
+            Specific handler invoker (keeping a compiled invoker delegate inside) for any instance type and corresponding method
+            </summary>
+            <typeparam name="TInstance">The type of the corresponding instance.</typeparam>
+        </member>
+        <member name="T:ATT.Services.Impl.WeakEventDispatcher`1.HandlerBucket">
+            <summary>
+            Bucket for keeping an invoker and the corresponding weak referenced target together
+            </summary>
+        </member>
+        <member name="M:ATT.Services.Impl.WeakEventDispatcher`1.HandlerBucket.Invoke(System.Object,`0)">
+            <summary>
+            Invokes the included invoker if it is not garbage collected.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="!:TEventArgs"/> instance containing the event data.</param>
+        </member>
+    </members>
+</doc>

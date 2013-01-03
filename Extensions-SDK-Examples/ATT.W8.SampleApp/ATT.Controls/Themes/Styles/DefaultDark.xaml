@@ -1,0 +1,36 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ATT.Controls.Themes.Styles">
+    
+    <SolidColorBrush x:Key="DefaultBackground" Color="#555555" />
+    <SolidColorBrush x:Key="DefaultForeground" Color="#E8E8E8" />
+    <SolidColorBrush x:Key="DefaultControlDisable" Color="#888888" />
+    <SolidColorBrush x:Key="DefaultVotingGridBackground" Color="#FFB3B3B3" />
+    <SolidColorBrush x:Key="DefaultVotingGridMainColumn" Color="#FF343434" />
+    <SolidColorBrush x:Key="DefaultVotingGridOppositeColumn" Color="#FF6C6C6C" />       
+    <SolidColorBrush x:Key="DefaultChartForegroundBrush" Color="#FFffffff" />
+    <SolidColorBrush x:Key="DefaultListViewElementBorderBrush" Color="#F1F1F1" />
+
+	<x:String x:Key="ImageBucketPath">/ATT.Controls/Assets/delete_sign_white.png</x:String>
+
+	<Style x:Key="textBlockHeader" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="#C0C0C0" />
+    </Style>
+    
+    <Style x:Key="buttonPush" TargetType="Button">
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Background" Value="#555555" />
+        <Setter Property="Foreground" Value="#FFFFFF" />
+    </Style>
+
+    <Style x:Key="ErrorToolTipStyle" TargetType="ToolTip">
+        <Setter Property="Background" Value="#1D1D1D" />
+        <Setter Property="Foreground" Value="#D95A00" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="9" />
+    </Style>
+
+</ResourceDictionary>

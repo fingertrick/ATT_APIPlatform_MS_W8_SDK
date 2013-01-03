@@ -1,0 +1,14 @@
+Assets\Logo.png
+Assets\SmallLogo.png
+Assets\SplashScreen.png
+Assets\StoreLogo.png
+App.xaml
+Common\StandardStyles.xaml
+CopyRightControl.xaml
+MainPage.xaml
+MmsControlPage.xaml
+MmsCouponControlPage.xaml
+SmsControlPage.xaml
+SmsVotingControlPage.xaml
+SpeechControlPage.xaml
+Common\ReadMe.txt

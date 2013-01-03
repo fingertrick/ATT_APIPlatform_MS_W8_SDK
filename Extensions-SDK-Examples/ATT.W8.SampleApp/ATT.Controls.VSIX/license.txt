@@ -1,0 +1,516 @@
+AT&T API Agreement
+
+
+PLEASE READ THE FOLLOWING TERMS AND CONDITIONS CAREFULLY. THESE TERMS AND CONDITIONS CONSTITUTE A LEGAL AGREEMENT BETWEEN YOU ("YOU") AND AT&T MOBILITY LLC, ON BEHALF OF ITSELF AND ITS AFFILIATES (COLLECTIVELY "AT&T").
+AT&T Master License Agreement
+
+THIS AT&T MASTER LICENSE AGREEMENT (this "Agreement" or "Master License Agreement") is entered into as of the date you click to Review and Acknowledge the terms hereof.
+
+WHEREAS, AT&T is willing to grant You a limited license to use the Service Materials (defined below) to develop and test Your Applications on the terms and conditions set forth in this Agreement.
+
+NOW THEREFORE, in consideration of the foregoing and the agreements set forth below, the Parties agree as follows:
+
+1.	ACCEPTANCE AND CHANGES.
+1.1	Acceptance. In order to use the Service Materials, You must first agree to this Agreement. If You do not or cannot agree to this Agreement, You are not permitted to use the Service Materials or related services and should not download or use them. You accept and agree to the terms of this Agreement on Your own behalf and/or on behalf of Your company, organization or educational institution as Your authorized legal representative, by doing either of the following: (a) checking the box displayed at the end of this Agreement if You are reading this on an AT&T website; or (b) clicking an "Agree" or similar button, where this option is provided by AT&T.
+
+1.2	Changes. AT&T may change the terms of this Agreement at any time on a going forward basis upon written notice. Notice may be given to You by changing the applicable terms, guidelines, documentation, or other material posted on the Developer Site, by email, or by other means. New or modified terms will not apply retroactively to Applications already in distribution. You are not required to accept such changes, but Your continued performance under this Agreement, or use of the Service Materials or any other benefit under this Agreement, will constitute acceptance and AT&T will rely on that acceptance.
+
+2.	DEFINITIONS
+"API" means the application programming interfaces included in particular Service Materials, which APIs are identified in each Service Attachment.
+
+"Application" means software applications, games or content developed by You for use with an AT&T Service.
+
+"AT&T" means AT&T Mobility LLC. AT&T Inc. is not a party to this Agreement.
+
+"AT&T Service" means the wireless telecommunications and data services delivered over AT&T's wireless data network.
+
+"AT&T User Data" means all information collected by AT&T from End Users, provided by AT&T to You concerning End Users through use of the API or the AT&T Service (including, if applicable, the Mobile Identification Number (MIN) issued by AT&T to identify an End User and the Network Access Identifier (NAI)) or collected by AT&T in connection with the API.
+
+"Component" means any one of the APIs, system files, software tools or other elements identified in a particular Service Attachment.
+
+"Developer Site" means the AT&T website for use by Application developers, located at http:://developer.att.com or such other site as to which AT&T may notify You in writing from time-to-time.
+
+"Documentation" means all documents, notes and drawings provided with the Service Materials.
+
+"End User" means any user of the AT&T Service.
+
+"FOSS" (Free and Open Source Software) means any software that is subject to terms that, as a condition of use, copying, modification or redistribution, require such software and/or derivative works thereof to be disclosed or distributed in source code form, to be licensed for the purpose of making derivative works, or to be redistributed free of charge, including without limitation software distributed under the GNU General Public License or GNU Lesser/Library GPL.
+
+"Intellectual Property Right" means any patent, registered design, copyright, design right, topography right, trade mark, service mark, application to register any such rights, rights in the nature of any of the aforementioned rights, trade secrets, rights in unpatented know-how, right of confidence and any other intellectual or industrial property rights of any kind whatsoever in any part of the world.
+
+"Service Attachment" means each attachment to this Agreement. Each "Service Attachment" identifies the Components available for use for the development of Applications that will integrate with a particular feature or service of an AT&T Service and the terms and conditions that are applicable to use of such Components. By executing this Agreement You agree to be bound by the terms and conditions applicable to such Component.
+
+"Service Materials" means the collection of Components associated with a particular Service Attachment.
+
+"Unsuitable Content" means content that (a) is harassing, defamatory, libelous, abusive, threatening, or obscene, including material that is false, misleading or inaccurate; (b) violates the rights of any person or company protected by copyright, trade secret patent or other similar laws or regulations relating to Intellectual Property Rights; (c) You know or should have a reasonable basis to know, is derived from services or sites that permit illegal peer-to-peer sharing of copyrighted content; (d) disparages AT&T in any way; (e) except with AT&T's prior written consent, is sexually explicit, or relates to tobacco, alcohol or gambling; (f) constitutes unsolicited material, including without limitation "junk mail" or "unsolicited bulk e-mail or texts" or other advertising material or communications to persons or entities that have not specifically agreed to receive such material; or (g) introduces malicious programs into End Users' equipment or the AT&T network including, but not limited to: viruses, worms, Trojan horses, e-mail bombs, cancelbots or other computer programming routines that are intended to damage, interfere with, intercept or expropriate any system, data or personal information, including executing any form of network monitoring that will intercept data not expressly approved for use.
+
+3.	LICENSES AND OBLIGATIONS. 
+3.1	Grant by AT&T. Subject to Your compliance with all terms of this Agreement, AT&T hereby grants to You, and You hereby accept, a limited, revocable, non-exclusive, non-transferable, non-assignable, and non-sublicensable license for the term of the Agreement to use the Service Materials and the applicable Documentation solely for the following purposes: (i) to develop and test Application(s); (ii) to distribute Application(s) to third parties in binary (object) code only, but solely as such code is included in the Application(s) as the result of the proper use of the Components and associated Documentation that are included in particular Service Materials in accordance with the terms of this Agreement; and (iii) to make one (1) copy of Service Materials and Documentation solely for archival and backup purposes in accordance with the terms and conditions of this Agreement.
+
+3.2	Ownership. AT&T shall retain all Intellectual Property Rights in and to the Service Materials and the Documentation, and all portions and components thereof. You shall not acquire any rights in or to the Service Materials or the Documentation other than those expressly specified in this Agreement. You acknowledge that the Service Materials contain proprietary information and trade secrets of AT&T and Your licensors, if any, whether or not any portion thereof is or may be the subject of a valid copyright or patent.
+
+3.3	Your Obligations. Except as otherwise expressly provided herein, You shall (a) be responsible for all technical support of Your customers; (b) immediately inform AT&T when You become aware of any complaints or problems encountered with Your use of the Service Materials or Documentation and any resolutions of such complaints and problems; (c) immediately notify AT&T upon learning of any unauthorized use of the Service Materials, Documentation or any portions thereof; (d) supervise and control the use of the Service Materials and Documentation by Your employees to ensure that it takes place in accordance with the terms of this Agreement; (e) take all steps necessary to ensure that no person or entity will have unauthorized access to the Service Materials or Documentation; and (f) comply with all applicable laws and regulations, and standards of industry or professional conduct, including, without limitation, those applicable to service claims, labeling, approvals, registrations and notifications.
+
+3.4	Training, Installation & Consulting: No training, installation or consulting is included in this Agreement. In the event any of such services are requested by You and if AT&T agrees to provide such services, the parties shall enter into AT&T's standard agreement for such services and You shall pay AT&T's then-current standard fees for such services.
+
+4.	RESTRICTIONS ON USE
+(a)	Use of Components that are licensed under a FOSS license are governed solely by the terms of that FOSS license. You agree not to use or combine the Service Materials and Documentation or any Applications developed by You in any manner that would cause the Service Materials and Documentation, in whole or in part, to become subject to any of the terms of an open source license.
+
+(b)	AT&T may extend, enhance, or otherwise modify the Service Materials at any time without notice. AT&T is not obligated to provide You with any updates to the Service Materials. If AT&T makes updates to the Service Materials, the terms of this Agreement will govern them, unless the update is accompanied by a separate license. AT&T has no express or implied obligation to announce or make available any updates to the Service Materials to anyone in the future. Should an update be made available, it may have features, services or functionality that are different from those offered under this Agreement and may be incompatible with Applications developed on previous versions of the Service Materials.
+
+(c)	You may not (1) modify, adapt or translate any of the Components, (2) reverse engineer, reverse compile or disassemble any of the Components, (3) use the Components in any way that will (or will attempt to) (i) intentionally or willfully infringe on any AT&T or third party Intellectual Property Rights, (ii) interfere with the use of AT&T's network or systems, or the network of any other provider, (iii) interfere with the use or enjoyment of services received by others, (iv) result in the publication of threatening or Unsuitable Content, or constitute spam, or (v) violate an Application user's privacy, the security of AT&T's (or another party's) servers, network, network access, personal computer or control devices, software or data, or other system , (4) rent, lease, redistribute, resell or display any of the Components, (5) circumvent, disable or tamper with any security-related components or other protective measures applicable to the Components or (6) reproduce, archive, retransmit, distribute, disseminate, sell, lease, rent, exchange, modify, broadcast, synchronize, publicly perform, publish, publicly display, make available to third parties, transfer or circulate the Components except as otherwise allowed under Section 3.
+
+(d)	Your use of the Components must comply with this Agreement and, to the extent applicable, AT&T's Acceptable Use Policy www.att.com/aup.
+
+(e)	You may only access the Components through the token key issued to You. You may not provide your token key to any other person or party without AT&T's written permission. AT&T reserves the right to revoke Your token key at any time, validate Your IP and/or domain address, and to block requests that AT&T deems in Your sole discretion to be malicious or abusive.
+
+(f) You shall not use any API with any Application to operate dangerous facilities, life support, or other mission critical applications where human life or property may be at stake. You understand that the API's are not designed for such purposes and that Your failure in such cases could lead to death, personal injury, or severe property or environmental damage for which AT&T is not responsible.
+
+(g)	 The number of calls you will be permitted to make during any given period through an API ("Calls") may be limited. AT&T will determine on various factors, including the ways Your Application may be used or the anticipated volume of use associated with Your Application. The amount of the rate limit may change from time to time in AT&T's sole discretion. You understand and agree that programmatic methods intended to subvert rate limiting are considered violations of these terms. Calls may be subject to AT&T's controls concerning the maximum number of Calls that You can send during a period of time ("Throughput"). Throughput is measured in Transactions per Second (TPS) such that each Call typically constitutes a transaction and AT&T reserves the right to limit TPS. You must comply with the API's in handling temporary or permanent errors in connection with flow-control and message re-tries. In order to be able to transmit Calls, You may not have more unacknowledged Calls in the queue for transmission than designated in writing by AT&T. The Calls in the queue for transmission must be acknowledged before additional Calls will be sent. You may not use any API in a manner that exceeds a reasonable request volume, or constitutes excessive or abusive usage. AT&T may use technical measures to prevent over usage and/or stop usage after any usage limitations are exceeded.
+
+(h)	 You will report to AT&T within 24 hours any security deficiencies in or intrusions to Your systems that You discover where the API or End User data ("Security Information") have been acquired by an unauthorized person ("Security Breach"). Such reports must be delivered to developer.program@att.com. You will work with AT&T to correct any Security Breach immediately, and will disconnect immediately any intrusions or intruder. In the event of such a Security Breach (or where AT&T reasonably believes that the API's or the Security Information has been compromised), AT&T may suspend or terminate Your access to the API. You agree to adhere at all time to best security practices within the industry. Upon good cause, AT&T will have the right, at Your own expense, to review, or to have an independent third party that is not Your competitor, inspect and review Your security procedures. You will (at Your own expense) correct any security flaws detected by such a review as soon as possible. You will then promptly certify to AT&T in writing that the security flaw has been corrected, along with a description of the corrective action(s) taken. AT&T will give You 72 hours notice before conducting such a review, and may conduct no more than four reviews annually. Any such review will be conducted during regular business hours in such a manner as not to interfere with normal business activities. If a review reveals a material breach of security provisions, You will reimburse AT&T for the reasonable costs of the review.
+
+(i) You may use AT&T User Data only to perform your obligations under this Agreement. You will not use any AT&T User Data for direct marketing or promotions to AT&T customers. You will not distribute AT&T User Data to any third party without the prior written approval of AT&T.
+
+(j) You agree that AT&T may audit Your Application or activities relating to the use of the Service Materials. You will not seek to block or otherwise interfere with the monitoring or audit.
+
+5.	FEES. Unless otherwise provided in a Service Attachment, there are no license fees for the licenses granted herein.
+
+6. APPLICATIONS
+(a)	Your Applications must comply with all applicable laws and regulations and You must ensure that the privacy and legal rights of users of Your Application are protected. At a minimum, if Your Applications access or uses a user's personal information, You must make the user is aware that the information will be available to You, Your Application, and any other entity that may receive such information. Furthermore, You must provide and prominently display to users a commercially reasonable privacy policy outlining Your uses of customer information and the protections for those users. If Your Application stores personal or sensitive information provided by users, it must do so securely.
+
+(b)	You may not use the Service Materials to write or distribute any Application that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of AT&T or any third party including, but not limited to, any mobile communications carrier. You may not use any Component to create an Application or other program that would disable, hack or otherwise interfere with any security, digital rights management, digital signing, verification or authentication mechanisms implemented by or for AT&T, a user, or a third party, nor can You enable others to do so.
+
+(c)	You bear sole responsibility for any claims, liabilities, losses, damages and costs arising from Your use of the Components or Your Application, and any equipment, Internet services, and other hardware, software and services used by You.
+
+7.	DISCLAIMER OF WARRANTY. THE SERVICE MATERIALS AND EACH OF THE COMPONENTS IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTY OF ANY KIND, INCLUDING WITHOUT LIMITATION THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SERVICE MATERIALS AND EACH OF THE COMPONENTS IS BORNE BY YOU. SHOULD THE SERVICE MATERIALS OR ANY OF THE COMPONENTS PROVE DEFECTIVE OR INACCURATE, AS THE CASE MAY BE, YOU (AND NOT AT&T OR ITS AFFILIATES OR SUPPLIERS) ASSUME THE ENTIRE COST OF ANY SERVICE AND REPAIR. IN ADDITION, THE SECURITY MECHANISMS, IF ANY, IMPLEMENTED BY THE COMPONENTS HAVE INHERENT LIMITATIONS AND YOU MUST DETERMINE THAT EACH OF THE COMPONENTS SUFFICIENTLY MEETS YOUR REQUIREMENTS. YOUR USE OF THE SERVICE MATERIALS AND ANY COMPONENTS DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SERVICE MATERIALS IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM, NETWORK OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS AGREEMENT.
+
+8.	PROPRIETARY RIGHTS. Title, ownership rights, and Intellectual Property Rights in the Service Materials and each of the Components remain in AT&T and/or Your suppliers. The Service Materials and the Components are protected by the intellectual property laws of the United States. Title and related rights in the content accessed through the Components is the property of the applicable content owner and may be protected by applicable law. This license gives You no rights to such content. This license does not grant You any right to any enhancement or update to, or support or telephone assistance with respect to, the Service Materials or any of the Components.
+
+9. THIRD PARTY SERVICE PROVIDERS. You are permitted to employ or retain a third party ("Service Provider") to assist You in delivery of content, functionality, services or subscriptions through Your Applications including, but not limited to, engaging any such Service Provider to maintain and administer Your Applications' servers on Your behalf, provided any such Service Provider's access to and use of the API's (and, if applicable the AT&T Billing System), is only done on Your behalf in providing such services to You for Your Application and in accordance with these terms, and is subject to a binding written agreement between You and the Service Provider with terms at least as restrictive and protective of AT&T as those set forth herein. Any actions undertaken by any such Service Provider in relation to Your Application (including, if applicable, Your use of the AT&T Billing System) and/or arising out of this Agreement will be deemed to have been taken by You, and You (in addition to the Service Provider) will be responsible to AT&T for all such actions (or any inactions), including but not limited to indemnifying AT&T against any harm caused by the Service Provider acting on Your behalf. In the event of any actions or inactions that would constitute a violation of this Agreement or otherwise cause any harm, AT&T reserves the right to require You to change Service Providers.
+
+10.	TERMINATION. AT&T may at any time terminate this Agreement with You or disable Your access to an API or the AT&T Service if: (a) You breach any provision of this Agreement; (b) AT&T is required to do so by law; or (c) a third party with whom AT&T offers certain Components to You has terminated Your relationship with AT&T or ceased to offer those Components, or (d) AT&T decides no longer to provide the Service Materials or certain Components of the Service Materials to You. Upon such termination, provisions hereof which by their nature or express terms survive termination will continue indefinitely. If you want to terminate this Agreement, you may do so by ceasing your use of the Service Materials and any Components. Upon termination or expiration of this Agreement for any reason, You will be responsible for notifying End Users of any effect of such termination or expiration on Applications in the possession of End Users and for handling End User complaints and inquiries.
+
+11.	EXPORT CONTROLS. You may not download or otherwise export or re-export the Components or any underlying information or technology except in full compliance with all United States export control laws and other applicable laws and regulations.
+
+12.	LIMITATION OF LIABILITY. UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, TORT, CONTRACT, OR OTHERWISE, SHALL AT&T, ITS AFFILITES, SUPPLIERS OR RESELLERS BE LIABLE TO YOU OR ANY OTHER PERSON FOR ANY DAMAGES WHATSOEVER, WHETHER DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER COMMERCIAL DAMAGES OR LOSSES, EVEN IF AT&T WAS INFORMED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+13.	INFRINGEMENT AND INDEMNIFICATION
+(a)	You may not assert against AT&T or any of its affiliates or authorized representatives, and hereby waive, any claim for infringement or misappropriation of any rights protectable under intellectual property law anywhere in the world, including rights under patent, copyright, trade secret or trademark law, related in any way to the Service Materials or the Components.
+
+(b)	To the maximum extent permitted by law, You will defend, indemnify and hold harmless AT&T, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys' fees) arising out of or accruing from (1) Your use of the Service Materials, (2) any claim that Your Application (whether alone or in combination with any software, services (including, without limitation, wireless services), products, materials, content, or information (regardless of the provider of any of the foregoing)) violates, infringes or misappropriates any third party Intellectual Property Rights or rights in privacy or publicity, or (3) any non-compliance by You with this Agreement.
+
+14.	CONFIDENTIALITY You agree that information AT&T discloses or makes available to You under this Agreement, including but not limited to the Components, the Documentation, and any other materials or content of any Service Materials (collectively, "Information") is confidential and proprietary. You must hold such Information in confidence, restrict disclosure solely to Your employees with a need to know, and advise those persons of their obligations hereunder. You must assure that such persons are bound by obligations of confidentiality no less stringent than those imposed in this Agreement. You will not disclose to AT&T any information that You regard as proprietary. You warrant that all information disclosed to AT&T by You is or will be free of any obligation of confidence. AT&T works with many Application and software developers and some of their products may be similar to or compete with Your Applications. AT&T may also be developing its own similar or competing Applications and products or may decide to do so in the future. To avoid potential misunderstandings, AT&T cannot agree, and expressly disclaims, any confidentiality obligations or use restrictions, express or implied, with respect to any information that You may provide in connection with this Agreement, including information about Your Application. AT&T will be free to use and disclose any such disclosures on an unrestricted basis without notifying or compensating You.
+
+15.	EQUITABLE REMEDIES. Developer and AT&T agree that any breach of this Agreement would cause irreparable injury to AT&T for which no adequate remedy at law exists; therefore, the Parties agree that equitable remedies, including without limitation injunctive relief and specific performance, are appropriate remedies to redress any breach or threatened breach of this Agreement, in addition to all other available remedies.
+
+16.	MISCELLANEOUS. This Agreement represents the complete agreement concerning this license and may be amended only by a writing accepted by both parties. This Agreement supersedes any prior written or oral agreement between the Parties concerning the subject matter hereof. This Agreement is personal to You and You agree not to assign Your rights herein, and any attempted assignment by You will be null and void. If any provision of this Agreement is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable. This Agreement shall be governed by the laws of the State of New York, except conflict of law rules. The United Nations Convention on the International Sale of Goods shall not apply to this Agreement. Suit to enforce this Agreement or any provision thereof will be brought exclusively in the state or federal courts located in New York, NY, except for claims seeking injunctive or other equitable relief, which may be sought in any court of competent jurisdiction. You may not make any public statement regarding this Agreement, the terms of this Agreement, or any specific aspect thereof without AT&T's prior written approval, which may be withheld in AT&T's sole discretion. In order to preserve the value of AT&T's name and/or any trademarks, service marks, trade names, or trade dress adopted and/or used by AT&T from time to time, You may not make any use of any of the same for any reason except solely as may be expressly authorized in writing by AT&T.
+
+[END OF BODY OF AGREEMENT. ATTACHMENTS AND ELECTRONIC SIGNATURE PROCESS FOLLOW]
+
+APPLICATION BILLING
+
+ATTACHMENT A-1 TO MASTER LICENSE AGREEMENT
+
+1.	Incorporation into AT&T Master License Agreement.
+This Service Attachment ("Application Billing Attachment") forms part of the Master License Agreement between You and AT&T. By downloading or using any Application Billing Component, You agree to the terms and conditions set forth below. Your rights under this Application Billing Attachment are subject to the conditions set forth in the Master License Agreement and will terminate upon the termination of the Master License Agreement. Capitalized terms used in this Application Billing Attachment have the meanings given to them in the Master License Agreement unless otherwise defined.
+
+2.	Applicable AT&T Services and Components. This Application Billing Attachment governs your access to and use of the Application Billing Components ("Application Billing Components").
+
+3.	Additional Terms of Conditions of Use. 
+3.1	Definitions. The following additional definitions are used in this Application Billing Attachment:
+"Application Billing" means the permitted use of the AT&T Billing System whether on a single-pay or subscription basis.
+
+"AT&T Billing System" means the billing, remittance and reporting system offered by AT&T's billing vendor and used for Application Billing.
+
+3.2 APIs. In order to provide Application Billing through the AT&T Service, You must meet the requirements set forth in the In the App Billing Components, which may be updated by AT&T from time-to-time. You must promptly comply with such update.
+
+3.3	Application Billing Requirements
+
+3.3.1	Use of Application Billing.
+(a) You may use Application Billing only to purchase premium Applications and to enable End Users to purchase content, functionality, or services that You make available for use within Your Application (e.g. digital books, additional game levels). You may not use Application Billing for the purchase of physical goods. Except with AT&T's prior written consent, International Developers (defined in Section 3.3.6, below) may not use Application Billing for the purchase of music, videos or movies outside of an Application (but it may be used for the purchase of music or movies through Your Application). Pricing for items included in Application Billing will be at Your sole discretion, subject to any purchase limits or caps imposed by AT&T or any minimum price thresholds (i.e., minimum price points to ensure that the cost of billing and collections does not exceed revenues). You agree that You may not charge End Users any finance, service or similar surcharges for use of the AT&T Billing System. For example, where an End User has the option to pay $10.00 for 1000 game points using a credit card, the End User is also provided the option to pay $10.00 for 1000 game points using the AT&T Billing System.
+
+3.3.2	Your Responsibilities.
+(a) You are responsible for developing the user interface Your Application will display to End Users for purchases made through Application Billing. You may not misrepresent, falsely claim, mislead or engage in any unfair or deceptive acts or practices regarding the promotion and sale of items through Your use of Application Billing. You must comply with all applicable laws and regulations, including those in any jurisdictions in which You make content, functionality, services or subscriptions available through the use of Application Billing, including but not limited to consumer laws and export regulations. You represent, warrant and covenant that each item You submit through Application Billing for billing to an End User is accurate and represents a transaction ordered by the End User. You may not use include, or bill for, Unsuitable Content through Application Billing.
+(b) You are responsible for providing items purchased through Application Billing to End Users in a timely manner (i.e., promptly after the purchase transaction) and for complying with all applicable laws in connection therewith, including but not limited to, laws, rules and regulations related to cancellation or delivery of ordered items. You are responsible for maintaining Your own records for all such transactions.
+(c) You may not issue any refunds to End Users of Your Application.
+
+3.3.3	Your Acknowledgements. You acknowledge and agree that:
+(a) AT&T provides the AT&T Billing System to You for Your use with Application Billing, and AT&T is not responsible for providing or unlocking any content, functionality, services or subscriptions that an End User purchases through Your use of the AT&T Billing System. You acknowledge and agree that any such items are made available by You, not AT&T, to the End User of Your Application, and You are solely liable and responsible for purchased items and for any such use of the AT&T Billing System in Your Application.
+(b) AT&T makes no guarantees to You in relation to the availability, accuracy or uptime of the AT&T Billing System or any other services that AT&T may provide to You in connection therewith.
+
+3.3.4	Additional Liability Disclaimer. AT&T WILL NOT BE LIABLE FOR ANY DAMAGES OR LOSSES ARISING FROM THE USE OF APPLICATION BILLING, THE AT&T BILLING SYSTEM AND ANY RELATED SERVICES, INCLUDING, BUT NOT LIMITED TO, (I) ANY LOSS OF PROFIT (WHETHER INCURRED DIRECTLY OR INDIRECTLY), ANY LOSS OF GOODWILL OR BUSINESS REPUTATION, ANY LOSS OF DATA SUFFERED, OR OTHER INTANGIBLE LOSS, (II) ANY CHANGES WHICH AT&T MAY MAKE TO THE AT&T BILLING SYSTEM, OR FOR ANY PERMANENT OR TEMPORARY CESSATION IN THE PROVISION OF THE AT&T BILLING SYSTEM OR ANY SERVICES (OR ANY FEATURES WITHIN THE SERVICES) PROVIDED THEREWITH, OR (III) THE DELETION OF, CORRUPTION OF, OR FAILURE TO PROVIDE ANY DATA TRANSMITTED BY OR THROUGH YOUR USE OF APPLICATION BILLING OR STHE AT&T BILLING SYSTEM.
+
+3.3.5	No Cramming and Clear and Conspicuous Disclosure
+This Agreement permits You to originate charges billed to End Users.
+
+
+3.3.5.1	NO CRAMMING
+A.	CPUC Decision. The Public Utilities Commission of the State of California published Decision 10-10-034, which revised rules governing third party billing for purposes of combating "cramming" events ("CPUC Decision"). In connection with the CPUC Decision, AT&T is required to make reasonable inquiry of Your company's history of violations of state or federal laws and rules relating to consumer protection ("Rules") and concerning Your company's current ability to operate lawfully ("Reasonable Inquiry"). In furtherance of the foregoing:
+
+(a)	You acknowledge and agree that all charges added by or on behalf of You to AT&T bills will be in compliance with the CPUC Decision.
+
+(b)	You warrant that You are currently able to operate lawfully and that, except as provided in the space below, You do not have a history of violations of the Rules. 
+You warrant that You will provide to AT&T under separate cover a complete list of all complaints, including complaints lodged by state attorneys general, state regulatory commissions, or the Federal Trade Commission, and all lawsuits related to consumer protection issues, including but not limited to, unfair or deceptive business practices and improper billing that, in each case, resulted in a finding of a violation of the Rules. You agree to notify AT&T in writing promptly, prior to submitting charges on AT&T bills, if additional items should be added to any disclosure previously made by You to AT&T under this Section.
+
+(c)	You agree to make Reasonable Inquiry of Your third-party content providers ("Content Suppliers") prior to commencing billing services for any such Content Suppliers, and on an ongoing basis, that, at a minimum, includes the following questions:
+
+1) whether or not the Content Supplier is currently able to operate lawfully, and
+2) whether or not the Content Supplier has a history of violations of the Rules.
+Without limiting the generality of this inquiry, You must ask whether, in the last five years, the Content Supplier has been the subject of any complaints, including complaints lodged by state attorneys general, state regulatory commissions, or the Federal Trade Commission, or any lawsuits related to consumer protection issues, including but not limited to, unfair or deceptive business practices and improper billing that, in each case, resulted in a finding of a violation of the Rules.
+If You determine that a Content Supplier has a history of violating the Rules or is not currently able to operate lawfully, You agree (i) to notify AT&T in writing promptly, and (ii) not to include charges for that You on AT&T bills.
+
+B.	Truth in Billing. You agree that You will submit to AT&T for billing and collection only true and correct charges properly authorized by End Users. In that regard, You warrant and represent that. prior to submitting any charge to AT&T and prior to obtaining the End User's consent to include a charge on the End User's bill, You or Content Supplier will thoroughly inform the End User of the product or service being offered, including all associated charges such as any term commitments or termination charges, and will explicitly inform the End User that the associated charges for the product or service will be rendered in the AT&T End User's bill. AT&T reserves the right to require You to send a written confirmation (via mail or email) to End Users notifying them of the product or service subscription or purchase, the date charges will begin to appear on the End User's bill, the amounts of all charges to be billed, and the process the End User should follow to cancel the subscription or otherwise return or terminate the product or service.
+
+C. Certain Remedies. In addition to AT&T's other remedies, if You submit any items for billing on AT&T bills that do not comply with the requirements of this Appendix A-1, AT&T may, at its sole discretion: (a) decline to process any such further transactions on behalf of You until You establish methods, procedures, programming or other measures deemed necessary by AT&T to ensure that You comply with such requirements; and/or (b) withhold payment of any amounts due to You up to the greater of (i) the amount AT&T reasonably believes may be affected by Your breach, or (ii) the amount AT&T reasonably believes to represent the maximum potential liability of AT&T as a result of any lawsuits, enforcement actions, or other disputes or claims of any kind resulting from such breach. In the event AT&T elects to withhold payment pursuant to clause (b) of this Section C, AT&T will provide written notice to You no less than ten (10) calendar days prior to beginning to withhold payment. During those ten (10) calendar days, the parties will meet to discuss the issue.
+
+D.	Disclosure to Investigators. Notwithstanding anything to the contrary elsewhere in the Master License Agreement, either party may disclose to federal, state, and local public and law enforcement agencies, or to any affected End User, any information it may have concerning complaints about unauthorized items included on AT&T bills involving Content Suppliers. The provision of such information will not subject the disclosing Party to any liability or claim by the other Party, any Content Supplier or anyone claiming to be a third-party beneficiary of this Agreement.
+
+E.	No Misleading or Deceptive marketing. No product or service of You or any Content Supplier for which charges will be included in the AT&T End-User Bills may be marketed or sold by means of any unlawful, fraudulent, unfair, misleading, deceptive or anticompetitive form of advertising or sales or marketing practice or by means that are unlawful under any state or federal statute.
+
+3.3.5.2.	CLEAR AND CONSPICUOUS DISCLOSURES.
+
+3.3.5.2.1	Definitions. 
+As used in this sub-section 3.3.5.2, the following definitions shall apply:
+"Clear and Conspicuous" means that a statement is made in a manner readily noticeable and understandable to the persons to whom it is directed. To determine whether a statement is clear and conspicuous, factors to consider include:
+
+i) whether it is located sufficiently near any other statement that clarifies, modifies, or explains it;
+ii) whether it contradicts, or renders confusing or ambiguous, any other statement; and
+iii) whether it is or appears to be inconsistent with any other statement.
+"Mobile Content" refers to content, applications, and goods and services sold by You under this Attachment A-1.
+
+"Initial Representation" means all sponsored links, banner ads, pop-ups, e-mail subject lines, and any and all other primary impressions created or presented by You relating to Your advertisement of Mobile Content.
+
+3.3.5.2.2	Prohibited Use. In connection with any Internet-based purchase of Mobile Content subscriptions by an End User, the following is prohibited:
+
+A.	the use of the terms "free," "complimentary," "no charge," "without charge," or any other term that reasonably leads a customer to believe that he or she may receive something of value, entirely or in part without a requirement of compensation in any form, or that tends to convey the impression to the consuming public that an article of merchandise or service is "free," unless the Initial Representation to the customer clearly and conspicuously states that the free item may be received by a customer pursuant to his or her authorization of billing for a paid subscription plan, the price of the plan, and its term. For example, a free ringtone offer requiring a customer to subscribe to a monthly subscription plan at a cost of $9.99 per month shall say, "Free ringtone with paid monthly subscription of $9.99/month."
+
+B.	the advertisement or promotion of any Mobile Content that is available only through certain wireless carriers, unless the advertisement clearly and conspicuously discloses that the Mobile Content is not available through all carriers.
+
+C.	the advertisement or promotion of Mobile Content that is available only on certain makes or models of mobile devices unless the advertisement clearly and conspicuously discloses that the Mobile Content is not available on all mobile devices.
+
+D.	the inclusion in any offer of a term or condition necessary to its acceptance whereby the customer agrees to accept advertising or promotional Messages delivered electronically to cell phones via text messaging, email or otherwise, that are unrelated to the current offer, unless consented to by the customer.
+
+E.	the placement of pre-checked boxes in an offer intended to be used for acceptance of a term(s) or condition(s) of the offer.
+
+3.3.5.2.3	You must. In connection with any Internet-based purchase of Mobile Content subscriptions by an End User, You must:
+
+A.	clearly and conspicuously disclose the price and billing period of the recurring charge of the Mobile Content immediately adjacent to any cell-phone-number-submit field and any PIN-code-submit field, e.g., "$9.99 per month."
+
+B.	clearly and conspicuously disclose on any cell-phone-number-submit web page and any PIN-code-submit web page the following material terms and conditions:
+
+1.	the initial and recurring charge for the Mobile Content,
+2.	whether other charges may apply,
+3.	that the customer's account will be charged automatically with no further action on the part of the customer; the frequency with which the charge will automatically be made to the account in the absence of cancellation of the plan; and that the customer will continue to receive the charges until the customer cancels the plan,
+4.	how to cancel the plan,
+5.	the mechanism for charging the customer, e.g., "on your cell phone bill or deducted from your prepaid balance on your cell phone account," and
+6.	that the purchase must be authorized by the User.
+C.	provide an Internet hyperlink to the terms and conditions of the offer on every cell-phone-number-submit page and PIN-code-submit page in the Internet order path.
+
+
+3.3.6	International Developers. If You operate outside of the United States (50 states and associated territorial waters) and payment will be made to You outside of the United States ("International Developer"), You must maintain an End User License Agreement ("EULA") which, at a minimum, (a) may not have a defined term, (b) is not terminable by You for Your convenience (i.e., is terminable only for legitimate commercial reasons, such as breach of the EULA by the customer), and (c) must provide that Your Application is made available "As Is."
+
+3.4	Certain Rights. Subject to Your compliance with the terms hereof, AT&T hereby grants to You a non exclusive, revocable, non-transferable, non-sublicensable right and license (a) to use the Application Billing Components in accordance with this Application Billing Attachment, and (b) to make available Application Billing to Your Applications. 
+
+4.	Transactions and Revenue Share. 
+4.1	Appointment. You hereby authorize and instruct AT&T to issue invoices for the purchase price payable by End Users for transactions through Application Billing (collectively, "Transactions").
+
+4.2	Revenue Share. In consideration of the billing-on-behalf-of (BOBO) service provided by AT&T, AT&T will retain thirty percent (30%) of the "Net Revenue" generated by Transactions (including any sales of content, programs and/or Applications through the Transactions) under this Agreement ("Revenue Share"). AT&T will remit the remaining portion of the Net Revenue as provided below. For these purposes, "Net Revenue" means the gross price collected from End Users for the Transactions (excluding any transport, telecommunications or similar charges or any sales, use or other taxes or governmental charges) minus any credits issued by AT&T. Notwithstanding the foregoing, the minimum Revenue Share with respect to a Transaction is $.50 per item ("Minimum Revenue Share"). The Minimum Revenue Share may be adjusted by AT&T on reasonable written notice by AT&T. The foregoing Revenue Share will apply to any item placed by You on an End User's bill through the AT&T Billing System. AT&T reserves the right to change Revenue Share on sixty (60) days' notice to You. If You do not agree with such change, You may terminate this Agreement on written notice to AT&T, effective at the end of such sixty-day period. If You do not so notify AT&T, then such changed Revenue Share will be effective at the end of such period.
+
+4.3	Remittance. AT&T will calculate the amount due to be remitted or paid to You (collectively "Remittance") at the end of every calendar month. You will integrate into the AT&T designated billing vendor ("Billing Vendor") in compliance with Billing Vendor requirements. Once integrated, You will have access to the vendor on-line reporting system. In addition, AT&T will provide a statement describing the Remittance due to You, and pay that Remittance to You in United States dollars, within sixty (60) days after the end of each calendar month through its designated billing vendor. If the amount owed You for any month is less than $25.00, AT&T may not mail a statement or payment until the next regular accounting period at which time the amounts owed (including withheld amounts) exceed $25.00. AT&T agrees to maintain accurate books and records regarding the Remittance payable to You under this Agreement. Each statement will be deemed final and binding unless You provide notice of Your specific objections thereto to AT&T within one (1) year of the date on which such statement was issued.
+
+4.4	No Music-Related Fees. You agree that the Revenue Share described above is inclusive of all amounts of any kind whatsoever due You or to any songwriters, publishers, featured or non-featured performers, producers, engineers, mixers, re-mixers and any other third parties who may be entitled to compensation as a result of AT&T's (or its Users') use of the Applications or any musical works embodied in the Applications (including any amounts that may be payable in connection with the public performance of any musical work embodied in any Application) under this Agreement.
+
+4.5	Bad Debt. You recognize and agree that AT&T reserves the right to deduct from Remittances Your pro rata portion of bad debt for Transactions. For example, if an End User purchased an Application for $5 and the End User does not pay AT&T for the Transaction, AT&T would have the right to deduct $3.50 from Your Remittances with respect to that Transaction. To the extent that AT&T is unable to track bad debt to the line item or third-party provider, You agree that AT&T may apply its overall bad debt rate for purchases of digital content against Your pro rata share of Remittances.
+
+
+4.6	Taxes. 
+a.	In the event that any Transaction is subject to any sales, use or other similar tax, under applicable law, AT&T will collect and remit such tax on Your behalf in accordance with its standard operating procedures. AT&T will not collect and remit any tax imposed by any taxing jurisdiction outside the United States.
+
+b.	You will indemnify and hold AT&T harmless against any and all claims by any tax authority for any underpayment of any tax or levy, and any penalties and/or interest thereon, except with respect to sales, use, or similar taxes collected by AT&T.
+
+c.	You will provide reasonable cooperation to AT&T in the event that any taxing authority audits AT&T with respect to any taxes collected, withheld and/or remitted under this Section 4.6. In the event that any remittance made by AT&T to You is subject to any withholding or similar tax, the full amount of that withholding or similar tax will be solely for Your account, and will not reduce the revenue share to which AT&T is entitled on that transaction. You will provide reasonable cooperation to AT&T to enable AT&T to determine whether such tax is due, which shall include providing AT&T properly completed and executed United States Internal Revenue Service (IRS) Forms W-8BEN, W-8ECI, W-8EXP, W-8IMY, or W-9 (or any successor forms prescribed by the IRS), as applicable to You. If AT&T reasonably believes that such tax is due, AT&T will deduct the full amount of such withholding or similar tax from the gross amount of any remittance owed to You, and will pay the full amount withheld over to the competent tax authorities. AT&T will use commercially practical efforts to obtain, and to furnish to You, copies of official tax receipts or similar evidence of payment, confirming AT&T's payment of those withholding or similar taxes to the competent tax authorities. You will indemnify and hold AT&T harmless against any and all claims by any competent tax authority for any underpayment of any such withholding or similar taxes, and any penalties and/or interest thereon, including, but not limited to, underpayments attributable to any erroneous claim or representation by You as to Your entitlement to, or Your disqualification for, the benefit of a reduced rate of withholding tax.
+
+
+4.7	Termination. This Appendix and all of AT&T's obligations hereunder will terminate upon the expiration or termination of the Master License Agreement. Notwithstanding any such termination, AT&T will be entitled to: (i) all Revenue Share payable with respect to Transactions occurring prior to the date of termination; and (ii) reimbursement from You of refunds or credits paid by AT&T to End Users, whether before or after the date of termination.
+
+
+DEVICE CAPABILITY
+ATTACHMENT A-2 TO MASTER LICENSE AGREEMENT
+1.	Incorporation into AT&T Master License Agreement.
+This Service Attachment ("Device Capability Attachment") forms part of the Master License Agreement between You and AT&T. By downloading or using any Device Capability Component, You agree to the terms and conditions set forth below. Your rights under this Device Capability Attachment are subject to the conditions set forth in the Master License Agreement and will terminate upon the termination of the Master License Agreement. Capitalized terms used in this Device Capability Attachment have the meanings given to them in the Master License Agreement unless otherwise defined.
+
+2.	Applicable AT&T Services and Components.This Device Capability Attachment governs Your access to and use of the AT&T Device Capabilities Components that enable an Application to retrieve information regarding an End User's device ("Device Capability Information").
+
+3.	Additional Terms of Conditions of Use.
+3.1	Definitions. The following additional definitions are used in this Device Capability Attachment:
+"Device Capability API" means the API that allows Applications to request read only details of device capabilities maintained in a database of all AT&T subscribers.
+
+3.2	APIs. In order to access Device Capability Information through the AT&T Service, You must meet the requirements set forth in the Device Capability Components.
+
+3.3	Device Capability API Requirements. 
+Applications using the Device Capability API shall comply with the following:
+
+(a) You agree and acknowledge that Device Capability Information constitutes AT&T User Data and is owned by AT&T. You will not use Device Capability Information for direct marketing or promotions to End Users. Device Capability Information collected or used by Your Application must comply with all applicable privacy and data collection laws and regulations, including any notice and consent requirements, and AT&T's Privacy Policy, posted at www.att.com/privacypolicy, as that Policy may be updated, with respect to any collection, transmission, maintenance, processing, use, of any personal information by the Application.
+(b) You will delete Device Capability Information when it is no longer necessary for Your Application. You will also delete Device Capability Information when Your Master License Agreement ceases or terminates.
+(c) You will not use the Device Capability API or Device Capability Information to send or enable the sending of unsolicited communications of any type.
+(d) You shall not enable or permit the disclosure of Device Capability Information or API to any third party.
+(e) Your use of the Device Capability API or Device Capability Information may not be designed or marketed for the purpose of harassing, abusing, stalking, threatening or otherwise violating the legal rights of others.
+3.3	Certain Rights. Subject to Your compliance with the terms hereof, AT&T hereby grants to You a non exclusive, revocable, non-transferable, non-sublicensable right and license (a) to use the Device Capability Components in accordance with this Device Capability Attachment, and (b) to make available Device Capability to Your Applications.
+4.	Financial Terms. No fees will be charged to You for use of the Device Capability API; provided, however, AT&T reserves the right to charge a fee with respect to the Device Capability API on thirty (30) days' notice to You. If You do not agree to pay any such fee, You may terminate this Attachment on written notice to AT&T.
+
+
+MMS
+ATTACHMENT A-3 TO MASTER LICENSE AGREEMENT
+1. Incorporation into AT&T Master License Agreement
+This Service Attachment ("MMS Attachment") forms part of the Master License Agreement between You and AT&T. By downloading or using any MMS Component, You agree to the terms and conditions set forth below. Your rights under this MMS Attachment are subject to the conditions set forth in the Master License Agreement and will terminate upon the termination of the Master License Agreement. Capitalized terms used in this MMS Attachment have the meanings given to them in the Master License Agreement unless otherwise defined.
+
+2.	Applicable AT&T Services and Components
+This MMS Attachment governs your access to and use of the MMS Components ("MMS Components") that enable Your Application to interact with the AT&T network to send and receive multimedia messages to mobile subscribers and to obtain delivery status of messages sent to mobile devices ("MMS Information").
+
+3.	Additional Terms of Condition of Use
+3.1	Definitions.
+The following additional definitions are used in this MMS Service Attachment:
+
+"MMS API" means the API that allows Applications to send and receive multimedia messages to and from mobile subscribers and to obtain delivery status of messages sent to mobile devices.
+
+3.2	APIs. In order to access MMS Information through the AT&T Service, You must meet the requirements set forth in the MMS Components.
+
+3.3	MMS API Requirements.
+Applications using the MMS API shall comply with the following:
+
+(a) You shall advise users, if applicable, that messaging charges apply and data charges may apply prior to their use of the Application.
+(b) You shall advise users, if applicable, that data charges apply if they open any link or URL included in the message.
+(c) You shall not use the MMS API to transmit messages that violate the law, a governmental order, AT&T's privacy policy, the Mobile Marketing Association guidelines, or other network or subscriber protective measures. As between the parties, You are solely responsible for the content of messages that are generated and sent. You will comply with all applicable laws, rules and regulations and will not transmit any communication that would violate any federal, state or local law, court order, applicable wireless industry rule or regulation. You will cooperate with AT&T and/or governmental authorities in investigations alleging a violation of any law, rule or regulation.
+(d) You shall not use the MMS API to transmit or disseminate material that You know, or have a reasonable basis to know, is Unsuitable Content or to provide professional advice in states where a state license is required to provide such advice.
+(e) You will not use MMS API to send or, to Your knowledge, enable the sending of unsolicited spam communications of any type, including, but not limited, to messages that contain advertising or a commercial solicitation to any person or entity without their consent; bulk messages; messages that are automatically generated; or messages that generate significant or serious customer complaints. Advertising and commercial solicitations do not include messaging that: 1) facilitates, completes, or confirms a commercial transaction where the recipient of such message has previously agreed to enter into with the sender of such message, or, 2) provide account information, service or product information, warranty information, product recall, safety, or security information with respect to a commercial product or service used or purchased by the recipient of such message.
+(f) Your Application shall not use the MMS API to falsify or mask the sender/or originator of the message.
+3.4	Certain Rights. Subject to Your compliance with the terms hereof, AT&T hereby grants to You a non exclusive, revocable, non-transferable, non-sublicensable right and license to use the MMS Components in accordance with this MMS Attachment.
+
+4.	Financial Terms. No fees will be charged to You for use of the MMS API; provided, however, AT&T reserves the right to charge a fee with respect to the MMS API on thirty (30) days' notice to You. If You do not agree to pay any such fee, You may terminate this Attachment on written notice to AT&T.
+
+
+SMS
+ATTACHMENT A-4 TO MASTER LICENSE AGREEMENT
+1. Incorporation into AT&T Master License Agreement
+This Service Attachment ("SMS Attachment") forms part of the Master License Agreement between You and AT&T. By downloading or using any SMS Component, You agree to the terms and conditions set forth below. Your rights under this SMS Attachment are subject to the conditions set forth in the Master License Agreement and will terminate upon the termination of the Master License Agreement. Capitalized terms used in this SMS Attachment have the meanings given to them in the Master License Agreement unless otherwise defined. 
+
+2.	Applicable AT&T Services and Components
+This SMS Attachment governs your access to and use of the SMS Components ("SMS Components") that enable Your Application to interact with the AT&T network to send and receive SMS messages to mobile subscribers and to obtain delivery status of messages sent to mobile devices ("SMS Information").
+
+3.	Additional Terms of Condition of Use
+
+3.1	Definitions.
+The following additional definitions are used in this SMS Service API Billing Attachment:
+"SMS API" means the API that allows Applications to send and receive short messaging service messages to and from mobile subscribers and to obtain delivery status of messages sent to mobile devices.
+
+3.2	APIs. In order to access SMS Information through the AT&T Service, You must meet the requirements set forth in the SMS Components.
+
+3.3 SMS API Requirements. 
+Applications using the SMS API shall comply with the following:
+
+(a) You shall advise users, if applicable, that messaging charges apply and data charges may apply prior to their use of the Application.
+(b) You shall advise users, if applicable, that data charges apply if they open any link or URL included in the message.
+(c) You shall not use the SMS API to transmit messages that violate the law, a governmental order, AT&T's privacy policy, the Mobile Marketing Association guidelines, or other network or subscriber protective measures. As between the parties, You are solely responsible for the content of messages that are generated and sent. You will comply with all applicable laws, rules and regulations and will not transmit any communication that would violate any federal, state or local law, court order, applicable wireless industry rule or regulation. You will cooperate with AT&T and/or governmental authorities in investigations alleging a violation of any law, rule or regulation.
+(d) You shall not use the SMS API to transmit or disseminate material that You know, or have a reasonable basis to know, is Unsuitable Content or to provide professional advice in states where a state license is required to provide such advice.
+(e) You will not use SMS API to send or, to Your knowledge, enable the sending of unsolicited spam communications of any type, including, but not limited, to messages that contain advertising or a commercial solicitation to any person or entity without their consent; bulk messages; messages that are automatically generated; or messages that generate significant or serious customer complaints. Advertising and commercial solicitations do not include messaging that: 1) facilitates, completes, or confirms a commercial transaction where the recipient of such message has previously agreed to enter into with the sender of such message, or, 2) provide account information, service or product information, warranty information, product recall, safety, or security information with respect to a commercial product or service used or purchased by the recipient of such message.
+(f) Your Application shall not use the SMS API to falsify or mask the sender/or originator of the message.
+3.4 Certain Rights. Subject to Your compliance with the terms hereof, AT&T hereby grants to You a non exclusive, revocable, non-transferable, non-sublicensable right and license to use the SMS Components in accordance with this SMS Attachment.
+4.	Financial Terms. No fees will be charged to You for use of the SMS API; provided, however, AT&T reserves the right to charge a fee with respect to the SMS API on thirty (30) days' notice to You. If You do not agree to pay any such fee, You may terminate this Attachment on written notice to AT&T.
+
+
+WAP PUSH
+ATTACHMENT A-5 TO MASTER LICENSE AGREEMENT
+
+1.	Incorporation into AT&T Master License Agreement.
+This Service Attachment ("WAP Push Attachment") forms part of the Master License Agreement between You and AT&T. By downloading or using any WAP Push Component, You agree to the terms and conditions set forth below. Your rights under this WAP Push Attachment are subject to the conditions set forth in the Master License Agreement and will terminate upon the termination of the Master License Agreement. Capitalized terms used in this WAP Push Attachment have the meanings given to them in the Master License Agreement unless otherwise defined. 
+
+2.	Applicable AT&T Services and Components.
+This WAP Push Attachment governs your access to and use of the WAP Push Components ("WAP Push Components") that enable Your Application to interact with the AT&T network to send and receive WAP Push messages to mobile subscribers ("WAP Push Information").
+3.	Additional Terms of Conditions of Use.
+
+3.1	Definitions. The following additional definitions are used in this WAP Push Attachment:
+
+"WAP Push (WAP) API" means the API that allows applications to send WAP Push messages to mobile subscribers. The payload of a WAP Push message is a URL which the device browser can use to navigate to the desired destination www site.
+
+3.2	APIs. In order to access WAP Push Information through the AT&T Service, You must meet the requirements set forth in the WAP Push Components
+
+3.3	WAP Push API Requirements. 
+WAP Push Applications using the WAP Push API shall comply with the following:
+
+(a) You shall advise users, if applicable, that messaging charges apply and data charges may apply prior to their use of the Application.
+(b) You shall advise users, if applicable, that data charges apply if they open any link or URL included in the message.
+(c) You shall not use the WAP Push API to transmit messages that violate the law, a governmental order, AT&T's privacy policy, the Mobile Marketing Association guidelines, or other network or subscriber protective measures. As between the parties, You are solely responsible for the content of messages that are generated and sent. You will comply with all applicable laws, rules and regulations and will not transmit any communication that would violate any federal, state or local law, court order, applicable wireless industry rule or regulation. You will cooperate with AT&T and/or governmental authorities in investigations alleging a violation of any law, rule or regulation.
+(d) You shall not use the WAP Push API to transmit or disseminate material that You know, or have a reasonable basis to know, is Unsuitable Content or to provide professional advice in states where a state license is required to provide such advice.
+(e) You will not use WAP Push API to send or, to Your knowledge, enable the sending of unsolicited spam communications of any type, including, but not limited, to messages that contain advertising or a commercial solicitation to any person or entity without their consent; bulk messages; messages that are automatically generated; or messages that generate significant or serious customer complaints. Advertising and commercial solicitations do not include messaging that: 1) facilitates, completes, or confirms a commercial transaction where the recipient of such message has previously agreed to enter into with the sender of such message, or, 2) provide account information, service or product information, warranty information, product recall, safety, or security information with respect to a commercial product or service used or purchased by the recipient of such message.
+3.4	Certain Rights. Subject to Your compliance with the terms hereof, AT&T hereby grants to You a non exclusive, revocable, non-transferable, non-sublicensable right and license to use the WAP Push Components in accordance with this WAP Push Attachment.
+4.	Financial Terms. No fees will be charged to You for use of the WAP Push API; provided, however, AT&T reserves the right to charge a fee with respect to the WAP Push API on thirty (30) days' notice to You. If You do not agree to pay any such fee, You may terminate this Attachment on written notice to AT&T.
+
+
+LOCATION BASED SERVICES
+
+ATTACHMENT A-6 TO MASTER LICENSE AGREEMENT
+1.	Incorporation into AT&T Master License Agreement.
+This Service Attachment ("LBS Attachment") forms part of the Master License Agreement between You and AT&T. By downloading or using any LBS Component, You agree to the terms and conditions set forth below. Your rights under this LBS Attachment are subject to the conditions set forth in the Master License Agreement and will terminate upon the termination of the Master License Agreement. Capitalized terms used in this LBS Attachment have the meanings given to them in the Master License Agreement unless otherwise defined.
+
+2.	Applicable AT&T Services and Components.
+
+This LBS Attachment governs your access to and use of the LBS Components ("LBS Components") that enable Your Application to interact with the AT&T network to use Location Information (defined below).
+This LBS Attachment governs your access to and use of the Components made available to You under this LBS Attachment ("LBS Components"). These Components may be used to solely to develop and integrate your Application with the following AT&T Service: Location Based Services (LBS).
+
+3.	Additional Terms of Conditions of Use.
+3.1	Definitions. The following additional definitions are used in this LBS Attachment:
+
+"LBS API" means the API that allows Applications to access and use Location Information.
+
+"Location Information" means any information network-based information that identifies the geographic location of a mobile device, including assisted GPS, cell ID and enhanced cell ID information.
+
+"Location Query" means a query to the AT&T Service to determine the Location Information of an End User's mobile device in connection with a Location Service.
+
+"Location Service" means an Application that uses Location Information.
+
+3.2	APIs. In order to provide a Location Service through the AT&T Service, You must meet the requirements set forth in the LBS Components.
+
+3.3	LBS API Requirements. 
+Applications using the LBS API shall comply with the following:
+
+(a)	All Location Services must comply with AT&T's LBS Developer's Guide, available at Developer.att.com. Except with AT&T's prior written consent, Your Application may not allow End Users to be located passively or automatically (i.e., "tracked," by any third party). For example, Your Application may access the location of a mobile device that has requested a navigation service, but Your Application may not provide a "family finder" or "friend finder" or similar feature that would allow anyone to track a mobile device passively. You acknowledge that Location Information is sensitive personal information. You may not collect, use or disclose Location Information in connection with Your Location Service other than as specifically provided in this LBS Attachment and only in accordance with the required disclosures below. You may not use Location Information for any purpose other than delivering Your Location Service. Without limiting the generality of the immediately preceding sentence, you may not anonomyze, aggregate and re-use or distribute any Location Information.
+(b)	AT&T will obtain consents from End Users for use of Location Information. You agree that Your Application will not disable, modify or circumvent AT&T's consent process. Notwithstanding the foregoing, before You may use or collect Location Information, You must disclose to the End User, at a minimum (a) what Location Information is collected and how it will be used by You, (b) the identity of the party collecting the Location Information, (c) whether Location Information is shared with third parties, (d) how long Location Information will be retained, and (e) what security measures are in place to protect the Location Information. Your Location Service may not access Location Information directly or through your Application unless Your Location Service is first initiated by an End User. Your Application may not unilaterally initiate a Location Service. You agree not to store Location Information any longer than necessary to provide the Location Service.
+(c)	You will ensure that Your Application using Location Services will comply in all respects with the Location Based Services Developer's Privacy Guide available at developer.att.com.
+(d)	You will (i) employ administrative, physical, and technical safeguards that prevent the unauthorized collection, access, disclosure, and use of Location Information; (ii) use, at a minimum, best industry practices to protect Location Information; (iii) encrypt where possible all Location Information at rest or in transport; and (iv) allow access to the Location Information only to the applicable End User, and to Your employees, representatives, agents, contractors, and subcontractors who have a need to know the Location Information. You will ensure that no Location Information that is specifically identifiable with an End User is stored except to deliver and support the Location Service.
+(e)	Upon good cause, AT&T will have the right, at Your own expense, to review, or to have an independent third party that is not Your competitor, to inspect and review Your security procedures. You will (at Your own expense) correct any security flaws detected by such a review as soon as possible. You will then promptly certify to AT&T in writing that the security flaw has been corrected, along with a description of the corrective action(s) taken. AT&T will give You 72 hours notice before conducting such a review, and may conduct no more than four reviews annually. Any such review will be conducted during regular business hours in such a manner as not to interfere with normal business activities. If a review reveals a material breach of security provisions, You will reimburse AT&T for the reasonable costs of the review.
+(f)	You will ensure that the Location Service will maintain security for connectivity between You and the AT&T network in accordance with AT&T's security requirements identified to You.
+If AT&T reasonably believes that a Location Service (i) contains any Unsuitable Content, (ii) violates any law or regulation, AT&T's Location-Based Services Developer's Privacy Guide, industry guidelines, or other network or subscriber protective measures, or (iii) if AT&T receives a complaint from an End User or a governmental or law enforcement agency, or any other person or entity concerning a Location Service, AT&T may (in its discretion) disable access of Your Location Service to Location Information. In addition, AT&T may suspend Your access to Location Information if AT&T has a reasonable basis to believe that You are in breach of this LBS Attachment or the Master License Agreement.
+3.4	Certain Rights. Subject to Your compliance with the terms hereof, AT&T hereby grants to You a non exclusive, revocable, non-transferable, non-sublicensable right and license to use the LBS Components in accordance with this LBS Attachment.
+4.	Financial Terms - No fees will be charged to You for use of the LBS API; provided, however, AT&T reserves the right to charge a fee with respect to the LBS API on thirty (30) days' notice to You. If You do not agree to pay any such fee, You may terminate this Attachment on written notice to AT&T.
+
+
+OAUTH
+
+ATTACHMENT A-7 TO MASTER LICENSE AGREEMENT
+1.	Incorporation into AT&T Master License Agreement.
+This Service Attachment ("OAuth Attachment") forms part of the Master License Agreement between You and AT&T. By downloading or using any OAuth Component, including the "OAuth API," You agree to the terms and conditions set forth below. Your rights under this OAuth Attachment are subject to the conditions set forth in the Master License Agreement and will terminate upon the termination of the Master License Agreement. Capitalized terms used in this OAuth Attachment have the meanings given to them in the Master License Agreement unless otherwise defined.
+
+2.	Applicable AT&T Services and Components.
+This OAuth Attachment governs your access to and use of the OAuth Components ("OAuth Components") that enable Your Application to: (a) obtain an authorization code from the AT&T network, which indicates that a resource owner has authorized an Application to access a protected resource on behalf of that resource owner, and (b) obtain an access token from the AT&T network, which enables an Application to access protected resources on behalf of a resource owner via the AT&T network and payment APIs. The OAuth Components may not be used for any other purpose.
+
+3.	Additional Terms of Conditions of Use. 
+You agree that Application credentials may only be transmitted on a server-to-server basis (e.g., they may not be delivered in a URL). 
+
+4.	Financial Terms - No fees will be charged to You for use of the OAuth API; provided, however, AT&T reserves the right to charge a fee with respect to the OAuth API on thirty (30) days' notice to You. If You do not agree to pay any such fee, You may terminate this Attachment on written notice to AT&T.
+
+
+NOTARY MANAGEMENT
+ATTACHMENT A-8 TO MASTER LICENSE AGREEMENT
+1.	Incorporation into AT&T Master License Agreement.
+This Service Attachment ("Notary Management Attachment") forms part of the Master License Agreement between You and AT&T. By downloading or using any Notary Management Component, including the "Notary Management API" You agree to the terms and conditions set forth below. Your rights under this Notary Management Attachment are subject to the conditions set forth in the Master License Agreement and will terminate upon the termination of the Master License Agreement. Capitalized terms used in this Notary Management Attachment have the meanings given to them in the Master License Agreement unless otherwise defined. 
+
+2.	Applicable AT&T Services and Components.
+This Notary Management Attachment governs your access to and use of the Notary Management Components ("Notary Management Components") that enable Your Application to interact with the AT&T network solely in conjunction with Application Billing to obtain a "signed" version of an arbitrary payload so that the "signed" payload can be supplied as a parameter in another API request. The Notary Management Components may not be used for any other purpose.
+
+3.	Restrictions 
+You agree that Application credentials may only be transmitted on a server-to-server basis (e.g., they may not be delivered in a URL).
+
+4.	Financial Terms - No fees will be charged to You for use of the Notary Management API; provided, however, AT&T reserves the right to charge a fee with respect to the Notary Management API on thirty (30) days' notice to You. If You do not agree to pay any such fee, You may terminate this Attachment on written notice to AT&T.
+
+
+SPEECH
+
+ATTACHMENT A-9 TO MASTER LICENSE AGREEMENT
+1. Incorporation into AT&T Master License Agreement
+This Service Attachment ("Speech Attachment") forms part of the Master License Agreement between You and AT&T. By downloading or using any Speech Component, You agree to the terms and conditions set forth below. Your rights under this Speech Attachment are subject to the conditions set forth in the Master License Agreement and will terminate upon the termination of the Master License Agreement. Capitalized terms used in this Speech Attachment have the meanings given to them in the Master License Agreement unless otherwise defined.
+
+2.	Applicable AT&T Services and Components
+This Speech Attachment governs your access to and use of the Components made available to You under this Speech Attachment ("Speech Components"). These Speech Components may be used to solely to integrate your Application with the following AT&T Service: to enable Your Application to incorporate speech technology into user interfaces ("Speech AP Information").
+
+3.	Terms of Condition of Use
+
+3.1	Definitions.
+The following additional definitions are used in this Speech Attachment:
+
+"Speech API" means the API that allows Applications to incorporate speech technology into user interfaces. The Speech API enables You to send Your End User's spoken utterances to AT&T, where AT&T will convert those utterances into text. Currently, the API supports the transcription of English utterances only. The following speech contexts are available via the Speech API: business search, web search, SMS, Voicemail to text, Question and Answer, TV and Generic.
+
+3.2	APIs. In order to access Speech API Information through the AT&T Service, You must meet the requirements set forth in the Speech Components. AT&T may update the Speech Components on at least sixty (60) days' notice to you via email and You must comply with such updates; provided, if AT&T needs to make an urgent update (e.g., to patch a security issue), You agree to comply with such update as promptly as possible, but not no later than 30 days after receiving notice.
+
+3.3	Speech API Requirements.
+Applications using the Speech API shall comply with the following:
+
+(a)	You must obtain Your End User's consent to AT&T listening to and transcribing Your End User's utterances, as well as, obtaining Your End User's consent to AT&T storing Your End User's fragments of utterances to enhance, train and improve AT&T's speech recognition and transcription services, software and equipment.
+(b)	You and Your Applications shall not use or enable others to use the Speech API in any manner or for any purpose that violates any law or regulation, any right of any person, including but not limited to intellectual property rights, rights of privacy, data protection rights, or rights of personality. Further, Your Applications using the Speech API may not be designed or marketed for the purpose of harassing, abusing, stalking, threatening or otherwise violating the legal rights of others.
+(c)	You will not modify the utterance or text transcription, without our consent and the End User's consent.
+(d)	You agree that if your Application can be used to record utterances or conversations between Your End User and another person or person(s) that Your Application shall verbally notify all persons prior to beginning the recording that the conversation is being recorded and that if they remain on the call that they consent to the recording of the conversation.
+(e)	You agree You will not use the Speech API to secretly record Your End User's or any other person's utterances.
+(f)	Your Application shall not use the Speech API to operate dangerous facilities, life support, or other mission critical applications where human life or property may be at stake. You understand that the Speech API is not designed for such purposes and that its failure in such cases could lead to death, personal injury, or severe property or environmental damage for which AT&T is not responsible.
+(g)	You shall not publish or disclose the results of benchmark testing of the Speech API, except to the extent such restriction is expressly prohibited by applicable law.
+3.4	Certain Rights. Subject to Your compliance with the terms hereof, AT&T hereby grants to You a non exclusive, revocable, non-transferable, non-sublicensable right and license to use the Speech Components in accordance with this Speech Attachment.
+4.	Additional Terms
+
+a) AT&T is not responsible, nor liable for: 1) errors in the conversion of or its inability to transcribe utterances to text; 2) lost or misdirected text messages; or, 3) content that is unlawful, harmful, threatening, abusive, obscene, tortious, or otherwise objectionable and You or Your End User shall be responsible for any content that is unlawful, harmful, threatening, abusive, obscene or otherwise objectionable. You acknowledge that AT&T does not filter, edit, or control Your End User's utterances.
+b) Transcription responses, including but not limited to the response time in which text is sent, are not guaranteed. Generally, response time depends on the length of the utterance file, the file type, the originating operating system and the encryption employed. AT&T reserves the right to limit the length of an utterance that will be transcribed to a set period of time. Currently, AT&T limits the length of an utterance that will be transcribed at one time to four minutes.
+c) HIPAA - You are not authorized to use, and will not enable the Speech API to be used with services that store Protected Health Information ("PHI") as defined under the Health Insurance Portability and Accountability Act ("HIPAA") and AT&T specifically disclaims any responsibility or obligation to act as a Business Associate under HIPAA.
+5.	Financial Terms. No fees will be charged to You for use of the Speech API until the end of 2012. provided, however, AT&T reserves the right to charge a fee with respect to the Speech API starting Jan 1st 2013. AT&T will provide you at least thirty (30) days' notice to You of the fees. If You do not agree to pay any such fee, You may terminate this Attachment on written notice to AT&T.
+
+[end of ATTACHMENTS]
+
+Electronic Signature. By clicking on "Review and Acknowledge," You (a) acknowledge that You have read this Agreement and agree to be bound by the terms of this Agreement on behalf of Yourself (if an individual) or the legal entity that you represent (in the case of a legal entity), and (b) warrant that you have authority to execute this Agreement and bind Yourself to the terms hereof. If You do not agree to the terms of this Agreement, do not click on "Review and Acknowledge."
+
+
+SOFTWARE DEVELOPMENT KIT TOOLS AGREEMENT
+
+PLEASE READ THE FOLLOWING TERMS AND CONDITIONS CAREFULLY. THESE TERMS AND CONDITIONS CONSTITUTE A LEGAL AGREEMENT BETWEEN YOU ("DEVELOPER") AND AT&T MOBILITY LLC, ON BEHALF OF ITSELF AND ITS AFFILIATES (COLLECTIVELY "AT&T").
+
+THIS SOFTWARE DEVELOPMENT KIT TOOLS AGREEMENT is entered into as of the date you click to Review and Acknowledge the terms hereof. 
+The following terms and conditions shall govern Developer's borrowing and use of the AT&T Software Development Kit Tools (hereinafter "SDK Tools") and related documentation described in Attachment A:
+
+1.	AT&T hereby loans to Developer, and Developer accepts, the AT&T SDK Tools for use by Developer during the term of this Agreement solely in accordance with this Agreement. Subject to this Agreement, AT&T hereby grants Developer a non-exclusive, non-transferable revocable, royalty-free right and license, during the term of this Agreement, to use the AT&T SDK Tools internally within the Developer's company to test and evaluate the operation and performance of any of Developer's Application or mobile software. After the term of this Agreement, Developer, at its expense, shall promptly return the AT&T SDK Tools to AT&T or destroy them as requested by AT&T. As used in this Agreement, a Developer's Application shall mean software that runs on smartphones, mobile phones or mobile devices (including tablets). Mobile applications are designed to educate, entertain, or assist users in their daily lives. Software comprising a Developer's Application is contrasted with and shall not mean 'system software' and 'middleware,' which manage and integrate a computer's capabilities, while not directly applying in the performance of tasks that benefit the user. The 'system software' serves the Developer's Application, which in turn serves the user.
+
+2.	Developer shall obtain permission from a mobile device user before evaluating any user data related to such user's use of Developer's Application or mobile software when such user data is obtained using any component of the AT&T SDK Tools installed on a mobile handset/device and connected or linked to a Developer or other server. Under no circumstances shall Developer obtain any mobile device user's personal identifiable information or location without first obtaining permission from such user. Any breach of this provision shall be considered a Material Breach and grounds for immediate termination of this Agreement including cessation of the use and return of all AT&T SDK Tools.
+
+3.	AT&T shall retain all right, title and ownership interests to the AT&T SDK Tools (specifically excluding any Developer data and Developer's Application or mobile software) and no interest in the AT&T SDK Tools is transferred to Developer. Except as expressly authorized under this Agreement, Developer shall not use, copy, distribute, disassemble, modify, prepare derivative works based on, display, perform or transfer the AT&T SDK Tools or documentation provided therewith, and no licenses are granted or implied for such purposes.
+
+4.	AT&T may at any time terminate this Agreement with Developer:
+
+(a) Developer breaches any provision of this Agreement;
+(b) AT&T is required to do so by law; or
+(c) AT&T decides no longer to provide the SDK Tools available to Developer. If Developer wants to terminate this Agreement, it may do so by ceasing to use the SDK Tools or by giving written notice to AT&T. This Agreement, including all rights granted to Developer, shall terminate upon termination of this Agreement. Unless any written notice from AT&T shall provide otherwise, upon expiration or termination of this Agreement, Developer shall return all items furnished by AT&T and, if AT&T requests, certify to AT&T the destruction of same. Developer's obligations under this Agreement, including its obligation under Sections 3, 5, 6, 7, 9-15, and 17 shall survive and continue after expiration or termination.
+5.	AT&T and Developer shall each bear their respective costs and expenses incurred in connection with this Agreement. Neither this Agreement nor the furnishing of the SDK Tools hereunder shall constitute or imply any promise, commitment or intention to (in the case of Developer) make any present or future use of the AT&T SDK Tools by Developer to improve any of Developer's mobile software or for any other reason; or (in the case of AT&T) to offer the AT&T SDK Tools (or any commercial version of same) to Developer following the expiration or termination of this Agreement.
+
+6.	Developer shall hold the AT&T SDK Tools, and any written information furnished by AT&T to Developer in furtherance of this Agreement (collectively, hereinafter, "AT&T Confidential Information"), in confidence for AT&T and shall only use the AT&T Confidential Information for the purpose permitted under this Agreement. Developer shall not de-compile, reverse engineer, disassemble or attempt to derive the source code of, all or any portion of the computer programs that comprise the AT&T SDK Tools. Developer shall not make any disclosure of all or any portion of the AT&T Confidential Information to anyone, except to Developer's employees to whom disclosure is necessary for Developer's permitted use, provided that any disclosure or use of the AT&T Confidential Information by such persons in violation of this Agreement shall be deemed a breach of this Agreement by Developer. Developer's obligations under this Section 6 shall not apply to any information that: (i) is or becomes available without restriction to the general public by acts not attributable to Developer or its employees; (ii) was rightfully in Developer's possession without limitation on disclosure before disclosure hereunder to Developer; (iii) is rightfully disclosed to Developer by a third party without restrictions on disclosure; or (iv) is independently developed by Developer as evidenced by documents in Developer's possession.
+
+7.	As used in this Agreement, the term "Feedback" means any suggestions, improvements, observations, comments, testing comments, and other evaluation information relating to the AT&T SDK Tools, that may be provided by Developer to AT&T from time to time, either orally or in writing. Notwithstanding the above, Feedback shall not be deemed to include any computer software or algorithms developed, owned or licensed by Developer that existed as of or subsequent to the Effective Date of this Agreement. Nothing in this Agreement shall require Developer to provide any Feedback to AT&T. Subject to the terms of this Agreement including the definition of "Feedback" provided herein, Developer agrees that AT&T shall be entitled to use any Feedback that may be provided by Developer to AT&T for any purpose, including but not limited to modification and improvement of AT&T's SDK Tools based on such Feedback, without compensation to Developer, and that AT&T shall own the intellectual property rights relating to any such modifications and improvements created by AT&T.
+
+8.	You may not use the AT&T SDK Tools to intentionally write or distribute any Application that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of AT&T or any third party including, but not limited to, any mobile communications carrier ("Malicious Activities"). You may not use any Component to create an Application or other program that would intentionally disable, hack or otherwise interfere with any security, digital rights management, digital signing, verification or authentication mechanisms implemented by or for AT&T, a user, or a third party, nor can You enable others to do so. You agree that any Application You develop shall be free of any viruses, worms, time bombs, Trojan horses, other harmful, malicious or destructive code, or any software disabling devices, time-out devices, counter devices and devices intended to collect data regarding usage of Application. If you intentionally participate in Malicious Activities, AT&T shall have the immediate and automatic right to terminate your usage of the SDK Tools and this Agreement without further notice to you. You also agree that AT&T shall have the right to prevent your Application from operating on the AT&T or any other network. AT&T shall also seek any and all further remedies available to it.
+
+9.	You may not assert against AT&T or any of its affiliates or authorized representatives, and hereby waive, any claim for infringement or misappropriation of any rights protectable under intellectual property law anywhere in the world, including rights under patent, copyright, trade secret or trademark law, solely related to the AT&T SDK Tools.
+
+10.	AT&T GRANTS DEVELOPER THE RIGHT TO USE THE AT&T SDK TOOLS ON AN "AS IS" BASIS. EXCEPT AS EXPRESSLY SET FORTH HEREIN, AT&T DOES NOT MAKE, AND EXPRESSLY DISCLAIMS, ANY EXPRESS OR IMPLIED WARRANTIES, REPRESENTATIONS OR ENDORSEMENTS OF ANY KIND WHATSOEVER, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, AND THE WARRANTIES OF TITLE OR NON-INFRINGEMENT.
+
+11.	TO THE MAXIMUM EXTENT PERMITTED BY LAW, YOU WILL DEFEND, INDEMNIFY AND HOLD HARMLESS AT&T, ITS AFFILIATES AND THEIR RESPECTIVE DIRECTORS, OFFICERS, EMPLOYEES AND AGENTS FROM AND AGAINST ANY AND ALL LOSSES, LIABILITIES, DAMAGES, COSTS AND EXPENSES (INCLUDING REASONABLE ATTORNEYS FEES) RESULTING FROM THIRD PARTY CLAIMS, ACTIONS, SUITS OR PROCEEDINGS ARISING OUT OF OR ACCRUING FROM (1) YOUR INTERNAL USE OF THE AT&T SDK TOOLS SOLELY FOR THE DEVELOPMENT OF YOUR APPLICATION, (2) ANY APPLICATION YOU DEVELOP THAT INFRINGES ANY COPYRIGHT, TRADEMARK, PATENT OR OTHER INTELLECTUAL PROPERTY RIGHT OR THE MISAPPROPRIATION OF A TRADE SECRET OR TRADE DRESS OF ANY PERSON OR THAT DEFAMES ANY PERSON OR VIOLATES THEIR RIGHTS, INCLUDING RIGHTS OF PUBLICITY OR PRIVACY; OR (3) ANY NON-COMPLIANCE BY YOU WITH THIS AGREEMENT.
+
+12.	EACH PARTY SHALL BE RESPONSIBLE FOR ITS OWN ACTS AND OMISSIONS AND THE ACTS AND OMISSIONS OF ITS EMPLOYEES AS A RESULT OF ANY ACTIONS TAKEN UNDER THIS AGREEMENT. IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER OR TO ANY THIRD PARTY FOR ANY LOSS, CLAIM, DAMAGE OR LIABILITY, OF WHATSOEVER KIND OR NATURE, WHICH MAY ARISE FROM OR IN CONNECTION WITH THIS AGREEMENT.
+
+13.	NEITHER PARTY SHALL BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, HOWEVER ARISING, EVEN IF IT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+
+14.	This Agreement shall be governed by and construed in accordance with the laws of the State of New York, USA, applicable to agreements made and to be performed wholly therein without regard to its conflicts of law rules.
+
+15.	Any and all controversies or claims of any nature arising out of or relating to this Agreement or the breach, termination or validity thereof, whether based on contract, tort, statute, fraud, misrepresentation or any other legal or equitable theory (the "Claim") shall be resolved solely and exclusively by arbitration by the CPR Institute for Dispute Resolution ("CPR") in accordance with the provisions of the CPR Rules for Non-Administered Arbitration to the extent such rules do not conflict with this paragraph and Agreement.
+
+16.	Developer shall not, in connection with its use of the AT&T SDK Tools, reference AT&T, its trade names, trademarks, service marks or any other indicia of origin owned by AT&T, or indicate that Developer's products or services are in any way sponsored, approved or endorsed by AT&T. For clarity, this restriction shall not impact any other rights Developer has under separate agreements with AT&T. Developer shall not cause to be issued or released for publication any articles, advertising, packaging, press releases, or other publicity mentioning or implying the AT&T in connection with the subject matter of this Agreement. 
+
+17.	If any section of this Agreement, or portion thereof, is found by competent judicial authority to be invalid, illegal, or unenforceable in any respect, then that section in every other respect, and the remainder of this Agreement and its Attachments, shall continue in effect.
+
+AT&T may modify or amend the terms of this SDK Tools Agreement at any time, with notice to You, by prominently posting a copy of the modified or amended License available through any of the Tools or at AT&T Developer's Portal solely for additional tools and/or resources made available to you. You will be deemed to have agreed to any such modification or amendment by Your decision to use such additional or new tools and/or resources available through the AT&T Developer Portal following the date in which the modified or amended Agreement is made available through the SDK Tools site or the AT&T Developer's Portal.
+
+END OF GENERAL TERMS AND CONDITIONS 
+
+Attachment A
+
+AT&T SDK Tools may include, but are not limited the following tools:
+
+Whitepapers, technical articles, videos, podcasts, example applications, code snippets, webcasts, info-graphics, live application examples, libraries, IDE's, general tools(test harnesses, packaging tools, etc) all of which can be part of an SDK or downloaded separately.
+
+In the cases AT&T distributes source code, such as with libraries, example apps, code snippets, AT&T allows the Developer to use this code and modify to work within their own application. AT&T Developer Program sees such code examples as a means to help improve Developer's Application quality and speed adoption on AT&T offered devices using AT&T APIs.
+
+This list is an evergreen listing of tools available through the AT&T SDK Toolkit and will be modified from time to time to include new tools or delete existing tools. This agreement only applies to those tools you have downloaded.
+
+Sencha Touch SDK: In order to speed your development with network APIs, AT&T has provided an SDK that exposes the network APIs in a library of simple user objects. The SDK extends the server-side libraries to WebKit browsers through elements of the Sencha Touch SDK. The Sencha Touch SDK has many UI elements that can complement your development and the visual appearance of your web pages, and speed development to multiple HTML5 devices.
