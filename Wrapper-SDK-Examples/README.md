@@ -51,6 +51,7 @@ available in Wrapper SDK:
 * SendSMSApp
 * SendMMSApp
 * SpeechToTextApp
+* SpeechToSMSApp
 
 In each solution, update the following lines in MainPage.xaml.cs with your own
 App Key and Secret Key.

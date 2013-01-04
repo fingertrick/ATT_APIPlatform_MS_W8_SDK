@@ -1,0 +1,66 @@
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\Assets\ApplicationIcon.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\ATT.WP8.SpeechToSMS.dll
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\ATT.WP8.SpeechToSMS.pdb
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\AppManifest.xaml
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\ATT.WP8.SpeechToSMS_Debug_AnyCPU.xap
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\ATT.WP8.Controls.dll
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\ATT.WP8.SDK.dll
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\ATT.WP8.Controls.pdb
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\Bin\Debug\ATT.WP8.Controls.xml
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\obj\Debug\App.g.cs
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\obj\Debug\MainPage.g.cs
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\obj\Debug\ATT.WP8.SpeechToSMS.g.resources
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\obj\Debug\ATT.WP8.SpeechToSMS.Resources.AppResources.resources
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\obj\Debug\ATT.WP8.SpeechToSMS.csproj.GenerateResource.Cache
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\obj\Debug\ATT.WP8.SpeechToSMS.dll
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\obj\Debug\ATT.WP8.SpeechToSMS.pdb
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS\obj\Debug\XapCacheFile.xml
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\Assets\ApplicationIcon.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\ATT.WP8.SpeechToSMS.dll
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\ATT.WP8.SpeechToSMS.pdb
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\AppManifest.xaml
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\ATT.WP8.SpeechToSMS_Debug_AnyCPU.xap
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\ATT.WP8.Controls.dll
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\ATT.WP8.SDK.dll
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\ATT.WP8.Controls.pdb
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\Bin\Debug\ATT.WP8.Controls.xml
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\obj\Debug\App.g.cs
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\obj\Debug\MainPage.g.cs
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\obj\Debug\ATT.WP8.SpeechToSMS.g.resources
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\obj\Debug\ATT.WP8.SpeechToSMS.Resources.AppResources.resources
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\obj\Debug\ATT.WP8.SpeechToSMS.csproj.GenerateResource.Cache
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\obj\Debug\ATT.WP8.SpeechToSMS.dll
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\obj\Debug\ATT.WP8.SpeechToSMS.pdb
+D:\ATT-MS-SDK-12272012\ATT-MS-SDK-12272012\ATT.Sources\Src\ATT.WP8.SpeechToSMS - ButtonControl\obj\Debug\XapCacheFile.xml
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\Assets\ApplicationIcon.png
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\ATT.WP8.SpeechToSMS.dll
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\ATT.WP8.SpeechToSMS.pdb
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\AppManifest.xaml
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\ATT.WP8.SpeechToSMS_Debug_AnyCPU.xap
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\ATT.WP8.Controls.dll
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\ATT.WP8.Controls.xml
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\ATT.WP8.SDK.dll
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\Bin\Debug\ATT.WP8.SDK.xml
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\obj\Debug\App.g.cs
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\obj\Debug\MainPage.g.cs
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\obj\Debug\ATT.WP8.SpeechToSMS.g.resources
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\obj\Debug\ATT.WP8.SpeechToSMS.Resources.AppResources.resources
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\obj\Debug\ATT.WP8.SpeechToSMS.csproj.GenerateResource.Cache
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\obj\Debug\ATT.WP8.SpeechToSMS.dll
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\obj\Debug\ATT.WP8.SpeechToSMS.pdb
+E:\att\releases\Windows-SDKs\Wrapper-SDK\github\Wrapper-SDK-Examples\ATT.WP8.SpeechToSMS-ButtonControl\obj\Debug\XapCacheFile.xml

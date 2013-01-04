@@ -79,6 +79,24 @@ own Api Key and Secret Key.
 	ApiKey
 	SecretKey
 
+3) ATT.WP8.SpeechToSMS-ButtonControl
+------------------------------------
+This is a mash-up application using SpeechButton control and SMS Wrapper API.
+
+In this solution, update the following:
+
+3.a) Properties of AT&T Control ('Convert' Button) with your own Api Key and 
+Secret Key.
+
+	ApiKey
+	SecretKey
+
+3.b) Update the following lines in MainPage.xaml.cs with your own App Key and
+Secret Key.
+
+        clientId = "your_att_app_key";
+        clientSecret = "your_att_secret_key";
+
 ===================
 Known Limitations
 ===================

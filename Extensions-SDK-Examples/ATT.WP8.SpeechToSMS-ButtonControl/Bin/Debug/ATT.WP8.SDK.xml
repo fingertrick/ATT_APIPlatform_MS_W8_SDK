@@ -1,0 +1,1477 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATT.WP8.SDK</name>
+    </assembly>
+    <members>
+        <member name="T:ATT.WP8.SDK.AttRestService">
+            <summary>
+            Base class for ATT API REST service wrappers.  Other services inherit from and extend this class.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.AttRestService._authService">
+            <summary>
+            Authorization service
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.AttRestService.#ctor(ATT.WP8.SDK.Entities.AttServiceSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.AttRestService"/> class. 
+            </summary>
+            <param name="settings">
+            <see cref="T:ATT.WP8.SDK.Entities.AttServiceSettings"/>ATT service settings.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            The constructor will throw an exception when the setting variable is null.
+            </exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.AttRestService.Authenticate">
+            <summary>
+            Creates or refreshes current service client credentials used to perform a request.
+            </summary>
+            <returns>The <see cref="T:ATT.WP8.SDK.Entities.OAuthToken"/></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.AttRestService.GetScope">
+            <summary>
+            Gets concrete service scope.  Abstract in the base class, this will return a string that is the type of service of the object; for example, "SMS", "MMS", and so on.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.AttRestService.SendRawRequest(ATT.WP8.SDK.Utils.HttpMethod,System.String,System.String,System.String)">
+            <summary>
+            Sends HTTP request with raw string content.
+            </summary>
+            <param name="httpMethod"><see cref="T:ATT.WP8.SDK.Utils.HttpMethod"/>Http method to use in the request.</param>
+            <param name="relativeUri">ATT service relative Uri.</param>
+            <param name="requestBody">Request body to send.</param>
+            <param name="bodyMediaType">Request body media type.</param>
+        </member>
+        <member name="M:ATT.WP8.SDK.AttRestService.SendContentRequest(ATT.WP8.SDK.Utils.HttpMethod,System.String,ATT.WP8.SDK.Utils.RequestData)">
+            <summary>
+            Sends HTTP request with specified <see cref="T:ATT.WP8.SDK.Utils.RequestData"/> as request body.
+            </summary>
+            <param name="httpMethod"><see cref="T:ATT.WP8.SDK.Utils.HttpMethod"/>Http method to use in the request.</param>
+            <param name="relativeUri">ATT service relative Uri.</param>
+            <param name="requestData"><see cref="T:ATT.WP8.SDK.Utils.RequestData"/> to use as request body.</param>
+        </member>
+        <member name="P:ATT.WP8.SDK.AttRestService.Settings">
+            <summary>
+            Gets ATT service settings
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.AttRestService.AuthService">
+            <summary>
+            Gets the auth service.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.AttRestService.ClientCredential">
+            <summary>
+            Gets or sets client credenitals
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.AuthorizationService">
+            <summary>
+            This class implements the AT&amp;T Authorization service.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.AuthorizationService.#ctor(ATT.WP8.SDK.Entities.AttServiceSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.AuthorizationService"/> class. 
+            </summary>
+            <param name="settings">
+            <see cref="T:ATT.WP8.SDK.Entities.AttServiceSettings"/>Service settings.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Throws exception when settings is null.
+            </exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.AuthorizationService.GetClientCredentials(ATT.WP8.SDK.Entities.OAuthToken,System.String)">
+            <summary>
+            Passes in client credential. If they have not expired, return them; otherwise, get and return a new set of client credentials.
+            </summary>
+            <param name="clientCredential">Client credentials.</param>
+            <param name="scopeList">Scope list.</param>
+            <returns>The <see cref="T:ATT.WP8.SDK.Entities.OAuthToken"/></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.AuthorizationService.GetClientCredentials(System.String)">
+            <summary>
+            Gets client credentials by authorization code
+            </summary>
+            <param name="authorizationCode">authorization code</param>
+            <returns>client credential</returns>
+        </member>
+        <member name="E:ATT.WP8.SDK.AuthorizationService.AuthorizationFailed">
+            <summary>
+            raise when authorization failed
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.AttServiceSettings">
+            <summary>
+            A domain object that contains client data for an ATT service, including client identifier, secret key, and service endpoint.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.AttServiceSettings.#ctor(System.String,System.String,System.Uri)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WP8.SDK.Entities.AttServiceSettings"/>
+            </summary>
+            <param name="clientId">Client identifier</param>
+            <param name="clientSecret">Client secret key</param>
+            <param name="serviceEndPoint">Service endpoint</param>
+            <exception cref="T:System.ArgumentNullException">Will throw and exception with an input parameter - clientId, clientSecret, or serviceEndPoint, is null.</exception>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.AttServiceSettings.ClientId">
+            <summary>
+            Client identifier
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.AttServiceSettings.ClientSecret">
+            <summary>
+            Client secret key
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.AttServiceSettings.EndPoint">
+            <summary>
+            Service endpoint
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.DeliveryInfo">
+            <summary>
+            Represents Delivery information.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.ResponseEntityBase">
+            <summary>
+            The base class for HTTP responses; specific classes will inherit from this.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.ResponseEntityBase.ToString">
+            <summary>
+            Returns a string that represents the current response.
+            </summary>
+            <returns>A string that represents the current response.</returns>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.ResponseEntityBase.BadRequest">
+            <summary>
+            Gets or sets response error.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.ResponseEntityBase.RequestError">
+            <summary>
+            Gets or sets request error.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.ResponseEntityBase.RequestErrorLowMoniker">
+            <summary>
+            Gets or sets request error.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.DeliveryInfo.Address">
+            <summary>
+            Gets or sets delivery address.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.DeliveryInfo.DeliveryStatus">
+            <summary>
+            Gets or sets delivery status.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.DeliveryInfo.Id">
+            <summary>
+            Gets or sets delivery identifier.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.DeliveryInfoList">
+            <summary>
+            Represents delivery information list.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.DeliveryInfoList.DeliveryStatus">
+            <summary>
+            Gets or sets delivery status.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.DeliveryStatus">
+            <summary>
+            Represents delivery status of HTTP request.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.DeliveryStatus.DeliveryInfoList">
+            <summary>
+            Gets or sets Delivery information list.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.DeliveryStatus.ResourceUrl">
+            <summary>
+            Gets or sets resource URL.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.InboundSms">
+            <summary>
+            A domain object that encapsulates and represents an inbound SMS message.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.InboundSms.ParseJson(System.String)">
+            <summary>
+            Parses JSON formatted message to <see cref="T:ATT.WP8.SDK.Entities.InboundSmsMessageList"/> entity.
+            </summary>
+            <param name="jsonInput">Input JSON formatted message.</param>
+            <returns>Parsed <see cref="T:ATT.WP8.SDK.Entities.InboundSmsMessageList"/> entity.</returns>
+            <exception cref="T:System.ArgumentNullException">jsonInput is null.</exception>
+            <exception cref="T:ATT.WP8.SDK.InvalidResponseException">JSON format is invalid or response contains error.</exception>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.InboundSmsMessage">
+            <summary>
+            A domain object that encapsulates and represents an inbound SMS message.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.InboundSmsMessage.ToString">
+            <summary>
+            Returns a string that represents the current inbound SMS message.
+            </summary>
+            <returns>A string that represents the current inbound SMS message.</returns>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.InboundSmsMessage.Message">
+            <summary>
+            Gets or sets message.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.InboundSmsMessage.MessageId">
+            <summary>
+            Gets or sets message identifier.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.InboundSmsMessage.SenderAddress">
+            <summary>
+            Gets or sets sender address.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.InboundSmsMessageList">
+            <summary>
+            A domain object that encapsulates and represents an inbound message list.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.InboundSmsMessageList.InboundSmsMessage">
+            <summary>
+            Gets or sets list of inbound SMS messages.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.InboundSmsMessageList.NumberOfMessagesInThisBatch">
+            <summary>
+            Gets or sets the number of messages in the message list.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.InboundSmsMessageList.ResourceUrl">
+            <summary>
+            Gets or sets resource URL.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.InboundSmsMessageList.TotalNumberOfPendingMessages">
+            <summary>
+            Gets or sets total number of pending messages.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.InboundSmsMessageListRoot">
+            <summary>
+            A domain object that encapsulates and represents the root of inbound SMS messages list.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.InboundSmsMessageListRoot.InboundSmsMessageList">
+            <summary>
+            Gets or sets list of inbound SMS messages.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.InvalidResponseException">
+            <summary>
+            Represents invalid response exception.
+            </summary>
+            Ignore CodeIt.Right rule for this line. Class marked as data contract. It is not nessesary mark it as ISerializable.
+        </member>
+        <member name="M:ATT.WP8.SDK.InvalidResponseException.#ctor">
+            <summary>
+            Creates instance of <see cref="T:ATT.WP8.SDK.InvalidResponseException"/> with status code zero.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.InvalidResponseException.#ctor(ATT.WP8.SDK.Entities.ResponseEntityBase)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WP8.SDK.InvalidResponseException"/> with an invalidResponseEntity.
+            </summary>
+            <param name="invalidResponseEntity"><see cref="T:ATT.WP8.SDK.Entities.ResponseEntityBase"/>Invalid response entity</param>
+        </member>
+        <member name="M:ATT.WP8.SDK.InvalidResponseException.#ctor(System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WP8.SDK.InvalidResponseException"/> with a string.
+            </summary>
+            <param name="message">Error message</param>
+        </member>
+        <member name="M:ATT.WP8.SDK.InvalidResponseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WP8.SDK.InvalidResponseException"/> with an exception passed in.
+            </summary>
+            <param name="message">Error message</param>
+            <param name="ex">Original exception</param>
+        </member>
+        <member name="M:ATT.WP8.SDK.InvalidResponseException.#ctor(System.String,System.Exception,System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WP8.SDK.InvalidResponseException"/>
+            </summary>
+            <param name="message">Error message</param>
+            <param name="ex">Original exception</param>
+            <param name="status"><see cref="T:System.Net.HttpStatusCode"/>Response status</param>
+            <param name="body">Invalid response body</param>
+        </member>
+        <member name="P:ATT.WP8.SDK.InvalidResponseException.Body">
+            <summary>
+            Gets or sets invalid response body.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.InvalidResponseException.InvalidResponseEntity">
+            <summary>
+            Gets or sets invalid response entity.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.InvalidResponseException.Status">
+            <summary>
+            Gets or sets error status.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.MmsResponse">
+            <summary>
+            A domain object to encapsulate and represent an MMS response.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.MmsResponse.#ctor(System.String,System.String)">
+            <summary>
+            Creates instance of the <see cref="T:ATT.WP8.SDK.Entities.MmsResponse"/> object.
+            </summary>
+            <param name="id">MMS response identifier</param>
+            <param name="resourceUrl">Resource URL</param>
+            <exception cref="T:System.ArgumentNullException">id is null or resourceUrl is null</exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.MmsResponse.Parse(System.String)">
+            <summary>
+            Parses JSON formatted input text to <see cref="T:ATT.WP8.SDK.Entities.MmsResponse"/> entity.
+            </summary>
+            <param name="jsonInput">JSON formatted input text</param>
+            <returns>Parsed MMS response entity</returns>
+            <exception cref="T:System.ArgumentException">jsonInput is null or empty string</exception>
+            <exception cref="T:ATT.WP8.SDK.InvalidResponseException">JSON format is invalid or response contains error.</exception>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.MmsResponse.Id">
+            <summary>
+            Gets MMS response identifier.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.MmsResponse.ResourceUrl">
+            <summary>
+            Gets resource URL.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.MmsResponseRaw">
+            <summary>
+            A domain object of represent the MMS response parsed out of the JSON formatted text.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.MmsResponseRaw.Id">
+            <summary>
+            Gets or sets MMS response identifier.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.MmsResponseRaw.ResourceReference">
+            <summary>
+            Gets or sets MMS resource reference.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.NBest">
+            <summary>
+            A domain object for the speech API, this contains data about recognized text.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.NBest.Confidence">
+            <summary>
+            Gets or sets confidence as a number.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.NBest.Grade">
+            <summary>
+            Gets or sets grade value.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.NBest.Hypothesis">
+            <summary>
+            Gets or sets hypothesis.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.NBest.LanguageId">
+            <summary>
+            Gets or sets language identifier.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.NBest.ResultText">
+            <summary>
+            Gets or sets resulting text.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.NBest.Words">
+            <summary>
+            Gets or sets array of words.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.NBest.WordScores">
+            <summary>
+            Gets or sets array of word scores.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.OAuthToken">
+            <summary>
+            A domain object that encapsulates and represents an authorization token instance.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.OAuthToken.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates instance of <see cref="T:ATT.WP8.SDK.Entities.OAuthToken"/>.
+            </summary>
+            <param name="accessToken">Access token</param>
+            <param name="refreshToken">Refresh token</param>
+            <param name="expiresIn">Expiration</param>
+            <exception cref="T:System.ArgumentNullException">accessToken is null or refreshToken is null or expiresIn is null</exception>
+            <exception cref="T:System.ArgumentException">expiresIn cannot be parsed to long</exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.OAuthToken.IsExpired">
+            <summary>
+            Gets whether authorization token is expired.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.OAuthToken.ParseJson(System.String)">
+            <summary>
+            Parses JSON formated text input to <see cref="T:ATT.WP8.SDK.Entities.OAuthToken"/> authorization token entity.
+            </summary>
+            <param name="jsonInput">JSON formated text input</param>
+            <returns><see cref="T:ATT.WP8.SDK.Entities.OAuthToken"/>Authorization token entity</returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.OAuthToken.ToString">
+            <summary>
+            Returns a string that represents the current authorization token.
+            </summary>
+            <returns>A string that represents the current authorization token.</returns>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OAuthToken.AccessToken">
+            <summary>
+            Gets access token.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OAuthToken.CreationTime">
+            <summary>
+            Gets creation time.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OAuthToken.Expiration">
+            <summary>
+            Gets expiration date&amp;time.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OAuthToken.ExpiresIn">
+            <summary>
+            Gets the number of seconds for expiration time, from creation time.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OAuthToken.RefreshToken">
+            <summary>
+            Gets refresh token.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.OAuthTokenRaw">
+            <summary>
+            A domain object that encapsulates and represents authorization token parsed from JSON formatted text.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.OAuthTokenRaw.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Entities.OAuthTokenRaw"/> class. 
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.OAuthTokenRaw.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Entities.OAuthTokenRaw"/> class. 
+            </summary>
+            <param name="accessToken">
+            Access token
+            </param>
+            <param name="refreshToken">
+            Refresh token
+            </param>
+            <param name="expiresIn">
+            Expires in
+            </param>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OAuthTokenRaw.AccessToken">
+            <summary>
+            Gets or sets access token value.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OAuthTokenRaw.ExpiresIn">
+            <summary>
+            Gets or sets number of expiration seconds.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OAuthTokenRaw.RefreshToken">
+            <summary>
+            Gets or sets refresh token value.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.OutboundSms">
+            <summary>
+            A domain object that encapsulates and represents an outbound SMS message.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.OutboundSms.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Entities.OutboundSms"/> class. 
+            Creates instance of <see cref="T:ATT.WP8.SDK.Entities.OutboundSms"/>.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.OutboundSms.#ctor(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Entities.OutboundSms"/> class. 
+            </summary>
+            <param name="address">
+            Set of SMS addresses
+            </param>
+            <param name="message">
+            SMS message
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            address is null
+            </exception>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OutboundSms.Address">
+            <summary>
+            Gets or sets set of SMS addresses.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OutboundSms.Message">
+            <summary>
+            Gets or sets SMS message.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.OutboundSmsRaw">
+            <summary>
+             A domain object that encapsulates and represents an outbound (raw) SMS message
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.OutboundSmsRaw.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Entities.OutboundSmsRaw"/> class. 
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.OutboundSmsRaw.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Entities.OutboundSmsRaw"/> class. 
+            </summary>
+            <param name="address">
+            SMS address
+            </param>
+            <param name="message">
+            SMS message
+            </param>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OutboundSmsRaw.Address">
+            <summary>
+            Gets or sets SMS address.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.OutboundSmsRaw.Message">
+            <summary>
+            Gets or sets SMS message.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.PolicyExceptionEntity">
+            <summary>
+            A domain object which wraps/represents policy exception parsed from JSON formatted text.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.PolicyExceptionEntity.MessageId">
+            <summary>
+            Gets or sets message identifier.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.PolicyExceptionEntity.Text">
+            <summary>
+            Gets or sets policy exception text.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.PolicyExceptionEntity.Variables">
+            <summary>
+            Gets or sets variables.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.Recognition">
+            <summary>
+            A domain object that encapsulates and represents a speech recognition result.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.Recognition.NBest">
+            <summary>
+            Gets or sets array of <see cref="P:ATT.WP8.SDK.Entities.Recognition.NBest"/>.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.Recognition.ResponseId">
+            <summary>
+            Gets or sets response identifier.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.RequestError">
+            <summary>
+            A domain object that encapsulates and represents a request error.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.RequestError.PolicyException">
+            <summary>
+            Gets or sets policy exception.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.RequestError.ServiceException">
+            <summary>
+            Gets or sets service exception.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.RequestError.ServiceExceptionLowMoniker">
+            <summary>
+            Gets or sets service exception.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.ResourceReferenceRaw">
+            <summary>
+            Represents a raw resource reference, parsed from JSON formatted text.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.ResourceReferenceRaw.ResourceUrl">
+            <summary>
+            Gets or sets resource URL.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.ServiceExceptionEntity">
+            <summary>
+            This class wraps the data in a service exception.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.ServiceExceptionEntity.MessageId">
+            <summary>
+            Gets or sets message identifier.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.ServiceExceptionEntity.MessageIdLowMoniker">
+            <summary>
+            Gets or sets message identifier.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.ServiceExceptionEntity.Text">
+            <summary>
+            Gets or sets service exception text.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.ServiceExceptionEntity.TextLowMoniker">
+            <summary>
+            Gets or sets service exception text.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.ServiceExceptionEntity.Variables">
+            <summary>
+            Gets or sets service exception variables.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.ServiceExceptionEntity.VariablesLowMoniker">
+            <summary>
+            Gets or sets service exception variables.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.SmsResponse">
+            <summary>
+            Domain object with wraps/represents an SMS response.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.SmsResponse.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Entities.SmsResponse"/> class. 
+            </summary>
+            <param name="id">
+            SMS response identifier
+            </param>
+            <param name="resourceUrl">
+            Resource URL
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            id is null or resourceUrl is null
+            </exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.SmsResponse.Parse(System.String)">
+            <summary>
+            Parses JSON formatted input text to <see cref="T:ATT.WP8.SDK.Entities.SmsResponse"/> entity.
+            </summary>
+            <param name="jsonInput">JSON formatted input text</param>
+            <returns>Parsed SMS response entity</returns>
+            <exception cref="T:System.ArgumentNullException">id is null or resourceUrl is null</exception>
+            <exception cref="T:ATT.WP8.SDK.InvalidResponseException">JSON format is invalid or response contains error.</exception>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.SmsResponse.Id">
+            <summary>
+            Gets or sets SMS response identifier.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.SmsResponse.ResourceUrl">
+            <summary>
+            Gets or sets resource URL.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.SmsResponseRaw">
+            <summary>
+            This object wrap the raw SMS response parsed from JSON formatted text.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.SmsResponseRaw.Id">
+            <summary>
+            Gets or sets SMS response identifier.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.SmsResponseRaw.ResourceReference">
+            <summary>
+            Gets or sets SMS resource reference.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.SpeechResponse">
+            <summary>
+            Domain object with wraps/represents a speech response.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.SpeechResponse.#ctor(ATT.WP8.SDK.Entities.Recognition)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Entities.SpeechResponse"/> class. 
+            </summary>
+            <param name="recognition">
+            Speech response recognition.
+            </param>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.SpeechResponse.Parse(System.String)">
+            <summary>
+            Parses speech response from input JSON formatted text message.
+            </summary>
+            <param name="jsonInput">Input JSON formatted text message</param>
+            <returns>Parsed speech response entity</returns>
+            <exception cref="T:System.ArgumentNullException">jsonInput is null</exception>
+            <exception cref="T:ATT.WP8.SDK.InvalidResponseException">JSON format is invalid or response contains error.</exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.Entities.SpeechResponse.GetTranscription">
+            <summary>
+            Method returns transcription in sentence.
+            </summary>
+            <returns>Transcripted Message</returns>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.SpeechResponse.Recognition">
+            <summary>
+            Gets speech response recognition.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Entities.SpeechResponseRaw">
+            <summary>
+            Represents speech response.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Entities.SpeechResponseRaw.Recognition">
+            <summary>
+            Gets or sets speech response recognition.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.ContentInfo">
+            <summary>
+            Class reperesnts binary content info
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.ContentInfo.Content">
+            <summary>
+            Gets or sets content
+            </summary>
+            Ignore CodeIt.Right rule for this line. Byte array property is required for MMS content destribution.
+        </member>
+        <member name="P:ATT.WP8.SDK.ContentInfo.Name">
+            <summary>
+            Gets or sets name of content
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.MmsPriority">
+            <summary>
+            Specifies MMS priority, which is used for sending MMS.  Priorities are Default, Low, Normal, and High.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.MmsPriority.Default">
+            <summary>
+            Default priority.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.MmsPriority.Low">
+            <summary>
+            Low priority.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.MmsPriority.Normal">
+            <summary>
+            Normal priority.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.MmsPriority.High">
+            <summary>
+            High priority.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.MmsRequestDataHelper">
+            <summary>
+            Helper class for preparation of RequestData for MMS
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.MmsRequestDataHelper.GetTimeStampString(System.DateTime)">
+            <summary>
+            Gets time stamp string for given date
+            </summary>
+            <param name="time"></param>
+            <returns>The <see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.MmsRequestDataHelper.GetContentTypeHeader(System.String)">
+            <summary>
+            Gets content type header
+            </summary>
+            <param name="timeStampStr">time stamp string</param>
+            <returns>The <see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.MmsRequestDataHelper.GetBodyPartDelimiter(System.String)">
+            <summary>
+            Gets body part delimiter part
+            </summary>
+            <param name="timeStamp">time stamp string</param>
+            <returns>The <see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.MmsRequestDataHelper.GetBodyTerminator(System.String)">
+            <summary>
+            Gets body terminator
+            </summary>
+            <param name="timeStamp">time stamp string</param>
+            <returns>The <see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.MmsRequestDataHelper.GetAddress(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets REST service address parameter by phone numbers
+            </summary>
+            <param name="phoneNumbers">phone numbers</param>
+            <returns>The <see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.MmsRequestDataHelper.GetTextContent(System.String,System.String,System.String,ATT.WP8.SDK.MmsPriority)">
+            <summary>
+            Gets text content of MMS request
+            </summary>
+            <param name="timeStampStr">time stamp string</param>
+            <param name="address">phone numbers as address</param>
+            <param name="subject">MMS subject</param>
+            <param name="priority">MMS priority</param>
+            <returns>The <see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.MmsRequestDataHelper.GetAttachmentPrefix(System.String,System.String)">
+            <summary>
+            Gets prefix for attachment with given name and time stamp
+            </summary>
+            <param name="timeStampStr">time stamp string</param>
+            <param name="fileName">attachment file name</param>
+            <returns>The <see cref="T:System.String"/></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.MmsRequestDataHelper.GetAttachmentsContent(System.String,System.Collections.Generic.IEnumerable{ATT.WP8.SDK.ContentInfo})">
+            <summary>
+            Gets attachemnts content as byte array
+            </summary>
+            <param name="timeStampStr">time stamp string</param>
+            <param name="attachments">attachments</param>
+            <returns></returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.MmsRequestDataHelper.GetRequestData(System.Collections.Generic.IEnumerable{System.String},System.String,System.Collections.Generic.IEnumerable{ATT.WP8.SDK.ContentInfo},ATT.WP8.SDK.MmsPriority)">
+            <summary>
+            Gets ReauestData object for MMS
+            </summary>
+            <param name="phoneNumbers">phone numbers</param>
+            <param name="message">MMS message</param>
+            <param name="attachments">attachments</param>
+            <param name="priority">priority</param>
+            <returns>MMS request data</returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.MmsRequestDataHelper.GetRequestData(System.DateTime,System.Collections.Generic.IEnumerable{System.String},System.String,System.Collections.Generic.IEnumerable{ATT.WP8.SDK.ContentInfo},ATT.WP8.SDK.MmsPriority)">
+            <summary>
+            Gets ReauestData object for MMS
+            </summary>
+            <param name="timeStamp">time stamp</param>
+            <param name="phoneNumbers">phone numbers</param>
+            <param name="message">MMS message</param>
+            <param name="attachments">attachments</param>
+            <param name="priority">priority</param>
+            <returns>MMS request data</returns>
+        </member>
+        <member name="T:ATT.WP8.SDK.MmsService">
+            <summary>
+            This class implements a .Net wrapper for ATT MMS REST API service.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.MmsService.#ctor(ATT.WP8.SDK.Entities.AttServiceSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.MmsService"/> class. 
+            </summary>
+            <param name="settings">
+            AT&amp;T service settings.
+            </param>
+        </member>
+        <member name="M:ATT.WP8.SDK.MmsService.GetScope">
+            <summary>
+            Gets MMS service scope. - that is, returns the type of service this object interfaces with.  In this case, it is MMS
+            </summary>
+            <returns>MMS service scope.</returns>
+            Ignore CodeIt.Right rule for this line. As used only one culture we don't specified culture info.
+        </member>
+        <member name="M:ATT.WP8.SDK.MmsService.SendMms(System.Collections.Generic.IEnumerable{System.String},System.String,System.Collections.Generic.IEnumerable{ATT.WP8.SDK.ContentInfo},ATT.WP8.SDK.MmsPriority)">
+            <summary>
+            Sends new MMS message.
+            </summary>
+            <param name="phoneNumbers">Phone numbers to send MMS message to.</param>
+            <param name="message">Message body to send.</param>
+            <param name="attachments">List of files attached to MMS.</param>
+            <param name="priority">MMS priority.</param>
+            <returns>Instance of <see cref="T:ATT.WP8.SDK.Entities.MmsResponse"/> with sent MMS response information.</returns>
+            <exception cref="T:System.ArgumentNullException">Throws exception when the message is null.</exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.MmsService.GetMmsStatus(System.String)">
+            <summary>
+            Gets status of previously sent MMS message.
+            </summary>
+            <param name="mmsId">Identifier of MMS message to get status for.</param>
+            <returns>Instance of <see cref="T:ATT.WP8.SDK.Entities.DeliveryInfoList"/> with the information about MMS message status.</returns>
+            <exception cref="T:System.ArgumentNullException">Throws exception when mmsId is null.</exception>
+        </member>
+        <member name="T:ATT.WP8.SDK.ScopeType">
+            <summary>
+            Specifies scope types of sending requests on AT&amp;T services,  As of September, 2012, this can include Payment, SMS, MMS, TerminalLocation, WAPPush, MOBO, MIM and Speech. 
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.ScopeType.Payment">
+            <summary>
+            Payment
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.ScopeType.SMS">
+            <summary>
+            MSM message
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.ScopeType.MMS">
+            <summary>
+            MMS message
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.ScopeType.TerminalLocation">
+            <summary>
+            Terminal location
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.ScopeType.WapPush">
+            <summary>
+            WAP push
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.ScopeType.MOBO">
+            <summary>
+            MOBO
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.ScopeType.MIM">
+            <summary>
+            MIM
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.ScopeType.SPEECH">
+            <summary>
+            Speech
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.SmsService">
+            <summary>
+            This class wraps the AT&amp;T REST API, creating a straightforward was to call REST in any .Net language.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.SmsService.#ctor(ATT.WP8.SDK.Entities.AttServiceSettings)">
+            <summary>
+            The constructor creates a new instance of <see cref="T:ATT.WP8.SDK.SmsService"/>.
+            </summary>
+            <param name="settings">Instance of <see cref="T:ATT.WP8.SDK.Entities.AttServiceSettings"/> containing ATT API settings.</param>
+        </member>
+        <member name="M:ATT.WP8.SDK.SmsService.GetScope">
+            <summary>
+            Gets SMS service scope - that is, returns the type of service this object interfaces with.  In this case, it is SMS.
+            </summary>
+            <returns>SMS service scope.</returns>
+            Ignore CodeIt.Right rule for this line. Using ScopeType.SMS.ToString() avoid hardcode scope type.
+        </member>
+        <member name="M:ATT.WP8.SDK.SmsService.SendSms(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Sends the SMS message.
+            </summary>
+            <param name="phoneNumbers">Phone numbers to send SMS message to.</param>
+            <param name="message">Message body to send.</param>
+            <returns>Instance of <see cref="T:ATT.WP8.SDK.Entities.SmsResponse"/> with sent SMS response information.</returns>
+            <exception cref="T:System.ArgumentNullException">phoneNumbers is null.</exception>
+            <exception cref="T:System.ArgumentException">phoneNumbers count equals zero.</exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.SmsService.GetSmsStatus(System.String)">
+            <summary>
+            Gets status of a previously sent (or attempted) SMS message.
+            </summary>
+            <param name="smsId">Identifier of SMS message to get status for.</param>
+            <returns>Instance of <see cref="T:ATT.WP8.SDK.Entities.DeliveryInfoList"/> with the information about SMS message status.</returns>
+            <exception cref="T:System.ArgumentNullException">smsId is null.</exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.SmsService.GetInboundSmsMessages(System.String)">
+            <summary>
+            Gets SMS messages received for a specific short code.
+            </summary>
+            <param name="shortCode">Short code to get SMS message for.</param>
+            <returns>instance of <see cref="T:ATT.WP8.SDK.Entities.InboundSmsMessageList"/>Returns task as a result of asynchronous operation. Task result is list of inbound SMS messages.</returns>
+            <exception cref="T:System.ArgumentNullException">shortCode is null.</exception>
+            Ignore CodeIt.Right rule for this line. Unused local use for output in the JSON parser.
+        </member>
+        <member name="T:ATT.WP8.SDK.SpeechService">
+            <summary>
+            This class implements a .net wrapper and API for the ATT Speech REST API.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.SpeechService.#ctor(ATT.WP8.SDK.Entities.AttServiceSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.SpeechService"/> class. 
+            </summary>
+            <param name="settings">
+            Instance of <see cref="T:ATT.WP8.SDK.Entities.AttServiceSettings"/> containing ATT API settings.
+            </param>
+        </member>
+        <member name="M:ATT.WP8.SDK.SpeechService.GetScope">
+            <summary>
+            Returns the service scope; in the case, "Speech"
+            </summary>
+            <returns>Speech service scope.</returns>
+            Ignore CodeIt.Right rule for this line. Using ScopeType.SMS.ToString() avoid hardcode scope type.
+        </member>
+        <member name="M:ATT.WP8.SDK.SpeechService.SpeechToText(ATT.WP8.SDK.ContentInfo,ATT.WP8.SDK.XSpeechContext,ATT.WP8.SDK.SpeechXArgs)">
+            <summary>
+            The main conversion API. Calling this function sends an audio file to AT&amp;T service for translation to text.
+            </summary>
+            <param name="content"> audio file as instance of <see cref="T:ATT.WP8.SDK.ContentInfo"/></param>
+            <param name="speechContext"> Speech content.</param>
+            <param name="xargs"> custom arguments</param>
+            <returns> Instance of <see cref="T:ATT.WP8.SDK.Entities.SpeechResponse"/> with sent speech response information.</returns>
+            <exception cref="T:System.ArgumentNullException">Throws an exception when attachment is null.</exception>
+        </member>
+        <member name="T:ATT.WP8.SDK.SpeechXArgs">
+            <summary>
+            Represents XArgs for speech service
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.SpeechXArgs.GetHttpHeaderValue">
+            <summary>
+            Serialize object for HttpHeader
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ATT.WP8.SDK.SpeechXArgs.ClientApp">
+            <summary>
+            Gets or sets client app
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.SpeechXArgs.ClientScreen">
+            <summary>
+            Gets or sets client screen
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.SpeechXArgs.ClientSdk">
+            <summary>
+            Gets or sets client SDK
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.SpeechXArgs.ClientVersion">
+            <summary>
+            Gets or sets client version
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.SpeechXArgs.DeviceOS">
+            <summary>
+            Gets or sets device OS
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.SpeechXArgs.DeviceTime">
+            <summary>
+            Gets or sets device time
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.SpeechXArgs.DeviceType">
+            <summary>
+            Gets or sets device type
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.Argument">
+            <summary>
+            Utility class used to encapsulate and simplify argument checks
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.Argument.ExpectNotNull``1(System.Linq.Expressions.Expression{System.Func{``0}},System.String)">
+            <summary>
+            Checks the argument value and throws <see cref="T:System.ArgumentNullException"/> if it is null
+            </summary>
+            <typeparam name="T">tye of the argument to check</typeparam>
+            <param name="f">expression pointing to the argument</param>
+            <param name="message">message to include in exception</param>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.Argument.ExpectNotNullOrWhiteSpace(System.Linq.Expressions.Expression{System.Func{System.String}},System.String)">
+            <summary>
+            Checks string argument and throws <see cref="T:System.ArgumentNullException"/> if it is null, empty or consists only of white-space characters.
+            </summary>
+            <param name="f">Expression pointing to the argument</param>
+            <param name="message">message to include in exception</param>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.Argument.ExpectNotEmptyGuid(System.Linq.Expressions.Expression{System.Func{System.Guid}})">
+            <summary>
+            Checks Guid argument and throws <see cref="T:System.ArgumentException"/> if it equals to empty Guid
+            </summary>
+            <param name="f">Expression pointing to the argument</param>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.Argument.Expect(System.Func{System.Boolean},System.String,System.String)">
+            <summary>
+            Checks custom argument condition and throws <see cref="T:System.ArgumentException"/> if its result is false
+            </summary>
+            <param name="condition">Condition expression to check</param>
+            <param name="argumentName">name of the argument checked by condition</param>
+            <param name="errorMessage">error message to include in exception</param>
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.BinaryFileUtils">
+            <summary>
+            This is a utility class for working with binary files.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.BinaryFileUtils.CombineByteArrays(System.Byte[][])">
+            <summary>
+            Combines list of byte arrays to the single array.
+            </summary>
+            <param name="arrays">Arrays to be combined</param>
+            <returns>Combined array</returns>
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.ContentTypeMapping">
+            <summary>
+            Utility class for defining file types.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.Utils.ContentTypeMapping._knownExtensions">
+            <summary>
+            Set of known file extensions.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.ContentTypeMapping.MapContentTypeFromExtension(System.String)">
+            <summary>
+            A simple lookup that takes file extension and returns content type
+            </summary>
+            <param name="extension">File extension</param>
+            <returns>Name of file type</returns>
+            <exception cref="T:System.ArgumentNullException">extension is null</exception>
+            <exception cref="T:System.ArgumentException">extension is unknown file extension</exception>
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.HttpHelper">
+            <summary>
+            The utility class realizes the instance for sending http requests.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.Utils.HttpHelper._endPoint">
+            <summary>
+            The URL of service endpoint point.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.HttpHelper.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Utils.HttpHelper"/> class. 
+            </summary>
+            <param name="endPoint">
+            Service endpoint
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            endPoint is null.
+            </exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.HttpHelper.EscapeDataString(System.String)">
+            <summary>
+            Converts a string to its escaped representation.
+            </summary>
+            <param name="toEscape">The string to escape.</param>
+            <returns>A System.String that contains the escaped representation of stringToEscape.</returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.HttpHelper.SendRequest(ATT.WP8.SDK.Utils.HttpMethod,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends HTTP request with raw string content.
+            </summary>
+            <param name="httpMethod"><see cref="T:ATT.WP8.SDK.Utils.HttpMethod"/>HTTP method to use in the request</param>
+            <param name="relativeUri">Service relative URI</param>
+            <param name="requestBody">Request body to send</param>
+            <param name="accessToken">Access token</param>
+            <param name="bodyMediaType">Request body media type</param>
+            <returns>Returns Task as a result of asynchronous operation.
+            The Task result is the result of HTTP request sending.</returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.HttpHelper.CreateRequest(ATT.WP8.SDK.Utils.HttpMethod,System.Uri,ATT.WP8.SDK.Utils.RequestData)">
+            <summary>
+            The creates Http request with given parameters.
+            </summary>
+            <param name="httpMethod">
+            The http request method(for example Post or Get).
+            </param>
+            <param name="requestUri">
+            The request uri.
+            </param>
+            <param name="requestData">
+            The request data.
+            </param>
+            <returns>
+            The <see cref="T:System.Net.HttpWebRequest"/> http request.
+            </returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.HttpHelper.SendRequest(ATT.WP8.SDK.Utils.HttpMethod,System.String,ATT.WP8.SDK.Utils.RequestData)">
+            <summary>
+            Sends HTTP request with raw string content.
+            </summary>
+            <param name="httpMethod"><see cref="T:ATT.WP8.SDK.Utils.HttpMethod"/>HTTP method to use in the request</param>
+            <param name="relativeUri">Service relative URI</param>
+            <param name="requestData">request data</param>
+            <returns>Returns Task as a result of asynchronous operation.
+            The Task result is the result of HTTP request sending.</returns>
+            <exception cref="T:System.ArgumentNullException">relativeUri is null.</exception>
+            <exception cref="T:ATT.WP8.SDK.InvalidResponseException">HTTP request could not be sent.</exception>
+            Ignore CodeIt.Right rule for this line. Catch general exeption for tracing all exeptions types.
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.HttpMethod">
+            <summary>
+            Defines the http methods.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.Utils.HttpMethod.POST">
+            <summary>
+            Defines Http request POST method.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.Utils.HttpMethod.GET">
+            <summary>
+            Gefines Http request GET method.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.HttpPropertyList">
+            <summary>
+            This utility class represents instance with the set of parameters for http request.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.HttpPropertyList.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.HttpPropertyList.FormEncode">
+            <summary>
+            Returns an encoding string that represents the current object.
+            </summary>
+            <returns>An encoding string that represents the current object.</returns>
+        </member>
+        <member name="P:ATT.WP8.SDK.Utils.HttpPropertyList.Properties">
+            <summary>
+            Gets Map of parameters mapped by parameter names.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Utils.HttpPropertyList.Item(System.String)">
+            <summary>
+            Gets or sets the value associated with the specified property name.
+            </summary>
+            <param name="propName">Property name</param>
+            <returns>The value associated with the property name</returns>
+            <exception cref="T:System.ArgumentNullException">property name is null.</exception>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">The property is retrieved and property name does not exist in the collection.</exception>
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.JsonParser`1">
+            <summary>
+            Utility class for parsing data from/to JSON format
+            </summary>
+            <typeparam name="T">
+            Response type.
+            </typeparam>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.JsonParser`1.DeserializeFromJson(System.String)">
+            <summary>
+            Parses JSON formatted data.
+            </summary>
+            <param name="jsonInput">Input string in JSON format</param>
+            <returns>Parsed data</returns>
+            <exception cref="T:System.ArgumentNullException">jsonInput is null</exception>
+            <exception cref="T:ATT.WP8.SDK.InvalidResponseException">jsonInput cannot be parsed</exception>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.JsonParser`1.SerializeToJson(`0)">
+            <summary>
+            Serializes data to JSON formatted data.
+            </summary>
+            <param name="toJsonObject">Data object for serialization</param>
+            <returns>JSON formatted data</returns>
+            <exception cref="T:System.ArgumentNullException">toJsonObject is null</exception>
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.PhoneNumberConverter">
+            <summary>
+            Utility class for converting phone numbers.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.PhoneNumberConverter.ConvertToIsdn(System.String)">
+            <summary>
+            Convert phone number to ISDN format.  Removes dashes, removes "+" from country code, etc.
+            </summary>
+            <param name="numberToConvert">Phone number to convert.</param>
+            <returns>Converted phone number.</returns>
+            <exception cref="T:System.ArgumentNullException">numberToConvert is null.</exception>
+            <exception cref="T:System.ArgumentException">numberToConvert is in incorrect format</exception>
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.RequestData">
+            <summary>
+            Represents data for HTTP Request
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.RequestData.StringToBytes(System.String)">
+            <summary>
+            Gets bytes corresponding to string
+            </summary>
+            <param name="str">string to convert to bytes</param>
+            <returns>bytes corresponding to string</returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.RequestData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Utils.RequestData"/> class. 
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.RequestData.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Utils.RequestData"/> class. 
+            </summary>
+            <param name="body">
+            body of request as string
+            </param>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.RequestData.#ctor(System.Byte[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Utils.RequestData"/> class. 
+            </summary>
+            <param name="body">
+            body of request as byte array
+            </param>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.RequestData.CopyHeaders(System.Net.HttpWebRequest)">
+            <summary>
+            Copies headers to instance of HttpWebRequest
+            </summary>
+            <param name="request"> Request to copy to.</param>
+        </member>
+        <member name="P:ATT.WP8.SDK.Utils.RequestData.Headers">
+            <summary>
+            Gets or sets HTTP headers
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Utils.RequestData.AccessToken">
+            <summary>
+            Gets or sets access token obtaine by authorization service
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.SDK.Utils.RequestData.Body">
+            <summary>
+            Gets Or sets Request body.
+            </summary>
+            Ignore CodeIt.Right rule for this line. Byte array property is required for outcome message format.
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.RequestProcessor">
+            <summary>
+            Class for async http processing request 
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.RequestProcessor.#ctor(System.Net.HttpWebRequest,ATT.WP8.SDK.Utils.RequestData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.SDK.Utils.RequestProcessor"/> class. 
+            </summary>
+            <param name="request">
+            The request.
+            </param>
+            <param name="requestData">
+            The request data.
+            </param>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.RequestProcessor.SendRequest">
+            <summary>
+            Sends request data
+            </summary>
+            <returns>async Task</returns>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.RequestProcessor.GetResponse">
+            <summary>
+            Gets response string
+            </summary>
+            <returns>async Task</returns>
+        </member>
+        <member name="T:ATT.WP8.SDK.Utils.ScopeList">
+            <summary>
+            Utility class for Scope -- maintains a list of possible scopes.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.SDK.Utils.ScopeList.ScopesList(System.Collections.Generic.IEnumerable{ATT.WP8.SDK.ScopeType})">
+            <summary>
+            Scope list 
+            </summary>
+            <param name="scopes">
+            The scopes.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="T:ATT.WP8.SDK.XSpeechContext">
+            <summary>
+            Specifies speech content of audio file which is used for recognizing audio file to text message.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.XSpeechContext.Generic">
+            <summary>
+            Generic search.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.XSpeechContext.UVerseEPG">
+            <summary>
+            UVerseEPG.
+            </summary>
+            Ignore CodeIt.Right rule for this line. Use uooercase letter in for enum naming becouse this is abbreveature.
+        </member>
+        <member name="F:ATT.WP8.SDK.XSpeechContext.BusinessSearch">
+            <summary>
+            Business search.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.XSpeechContext.WebSearch">
+            <summary>
+            Web search.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.XSpeechContext.SMS">
+            <summary>
+            SMS.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.XSpeechContext.VoiceMail">
+            <summary>
+            Voice mail.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.SDK.XSpeechContext.QuestionAndAnswer">
+            <summary>
+            Question&amp;Answer.
+            </summary>
+        </member>
+    </members>
+</doc>
