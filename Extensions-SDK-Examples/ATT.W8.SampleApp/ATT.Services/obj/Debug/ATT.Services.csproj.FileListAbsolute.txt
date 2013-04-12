@@ -1,9 +1,0 @@
-E:\tmp\ATT.W8.SampleApp\ATT.Services\bin\Debug\ATT.Services.XML
-E:\tmp\ATT.W8.SampleApp\ATT.Services\bin\Debug\ATT.Services.dll
-E:\tmp\ATT.W8.SampleApp\ATT.Services\bin\Debug\ATT.Services.pdb
-E:\tmp\ATT.W8.SampleApp\ATT.Services\bin\Debug\ATT.Utility.dll
-E:\tmp\ATT.W8.SampleApp\ATT.Services\bin\Debug\ATT.Utility.pdb
-E:\tmp\ATT.W8.SampleApp\ATT.Services\bin\Debug\ATT.Utility.xml
-E:\tmp\ATT.W8.SampleApp\ATT.Services\obj\Debug\ATT.Services.csprojResolveAssemblyReference.cache
-E:\tmp\ATT.W8.SampleApp\ATT.Services\obj\Debug\ATT.Services.dll
-E:\tmp\ATT.W8.SampleApp\ATT.Services\obj\Debug\ATT.Services.pdb

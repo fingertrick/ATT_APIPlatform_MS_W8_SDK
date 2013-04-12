@@ -53,8 +53,6 @@ Windows 8 / Windows RT Controls:
 Windows Phone 8 Controls:
 
 * Speech
-* SMS
-* MMS
 
 Please check http://developer.att.com/docs more details on these APIs.
 

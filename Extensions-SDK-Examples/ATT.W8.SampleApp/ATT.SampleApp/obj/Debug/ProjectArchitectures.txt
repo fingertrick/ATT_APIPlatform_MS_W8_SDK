@@ -1,2 +1,0 @@
-E:\tmp\ATT.W8.SampleApp\ATT.Controls\ATT.Controls.csproj;neutral
-E:\tmp\ATT.W8.SampleApp\ATT.SampleApp\ATT.SampleApp.csproj;neutral

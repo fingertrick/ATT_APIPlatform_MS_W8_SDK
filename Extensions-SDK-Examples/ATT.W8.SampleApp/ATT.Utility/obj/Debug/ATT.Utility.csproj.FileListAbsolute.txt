@@ -1,5 +1,0 @@
-E:\tmp\ATT.W8.SampleApp\ATT.Utility\bin\Debug\ATT.Utility.XML
-E:\tmp\ATT.W8.SampleApp\ATT.Utility\bin\Debug\ATT.Utility.dll
-E:\tmp\ATT.W8.SampleApp\ATT.Utility\bin\Debug\ATT.Utility.pdb
-E:\tmp\ATT.W8.SampleApp\ATT.Utility\obj\Debug\ATT.Utility.dll
-E:\tmp\ATT.W8.SampleApp\ATT.Utility\obj\Debug\ATT.Utility.pdb
