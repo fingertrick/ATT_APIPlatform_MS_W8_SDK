@@ -10,8 +10,14 @@ using Microsoft.Phone.Shell;
 
 namespace ATT.WP8.SampleApp
 {
+	/// <summary>
+	/// Speech control demo page
+	/// </summary>
 	public partial class SpeechControlPage : PhoneApplicationPage
 	{
+		/// <summary>
+		/// Creates instance of SpeechControlPage
+		/// </summary>
 		public SpeechControlPage()
 		{
 			InitializeComponent();

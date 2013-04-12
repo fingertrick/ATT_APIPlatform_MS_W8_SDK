@@ -9,13 +9,22 @@
 
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
+			<!--<x:String x:Key="MmsLimit">MMS size limit was reached</x:String>-->
+
+			<ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source='/ATT.WP8.Controls;Component/Themes/Default.xaml'/>
+				<ResourceDictionary Source='Themes/Controls/PhoneNumbersControl.xaml'/>
+				<ResourceDictionary Source='Themes/Controls/MessageControl.xaml'/>
+				<ResourceDictionary Source='Themes/Controls/FileOpenPickerControl.xaml'/>
+				<ResourceDictionary Source='Themes/Controls/FileOpenPickerPreviewControl.xaml'/>
             </ResourceDictionary.MergedDictionaries>
             
             <navigation:UriMapper x:Name="uriMapper">
                 <navigation:UriMapping Uri="SpeechControlPage" MappedUri="/SpeechControlPage.xaml"/>
                 <navigation:UriMapping Uri="SpeechButtonPage" MappedUri="/SpeechButtonPage.xaml"/>
+				<navigation:UriMapping Uri="MmsPage" MappedUri="/MmsPage.xaml"/>
+				<navigation:UriMapping Uri="MmsCouponPage" MappedUri="/MmsCouponPage.xaml"/>
+                <navigation:UriMapping Uri="SmsPage" MappedUri="/SmsPage.xaml"/>
             </navigation:UriMapper>
         </ResourceDictionary>
 

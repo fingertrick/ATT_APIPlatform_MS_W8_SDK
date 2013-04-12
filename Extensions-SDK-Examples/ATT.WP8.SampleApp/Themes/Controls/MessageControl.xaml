@@ -1,0 +1,88 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:ATT.WP8.SampleApp.Controls"
+	xmlns:controls="clr-namespace:ATT.WP8.Controls;assembly=ATT.WP8.Controls"
+    xmlns:utility="clr-namespace:ATT.WP8.Controls.Utils;assembly=ATT.WP8.Controls">
+    <ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/ATT.WP8.Controls;Component/Themes/Default.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+    
+    <Style TargetType="local:MessageControl">
+        <Setter Property="MinWidth" Value="180" />
+        <Setter Property="MinHeight" Value="80" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:MessageControl">
+                    <Border Background="{StaticResource DefaultBackground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="10">
+                        <Grid>
+							<Grid.Resources>
+								<utility:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+							</Grid.Resources>
+							<Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+									<TextBlock
+										Text="{TemplateBinding TextHeader}" 
+										HorizontalAlignment="Left" 
+										Style="{StaticResource textBlockHeader}"
+                                        Margin="10,0"
+										Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMessageLengthVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+									<TextBlock
+										Text="(" 
+										Style="{StaticResource textBlockHeader}"
+										Margin="5,0,0,0" 
+										Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMessageLengthVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+									<TextBlock
+										Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TotalMessageLength}" 
+										Style="{StaticResource textBlockHeader}"
+										Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMessageLengthVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+									<TextBlock
+										Text="/"
+										Style="{StaticResource textBlockHeader}"
+										Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMessageLengthVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+									<TextBlock 
+										Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=MaxMessageLength}"
+										Style="{StaticResource textBlockHeader}"
+										Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMessageLengthVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+									<TextBlock
+										Text=")"
+										Style="{StaticResource textBlockHeader}" 
+										Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMessageLengthVisible, Converter={StaticResource BoolToVisibilityConverter}}" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+									<TextBlock Text="{TemplateBinding MessageStatus}" Style="{StaticResource textBlockHeader}" Margin="0,0,15,0" />
+									<controls:ErrorToolTip ErrorMessage="{TemplateBinding ErrorMessage}" Margin="0,0,15,0" />
+                                </StackPanel>
+                            </Grid>
+							<local:ExtendedTextBox Grid.Row="1" 
+													CustomAction="{Binding Path=UpdateBindedViewModelProperty, 
+													RelativeSource={RelativeSource TemplatedParent}, Mode=OneTime}" 
+													Text="{Binding Path=TextMessage,
+													RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" 
+													Style="{TemplateBinding MessageTextStyle}"
+													MaxLength="{TemplateBinding MaxTextBoxLength}" 
+													AcceptsReturn="True"
+													TextWrapping="Wrap"
+													Height="{Binding MessageHeight}"
+													VerticalScrollBarVisibility="Auto"
+													HorizontalAlignment="Stretch"/>
+                        </Grid>
+					</Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

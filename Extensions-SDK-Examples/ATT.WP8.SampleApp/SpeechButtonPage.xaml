@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:ATT.WP8.SampleApp"
     xmlns:Controls="clr-namespace:ATT.WP8.Controls;assembly=ATT.WP8.Controls"
-    x:Class="ATT.WP8.SampleApp.SpeechButton"
+    x:Class="ATT.WP8.SampleApp.SpeechButtonPage"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -35,9 +35,13 @@
                 x:Name="btnSpeech"
                 Background="#1BA0E1"
             	Content="SpeechButton"
-                Click="btnSpeech_Click"
+            	Click="btnSpeech_Click"
                 MessageTranscripted="btnSpeech_MessageTranscripted"
-                Error="btnSpeech_Error"/>
+                ErrorOccurred="btnSpeech_Error"
+                ApiKey="your_att_app_key"
+                SecretKey="your_att_secret_key"
+                Endpoint="https://api.att.com"
+                />
         </StackPanel>
         <StackPanel Grid.Row="2">
             <Controls:ErrorToolTip x:Name="tbErrorMessage"

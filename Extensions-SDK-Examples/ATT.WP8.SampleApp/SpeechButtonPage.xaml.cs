@@ -1,4 +1,5 @@
-﻿using ATT.WP8.Controls.Utils;
+﻿using ATT.WP8.Controls;
+using ATT.WP8.Controls.Utils;
 using ATT.WP8.SampleApp.Resources;
 using Microsoft.Phone.Controls;
 using System;
@@ -6,12 +7,18 @@ using System.Windows;
 
 namespace ATT.WP8.SampleApp
 {
-	public partial class SpeechButton : PhoneApplicationPage
+	/// <summary>
+	/// Speech button demo page
+	/// </summary>
+	public partial class SpeechButtonPage : PhoneApplicationPage
 	{
 		private SoundRecorder _soundRecorder;
 		private bool _isRecording;
 
-		public SpeechButton()
+		/// <summary>
+		/// Creates instance of SpeechButtonPage
+		/// </summary>
+		public SpeechButtonPage()
 		{
 			InitializeComponent();
 			btnRecord.Content = AppResources.txtStartRecord;
@@ -30,11 +37,16 @@ namespace ATT.WP8.SampleApp
 		{
 			EnableTranscription(false);
 			tbErrorMessage.ErrorMessage = String.Empty;
+			tbxTranscriptedText.Text = String.Empty;
 		}
 
-		private void btnSpeech_MessageTranscripted(object sender, Controls.TranscriptedMessageEventArgs e)
+		private void btnSpeech_MessageTranscripted(object sender, TranscriptedMessageEventArgs e)
 		{
-			tbxTranscriptedText.Text = btnSpeech.TranscriptedText;
+			if (!String.IsNullOrEmpty(btnSpeech.TranscriptedText))
+			{
+				tbxTranscriptedText.Text = btnSpeech.TranscriptedText;
+			}
+			
 			EnableTranscription(true);
 		}
 

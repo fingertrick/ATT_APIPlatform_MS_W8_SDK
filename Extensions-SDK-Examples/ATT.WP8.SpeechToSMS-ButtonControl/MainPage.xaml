@@ -36,7 +36,7 @@
             <ProgressBar x:Name="statusProgress" IsIndeterminate="True" HorizontalAlignment="Left" Height="12" Margin="10,114,0,0" VerticalAlignment="Top" Width="436"/>
             <TextBlock x:Name="txtResult" TextAlignment="Center" HorizontalAlignment="Left" Margin="11,490,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434"/>
 
-            <Controls:SpeechButton x:Name="btnSpeech" Content="Convert" Background="#FF2F69E4" HorizontalAlignment="Left" Margin="0,48,0,0" VerticalAlignment="Top" Width="456" Click="btnSpeech_Click" MessageTranscripted="btnSpeech_MessageTranscripted" Error="btnSpeech_Error" ApiKey="your_att_app_key" SecretKey="b71e400f2211a424"/>
+            <Controls:SpeechButton x:Name="btnSpeech" Content="Convert" Background="#FF2F69E4" HorizontalAlignment="Left" Margin="0,48,0,0" VerticalAlignment="Top" Width="456" Click="btnSpeech_Click" MessageTranscripted="btnSpeech_MessageTranscripted" Error="btnSpeech_Error" ApiKey="your_att_app_key" SecretKey="your_att_secret_key"/>
 
         </Grid>
         <Grid Grid.Row="2">

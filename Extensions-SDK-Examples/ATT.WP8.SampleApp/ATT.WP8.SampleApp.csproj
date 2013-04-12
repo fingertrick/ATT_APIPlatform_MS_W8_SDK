@@ -40,6 +40,7 @@
     <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>Bin\Debug\ATT.WP8.SampleApp.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -97,6 +98,20 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ContentInfoFileToCollectionConverter.cs" />
+    <Compile Include="Controls\ExtendedTextBox.cs" />
+    <Compile Include="Controls\FileOpenPickerControl.cs" />
+    <Compile Include="Controls\FileOpenPickerPreviewControl.cs" />
+    <Compile Include="Controls\FileOpenPickerPreviewControlViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\FilePreview.cs" />
+    <Compile Include="Controls\FileType.cs" />
+    <Compile Include="Controls\MessageControl.cs" />
+    <Compile Include="Controls\PhoneNumbersControl.cs" />
+    <Compile Include="Controls\PhoneNumbersControlViewModel.cs" />
+    <Compile Include="Controls\TextBoxFormatValidationHandler.cs" />
+    <Compile Include="Controls\TextBoxValidationExtension.cs" />
     <Compile Include="CopyRightControl.xaml.cs">
       <DependentUpon>CopyRightControl.xaml</DependentUpon>
     </Compile>
@@ -104,21 +119,63 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MmsCouponPage.xaml.cs">
+      <DependentUpon>MmsCouponPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MmsCouponPageViewModel.cs" />
+    <Compile Include="MmsPage.xaml.cs">
+      <DependentUpon>MmsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MmsPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SenderPageViewModelBase.cs" />
+    <Compile Include="SmsPage.xaml.cs">
+      <DependentUpon>SmsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SmsPageViewModel.cs" />
     <Compile Include="SpeechButtonPage.xaml.cs">
       <DependentUpon>SpeechButtonPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="SpeechControlPage.xaml.cs">
       <DependentUpon>SpeechControlPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utils\PhoneNumbersUniqueValidator.cs" />
+    <Page Include="MmsCouponPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MmsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SmsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SpeechButtonPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Controls\FileOpenPickerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls\FileOpenPickerPreviewControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls\MessageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Controls\PhoneNumbersControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +207,7 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\delete_sign_white.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -174,12 +232,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ATT.WP8.Controls\ATT.WP8.Controls.csproj">
-      <Project>{4B3844B8-A8E1-429E-85F7-38A362729250}</Project>
-      <Name>ATT.WP8.Controls</Name>
-    </ProjectReference>
+    <SDKReference Include="AT&amp;T Controls, Version=1.1">
+      <Name>AT&amp;T Control Library</Name>
+    </SDKReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

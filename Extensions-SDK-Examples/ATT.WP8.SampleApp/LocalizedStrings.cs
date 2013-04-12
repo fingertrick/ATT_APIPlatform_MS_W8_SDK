@@ -9,6 +9,9 @@ namespace ATT.WP8.SampleApp
 	{
 		private static AppResources _localizedResources = new AppResources();
 
+		/// <summary>
+		/// Get localized resources
+		/// </summary>
 		public AppResources LocalizedResources { get { return _localizedResources; } }
 	}
 }

@@ -31,7 +31,12 @@
         <StackPanel Grid.Row="1">
             <!--ContentPanel - place additional content here-->
             <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-                <Controls:SpeechControl VerticalAlignment="Top"/>
+                <Controls:SpeechControl 
+                    VerticalAlignment="Top"
+                   ApiKey="your_att_app_key"
+                SecretKey="your_att_secret_key"
+                Endpoint="https://api.att.com"
+                    />
             </Grid>
         </StackPanel>
         <StackPanel Grid.Row="2">

@@ -10,6 +10,9 @@ using ATT.WP8.SampleApp.Resources;
 
 namespace ATT.WP8.SampleApp
 {
+	/// <summary>
+	/// Application class
+	/// </summary>
 	public partial class App : Application
 	{
 		/// <summary>

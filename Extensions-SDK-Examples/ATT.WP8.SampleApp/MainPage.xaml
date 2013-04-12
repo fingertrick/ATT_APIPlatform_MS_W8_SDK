@@ -27,7 +27,10 @@
         <StackPanel Margin="10" Grid.Row="1">
             <Button x:Name="btnSpeechControl" Content="Speech Control" Click="btnSpeechControl_Click"/>
             <Button x:Name="btnSpeech" Content="Speech Button" Click="btnSpeech_Click"/>
-        </StackPanel>
+            <Button x:Name="btnSms" Content="SMS Button Control" Click="btnSms_Click"/>
+            <Button x:Name="btnMms" Content="MMS Button Control" Click="btnMms_Click"/>
+			<Button x:Name="btnMmsCoupon" Content="MMS Coupon Example" Click="btnMmsCoupon_Click"/>
+ 		</StackPanel>
         <local:CopyRightControl Grid.Row="2" HorizontalAlignment="Center"/>
     </Grid>
 
