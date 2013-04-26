@@ -1,0 +1,601 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATT.WP8.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:ATT.WP8.Controls.AttControl">
+            <summary>
+            Abstract Base class for all AT&amp;T API controls.  
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.AttControl.EndPointProperty">
+            <summary>
+            Identifies the Endpoint dependency property - the base URL for the REST API to access. Defaults to https://api.att.com which is working as of September 2012.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.AttControl.ApiKeyProperty">
+            <summary>
+            Identifies the ApiKey dependency property.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.AttControl.SecretKeyProperty">
+            <summary>
+            Identifies the SecretKey dependency property.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.AttControl.Endpoint">
+            <summary>
+            Gets or sets Endpoint for ATT services - the base URL for the REST API to access.  Defaults to https://api.att.com which is working as of September 2012.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.AttControl.ApiKey">
+            <summary>
+            Gets or sets ApiKey for access to ATT services.  If you do not set an ApiKey, the software will default to the value set with the global static ATTSettings.ApiKey.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.AttControl.SecretKey">
+            <summary>
+            Gets or sets SecretKey for access to ATT services. If you do not set an ApiKey, the software will default to the value set with the global static ATTSettings.SecretKey.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.MicrophoneNotSupportedException">
+            <summary>
+            Throws when icriphone not enabled.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.MicrophoneNotSupportedException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.Utils.MicrophoneNotSupportedException"/> class.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.MicrophoneNotSupportedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.Utils.MicrophoneNotSupportedException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.MicrophoneNotSupportedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.Utils.MicrophoneNotSupportedException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.SpeechServiceHelper">
+            <summary>
+            Represents class working with att speech servise.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.SpeechServiceHelper.#ctor(ATT.WP8.SDK.Entities.AttServiceSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.Utils.SpeechServiceHelper"/> class.	
+            </summary>
+            <param name="attServiceSettings">The att service settings.</param>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.SpeechServiceHelper.GetTranscription(System.Byte[],System.String)">
+            <summary>
+            Gets the transcription.	
+            </summary>
+            <param name="contentAudio">The content audio.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="E:ATT.WP8.Controls.Utils.SpeechServiceHelper.MessageTranscripted">
+            <summary>
+            Occurs when [message transcripted].
+            </summary>
+        </member>
+        <member name="E:ATT.WP8.Controls.Utils.SpeechServiceHelper.Error">
+            <summary>
+            Occurs when [error].
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.ControlWithViewModel">
+            <summary>
+            Abstract base class all ATT controls will inherit from; adds a presenter (gui) instance.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.ControlWithViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.ControlWithViewModel"/> class. 
+            This constructor creates an instance of base class for AT&amp;T SDK Extension Controls.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.ControlWithViewModel.InitializeViewModel">
+            <summary>
+            Creates and initializes presenter instance.
+            </summary>
+            <returns>Returns created presenter instance.</returns>
+        </member>
+        <member name="P:ATT.WP8.Controls.ControlWithViewModel.ViewModel">
+            <summary>
+            Gets ViewModel instance for control.
+            Note: We cannot make this generic on presenter type because VS does not handle generic controls properly during design-time
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.ErrorToolTip">
+            <summary>
+            Control which shows error in tool tip.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.ErrorToolTip.ErrorMessageProperty">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.ErrorToolTip.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.ErrorToolTip"/> class. 
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.ErrorToolTip.ErrorMessage">
+            <summary>
+            Gets or sets error message
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.SpeechButton">
+            <summary>
+            Represents <see cref="T:ATT.WP8.Controls.SpeechButton"/> class for working with speech service.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.SpeechButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.SpeechButton"/> class.	
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.SpeechButton.AudioContentProperty">
+            <summary>
+            Identifies the AudioContent dependency property.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.SpeechButton.AudioContentNameProperty">
+            <summary>
+            Identifies the AudioContentName dependency property.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.SpeechButton.TranscriptedTextProperty">
+            <summary>
+            Identifies the TranscriptedText dependency property.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.SpeechButton.EndPointProperty">
+            <summary>
+            Identifies the Endpoint dependency property - the base URL for the REST API to access. Defaults to https://api.att.com which is working as of September 2012.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.SpeechButton.ApiKeyProperty">
+            <summary>
+            Identifies the ApiKey dependency property.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.SpeechButton.SecretKeyProperty">
+            <summary>
+            Identifies the SecretKey dependency property.
+            </summary>
+        </member>
+        <member name="E:ATT.WP8.Controls.SpeechButton.MessageTranscripted">
+            <summary>
+            Occurs when [message transcripted].
+            </summary>
+        </member>
+        <member name="E:ATT.WP8.Controls.SpeechButton.Error">
+            <summary>
+            Occurs when [error].
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.SpeechButton.AudioContent">
+            <summary>
+            Gets or sets the content info.
+            </summary>
+            <value>The content info.</value>
+        </member>
+        <member name="P:ATT.WP8.Controls.SpeechButton.AudioContentName">
+            <summary>
+            Gets or sets audio content file name.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.SpeechButton.TranscriptedText">
+            <summary>
+            Gets or sets the transcripted text.
+            </summary>
+            <value>The transcripted text.</value>
+        </member>
+        <member name="P:ATT.WP8.Controls.SpeechButton.Endpoint">
+            <summary>
+            Gets or sets Endpoint for ATT services - the base URL for the REST API to access.  Defaults to https://api.att.com which is working as of September 2012.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.SpeechButton.ApiKey">
+            <summary>
+            Gets or sets ApiKey for access to ATT services.  If you do not set an ApiKey, the software will default to the value set with the global static ATTSettings.ApiKey.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.SpeechButton.SecretKey">
+            <summary>
+            Gets or sets SecretKey for access to ATT services. If you do not set an ApiKey, the software will default to the value set with the global static ATTSettings.SecretKey.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.SpeechControl">
+            <summary>
+            The speech control records in an audio file and transcribes it into text which you can copy/paste, save, and so on.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.SpeechControl.TranscriptTextProperty">
+            <summary>
+            Transcript text
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.SpeechControl.TranscriptTextStyleProperty">
+            <summary>
+            Style for transcript textBox
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.SpeechControl.InitializeViewModel">
+            <summary>
+            Initializes the presenter.
+            </summary>
+            <returns>
+            The <see cref="T:ATT.WP8.Controls.Utils.ViewModelBase"/>.
+            </returns>
+        </member>
+        <member name="P:ATT.WP8.Controls.SpeechControl.TranscriptTextStyle">
+            <summary>
+            Gets or sets style for the text received from the server.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.TranscriptedMessageEventArgs">
+            <summary>
+            EventArgs for Transcripted message
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.TranscriptedMessageEventArgs.#ctor(ATT.WP8.SDK.Entities.SpeechResponse)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.TranscriptedMessageEventArgs"/> class.
+            </summary>
+            <param name="speechResponse">The transcripted text.</param>
+        </member>
+        <member name="P:ATT.WP8.Controls.TranscriptedMessageEventArgs.SpeechResponse">
+            <summary>
+            Gets the transcripted text.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.CommandManager">
+            <summary>
+            The command manager
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.CommandManager.InvalidateRequerySuggested">
+            <summary>
+            The invalidate re-query suggested.
+            </summary>
+        </member>
+        <member name="E:ATT.WP8.Controls.Utils.CommandManager.RequerySuggested">
+            <summary>
+            Re-query suggested.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.Utils.CommandManager.Current">
+            <summary>
+            Gets current <see cref="T:ATT.WP8.Controls.Utils.CommandManager"/>
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.EmptyStringVisibilityConverter">
+            <summary>
+            Converts empty string to collapse visibility.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.EmptyStringVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the specified value. If value empty itme should collapse.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>Visiblity type</returns>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.EmptyStringVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the back. Not supported.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="culture">The culture.</param>
+            <returns>Always null.</returns>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.RelayCommand">
+            <summary>
+            Taken from http://msdn.microsoft.com/en-us/magazine/dd419663.aspx#id0090048
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.RelayCommand.#ctor(System.Action{System.Object},System.Func{System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.Utils.RelayCommand"/> class. 
+            </summary>
+            <param name="execute">
+            The execution logic
+            </param>
+            <param name="canExecute">
+            The execution status logic
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown if the execute argument is null
+            </exception>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.RelayCommand.Deactivate">
+            <summary>
+            Deactivates command, must be called when appropriate control/presenter is unloaded
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.RelayCommand.RaiseCanExecuteChanged">
+            <summary>
+            Raises the <see cref="E:ATT.WP8.Controls.Utils.RelayCommand.CanExecuteChanged"/> event.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.RelayCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">
+            This parameter will always be ignored.
+            </param>
+            <returns>
+            true if this command can be executed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.RelayCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">
+            This parameter will always be ignored.
+            </param>
+        </member>
+        <member name="E:ATT.WP8.Controls.Utils.RelayCommand.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether the command should execute.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.NotifyPropertyChangedBase">
+            <summary>
+            Base class that raises the property changed.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.NotifyPropertyChangedBase.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the property changed event using a string
+            </summary>
+            <param name="propertyName">
+            The name of the property that changed
+            </param>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.NotifyPropertyChangedBase.OnPropertyChanged``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Raises the PropertyChanged event.
+            </summary>
+            <param name="propertyExpression">
+            Expression pointing to the property.
+            </param>
+            <typeparam name="T">
+            The type of the property (usually implicit)
+            </typeparam>
+            <exception cref="T:System.ArgumentNullException">
+            Raised if the property name is null
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Raised if the property does not point to a valid member
+            </exception>
+        </member>
+        <member name="E:ATT.WP8.Controls.Utils.NotifyPropertyChangedBase.PropertyChanged">
+            <summary>
+            PropertyChanged event, occurs when some property is modified.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.SpeechControlViewModel">
+            <summary>
+            ViewModel for <see cref="T:ATT.WP8.Controls.SpeechControl"/>
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.ViewModelBase">
+            <summary>
+            Base class for all view models
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.ViewModelBase.HandleException(System.Exception)">
+            <summary>
+            Handles exception and displays it's text in message dialog.
+            </summary>
+            <param name="e">Occurred exception</param>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.ViewModelBase.Unload">
+            <summary>
+            Unload presenter. Release resources which was used in presenter
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.Utils.ViewModelBase.IsEditableEnabled">
+            <summary>
+            Gets or sets a value indicating whether is editable enabled.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.Utils.ViewModelBase.ErrorMessage">
+            <summary>
+            Gets or sets error message
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.SpeechControlViewModel._buttonText">
+            <summary>
+            The button text value.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.SpeechControlViewModel.#ctor(ATT.WP8.SDK.Entities.AttServiceSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.SpeechControlViewModel"/> class.	
+            </summary>
+            <param name="attServiceSettings">
+            The att Service Settings.
+            </param>
+        </member>
+        <member name="M:ATT.WP8.Controls.SpeechControlViewModel.Unload">
+            <summary>
+            Unloads this instance.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.SpeechControlViewModel.Dispose(System.Boolean)">
+            <summary>
+            Disposes the specified disposing.	
+            </summary>
+            <param name="disposing">The disposing.</param>
+        </member>
+        <member name="M:ATT.WP8.Controls.SpeechControlViewModel.Dispose">
+            <summary>
+            Releases unmanaged and - optionally - managed resources	
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.SpeechControlViewModel.TranscriptMessage">
+            <summary>
+            Gets transcript text
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.SpeechControlViewModel.ButtonText">
+            <summary>
+            Gets or sets button text
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.SpeechControlViewModel.Record">
+            <summary>
+            Gets command for sending speech
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.ResourcesHelper">
+            <summary>
+            Class for working with resources
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.ResourcesHelper.GetString(System.String,System.String,System.String)">
+            <summary>
+            Gets string resource from resource dictionary
+            </summary>
+            <param name="assembly">Name of resource assembly</param>
+            <param name="path">Path to resource</param>
+            <param name="name">resource name</param>
+            <returns>resource value</returns>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.ResourcesHelper.GetString(System.String)">
+            <summary>
+            Gets string resource from default resource dictionary
+            </summary>
+            <param name="name">Resource name</param>
+            <returns>Resource value</returns>
+            <exception cref="T:System.ArgumentNullException">name is null.</exception>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.MicrophoneWrapper">
+            <summary>
+            Represents <see cref="T:ATT.WP8.Controls.Utils.MicrophoneWrapper"/> class for writing audio from microphone.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.MicrophoneWrapper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ATT.WP8.Controls.Utils.MicrophoneWrapper"/> class.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.MicrophoneWrapper.StartRecording">
+            <summary>
+            Start audio recording method.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.MicrophoneWrapper.StopRecording">
+            <summary>
+            Stop audio recording method.
+            </summary>
+            <returns>Recorded <see cref="T:System.IO.MemoryStream"/></returns>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.MicrophoneWrapper.Dispose(System.Boolean)">
+            <summary>
+            Disposes the specified disposing.
+            </summary>
+            <param name="disposing">The disposing.</param>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.MicrophoneWrapper.Dispose">
+            <summary>
+            Releases unmanaged and - optionally - managed resources	
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.Utils.MicrophoneWrapper.SampleRate">
+            <summary>
+            Gets a microphone sample rate.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.SoundRecorder">
+            <summary>
+            Represents <see cref="T:ATT.WP8.Controls.Utils.SoundRecorder"/> class.
+            </summary>
+        </member>
+        <member name="F:ATT.WP8.Controls.Utils.SoundRecorder.RecodingTimerStoped">
+            <summary>
+            Occurs when [recodingTimerStoped].
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.SoundRecorder.StartRecording">
+            <summary>
+            Method for start audio recording.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.SoundRecorder.StopRecording">
+            <summary>
+            Method for stop audio recording.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.SoundRecorder.GetBytes">
+            <summary>
+            Gets audio bytes method.
+            </summary>
+            <returns>Byte array.</returns>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.SoundRecorder.Dispose(System.Boolean)">
+            <summary>
+            Disposes the specified disposing.	
+            </summary>
+            <param name="disposing">The disposing.</param>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.SoundRecorder.Dispose">
+            <summary>
+            Releases unmanaged and - optionally - managed resources	
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.Utils.SoundRecorder.FileExtension">
+            <summary>
+            Gets temporary file extension.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.Utils.SoundRecorder.FilePath">
+            <summary>
+            Gets FilePath
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.Utils.SoundRecorder.RecordDuration">
+            <summary>
+            Gets or sets record duration.
+            </summary>
+        </member>
+        <member name="P:ATT.WP8.Controls.Utils.SoundRecorder.IsRecordingStarted">
+            <summary>
+            Gets a value indicating whether is recording started.
+            </summary>
+        </member>
+        <member name="T:ATT.WP8.Controls.Utils.WaveHeaderWriter">
+            <summary>
+            Represents <see cref="T:ATT.WP8.Controls.Utils.WaveHeaderWriter"/> class for writing headers for stream.
+            </summary>
+        </member>
+        <member name="M:ATT.WP8.Controls.Utils.WaveHeaderWriter.WriteHeader(System.IO.Stream,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Method writes .wav headers for <see cref="T:System.IO.Stream"/>
+            </summary>
+            <param name="targetStream">Stream for writing.</param>
+            <param name="streamSize">Size of strem content that will be writed after headers.</param>
+            <param name="channelCount">Chanel Count.</param>
+            <param name="sampleRate">Microphone sample rate.</param>
+        </member>
+    </members>
+</doc>

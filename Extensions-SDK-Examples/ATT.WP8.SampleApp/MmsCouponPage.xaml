@@ -1,0 +1,78 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="ATT.WP8.SampleApp.MmsCouponPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:ATT.WP8.SampleApp"
+    xmlns:Controls="clr-namespace:ATT.WP8.Controls;assembly=ATT.WP8.Controls"
+    xmlns:subcontrols="clr-namespace:ATT.WP8.SampleApp.Controls" 
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+	<ScrollViewer VerticalScrollBarVisibility="Auto">
+		<Grid x:Name="LayoutRoot" Background="{StaticResource DefaultBackground}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="244*"/>
+				<RowDefinition Height="auto"/>
+			</Grid.RowDefinitions>
+			<Grid.Resources>
+				<local:ContentInfoFileToCollectionConverter x:Key="ContentInfoFileToCollectionConverter" />
+			</Grid.Resources>
+
+			<StackPanel Grid.Row="0" Margin="12,17,0,28">
+				<TextBlock Text="AT&amp;T" Style="{StaticResource PhoneTextNormalStyle}"/>
+				<TextBlock Text="MMS Coupon" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+			</StackPanel>
+
+				<StackPanel Grid.Row="1">
+				<subcontrols:PhoneNumbersControl 
+					PhoneNumbers="{Binding PhoneNumbers, Mode=TwoWay}"
+					IsEnabled="{Binding IsEditableEnabled, Mode=OneWay}"/>
+				<subcontrols:MessageControl 
+					TextMessage="{Binding Message, Mode=TwoWay}" 
+					MessageStatus ="{Binding MessageStatusName, Mode= OneWay}"
+					ErrorMessage ="{Binding ErrorMessage, Mode=OneWay}"
+					IsEnabled="{Binding IsEditableEnabled, Mode=OneWay}"
+					Height="114"
+                    IsMessageLengthVisible="True" TextHeader="Message"/>
+				<subcontrols:FileOpenPickerPreviewControl
+					File="{Binding Path=File, Mode=TwoWay}"
+					MaxNewFilesSize="{Binding ElementName=MmsCouponButton, Path=MaxAttachmentsSize}"
+					IsEnabled="{Binding IsEditableEnabled, Mode=OneWay}"/>
+				<Button 
+					Margin="10,0,10,10"
+					Content="New Message"
+					VerticalAlignment="Top"
+					IsEnabled="{Binding Path=IsNewMessageEnabled, Mode=OneWay}"
+					Command="{Binding Path=NewCommand, Mode=OneTime}"/>
+				<Controls:MmsButton x:Name="MmsCouponButton" Content="Send MMS"
+					Margin="10,0,10,10"
+					PhoneNumbers="{Binding Path=PhoneNumbers, Mode=TwoWay}"
+					Message="{Binding Path=Message, Mode=TwoWay}"
+					Attachments="{Binding Path=File, Mode=TwoWay, Converter={StaticResource ContentInfoFileToCollectionConverter}}"
+					MessageStatusName="{Binding Path=MessageStatusName, Mode=TwoWay}"
+					MessageStatus="{Binding Path=MessageStatus, Mode=TwoWay}"
+					ErrorMessage="{Binding Path=ErrorMessage, Mode=TwoWay}"
+                    MessageStatusChanged="MmsCouponButton_MessageStatusChanged"
+                    Endpoint="https://api.att.com"
+                    ApiKey="your_att_app_key"
+                    SecretKey="your_att_secret_key"
+                    />
+				</StackPanel>
+				<StackPanel Grid.Row="3">
+					<local:CopyRightControl HorizontalAlignment="Center"/>
+				</StackPanel>
+
+		</Grid>
+	</ScrollViewer>
+
+</phone:PhoneApplicationPage>
