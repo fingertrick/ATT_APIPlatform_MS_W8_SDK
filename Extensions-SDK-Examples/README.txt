@@ -44,6 +44,8 @@ Windows 8 and Windows RT Controls can access the following APIs:
 Windows Phone 8 Controls can access the following APIs:
 
 * Speech
+* SMS
+* MMS
 
 Please check http://developer.att.com/docs more details on these APIs.
 

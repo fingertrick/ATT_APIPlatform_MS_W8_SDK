@@ -30,9 +30,9 @@ into Visual Studio IDE. For more details, please check:
 
 https://developer.att.com/developer/include/Home/APIsTools/Docs/ToolsandPlugins/12500085
 
-===================
+==================
 API Access
-===================
+==================
 This release of Wrapper library provides access to the following APIs on AT&T Platform:
 
 * SMS API
