@@ -1,0 +1,37 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ATT.SampleApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:AttControls="using:ATT.Controls"
+    x:Class="ATT.SampleApp.MainPage"
+    IsTabStop="false"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+            <Grid Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="primaryColumn" Width="800"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="36,10,0,0">
+                    <Button x:Uid="btnSms" Content="SMS Control" Click="btnSMS_Click" Width="276" Name="btnSMS"/>
+                    <Button x:Uid="btnSmsVoting" Content="SMS Voting" Click="btnSMSVoting_Click" Width="276" Name="btnSMSVoting"/>
+                    <Button x:Uid="btnMms" Content="MMS Control" Click="btnMMS_Click" Width="276" Name="btnMMS"/>
+                    <Button x:Uid="btnMmsCoupon" Content="MMS Coupon" Click="btnMMSCoupon_Click" Width="276" Name="btnMMSCoupon"/>
+                    <Button x:Uid="btnSpeech" Content="Speech Control" Click="btnSpeech_Click" Width="276" Name="btnSpeech"/>
+                    <!--Button x:Uid="btnWapPushService" Content="WAP Push Service Control" Click="btnWapPushService_Click" Width="276" Name="btnWapPushService"/-->
+                </StackPanel>
+                <!--ToggleSwitch Grid.Column="1" x:Name="swTheme" Header="Next Time Theme" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" OffContent="Light" OnContent="Dark" Toggled="ToggleSwitch_Toggled"/-->
+            </Grid>
+            <CaptureElement HorizontalAlignment="Left" Height="100" Margin="1401,258,-135,0" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:Uid="appTitle" Text="AT&amp;T API Platform Demo" Style="{StaticResource PageHeaderTextStyle}" Margin="120,0,27,40" Height="40" Grid.Row="0" />
+			<local:CopyRightControl Grid.Row="2" HorizontalAlignment="Center"/>
+	</Grid>
+</Page>
